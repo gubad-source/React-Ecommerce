@@ -1,0 +1,78 @@
+#products .product {
+  position: relative;
+}
+#products .product .discount {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: 0px;
+  top: 15px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: #292a2d;
+  justify-content: center;
+}
+#products .product .top-product {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* Gray 4 */
+  color: #bdbdbd;
+}
+#products .product p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0px;
+}
+#products .product .price {
+  display: flex;
+  position: relative;
+}
+#products .product .price .low-price,
+#products .product .price .current-price {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* Black */
+  color: #000000;
+}
+#products .product .price .low-price {
+  color: #eb5757;
+}
+#products .product .price .discount-price {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  position: absolute;
+  bottom: 10%;
+  right: 42%;
+}/*# sourceMappingURL=products.css.map */
