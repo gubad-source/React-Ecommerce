@@ -188,4 +188,50 @@ nav .account-cart {
   /* identical to box height */
   text-transform: uppercase;
   color: #ffffff;
+}
+
+footer {
+  background-color: #000000;
+  padding: 30px 10px 20px;
+}
+footer .foot-col h3 {
+  color: #ffffff;
+}
+footer .foot-col li {
+  list-style: none;
+}
+footer .foot-col li a {
+  text-decoration: none;
+  font-family: "Roboto Medium";
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer .foot-col .content p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0rem;
+}
+footer .foot-col .content span {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer .foot-subscribe h3 {
+  color: #ffffff;
+}
+footer .foot-subscribe p {
+  font-family: "Roboto Medium";
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer .copyright {
+  color: #ffffff;
 }/*# sourceMappingURL=output.css.map */
