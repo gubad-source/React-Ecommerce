@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 #products .product {
   position: relative;
 }
@@ -234,4 +235,122 @@ footer .foot-subscribe p {
 }
 footer .copyright {
   color: #ffffff;
+}
+
+#blog .blog h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 68px;
+  color: #000000;
+  text-transform: capitalize;
+}
+#blog .blog p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #3f3f3f;
+}
+#catalog-products .product {
+  position: relative;
+}
+#catalog-products .product .discount {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: 0px;
+  top: 15px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: #292a2d;
+  justify-content: center;
+}
+#catalog-products .product .top-product {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* Gray 4 */
+  color: #bdbdbd;
+}
+#catalog-products .product p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0px;
+}
+#catalog-products .product .price {
+  display: flex;
+  position: relative;
+}
+#catalog-products .product .price .low-price,
+#catalog-products .product .price .current-price {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* Black */
+  color: #000000;
+}
+#catalog-products .product .price .low-price {
+  color: #eb5757;
+}
+#catalog-products .product .price .discount-price {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  position: absolute;
+  bottom: 10%;
+  right: 42%;
+}
+#catalog-products .product ul {
+  padding: 0;
+  display: flex;
+}
+#catalog-products .product ul li {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  list-style: none;
+}
+#catalog-products .product ul li:not(:first-child) {
+  margin-left: 0.4rem;
+}
+#catalog-products .product ul .red {
+  background-color: red;
+}
+#catalog-products .product ul .green {
+  background-color: green;
+}
+#catalog-products .product ul .blue {
+  background-color: blue;
 }/*# sourceMappingURL=output.css.map */

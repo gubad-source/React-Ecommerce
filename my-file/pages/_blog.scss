@@ -1,0 +1,35 @@
+#blog {
+  .blog {
+    h1 {
+      // position: absolute;
+      // width: 818px;
+      // height: 634px;
+      // left: 339px;
+      // top: 672px;
+
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 68px;
+      color: #000000;
+      text-transform: capitalize;
+    }
+    p {
+      // position: absolute;
+      // width: 818px;
+      // height: 634px;
+      // left: 339px;
+      // top: 672px;
+
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      color: #3f3f3f;
+    }
+    &__image {
+    }
+  }
+}
