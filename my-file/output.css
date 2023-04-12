@@ -115,7 +115,6 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  /* Gray 4 */
   color: #bdbdbd;
 }
 #blogs .article-tips h1 {
@@ -132,7 +131,6 @@
   font-family: "Roboto Light";
   font-size: 16px;
   line-height: 24px;
-  /* or 150% */
   letter-spacing: 0.01em;
   color: #000000;
 }
@@ -142,10 +140,8 @@
   font-weight: 300;
   font-size: 13px;
   line-height: 37px;
-  /* or 285% */
   display: flex;
   align-items: center;
-  /* Gray 2 */
   color: #4f4f4f;
   border-top: 2px solid #000000;
 }
@@ -173,9 +169,7 @@ nav ul li a {
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  /* identical to box height */
   text-transform: uppercase;
-  /* White */
   color: #ffffff;
 }
 nav .account-cart {
@@ -186,7 +180,6 @@ nav .account-cart {
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  /* identical to box height */
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -235,6 +228,68 @@ footer .foot-subscribe p {
 }
 footer .copyright {
   color: #ffffff;
+}
+
+#explore .explore {
+  display: flex;
+}
+#explore .explore h2 {
+  box-sizing: border-box;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #000000;
+  border: 2px solid #000000;
+  border-left: none;
+  border-bottom: none;
+}
+#explore .explore p {
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+#explore .explore button {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 5px 15px;
+}
+
+#footer-top {
+  height: 100px;
+  background: #e6f1fa;
+}
+#footer-top .footer-top__list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 80%;
+}
+#footer-top .footer-top__list__checked {
+  list-style: none;
+  margin-left: 3rem;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #000000;
 }
 
 #blog .blog h1 {
