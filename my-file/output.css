@@ -146,90 +146,6 @@
   border-top: 2px solid #000000;
 }
 
-nav {
-  background-color: #000000;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0px 10px;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-}
-nav ul li {
-  list-style: none;
-  margin-right: 1rem;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-nav .account-cart {
-  display: flex;
-  width: 28%;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-footer {
-  background-color: #000000;
-  padding: 30px 10px 20px;
-}
-footer .foot-col h3 {
-  color: #ffffff;
-}
-footer .foot-col li {
-  list-style: none;
-}
-footer .foot-col li a {
-  text-decoration: none;
-  font-family: "Roboto Medium";
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #828282;
-}
-footer .foot-col .content p {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0rem;
-}
-footer .foot-col .content span {
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #828282;
-}
-footer .foot-subscribe h3 {
-  color: #ffffff;
-}
-footer .foot-subscribe p {
-  font-family: "Roboto Medium";
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  color: #828282;
-}
-footer .copyright {
-  color: #ffffff;
-}
-
 #explore .explore {
   display: flex;
 }
@@ -267,29 +183,6 @@ footer .copyright {
   color: #000000;
   background-color: #ffffff;
   padding: 5px 15px;
-}
-
-#footer-top {
-  height: 100px;
-  background: #e6f1fa;
-}
-#footer-top .footer-top__list {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  width: 80%;
-}
-#footer-top .footer-top__list__checked {
-  list-style: none;
-  margin-left: 3rem;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  color: #000000;
 }
 
 #blog .blog h1 {
@@ -408,4 +301,111 @@ footer .copyright {
 }
 #catalog-products .product ul .blue {
   background-color: blue;
+}
+
+footer #footer-top {
+  height: 100px;
+  background: #e6f1fa;
+  display: flex;
+}
+footer #footer-top .footer-top__list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 80%;
+}
+footer #footer-top .footer-top__list__checked {
+  list-style: none;
+  margin-left: 3rem;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+footer #crisp-footer {
+  background-color: #000000;
+  padding: 30px 10px 20px;
+}
+footer #crisp-footer .foot-col h3 {
+  color: #ffffff;
+}
+footer #crisp-footer .foot-col li {
+  list-style: none;
+}
+footer #crisp-footer .foot-col li a {
+  text-decoration: none;
+  font-family: "Roboto Medium";
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer #crisp-footer .foot-col .content p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0rem;
+}
+footer #crisp-footer .foot-col .content span {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer #crisp-footer .foot-subscribe h3 {
+  color: #ffffff;
+}
+footer #crisp-footer .foot-subscribe p {
+  font-family: "Roboto Medium";
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #828282;
+}
+footer #crisp-footer .copyright {
+  color: #ffffff;
+}
+
+nav {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px 10px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+nav .account-cart {
+  display: flex;
+  width: 28%;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
 }/*# sourceMappingURL=output.css.map */

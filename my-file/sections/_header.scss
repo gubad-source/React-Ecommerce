@@ -1,0 +1,40 @@
+nav {
+  background-color: $black-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px 10px;
+  .logo {
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    li {
+      list-style: none;
+      margin-right: 1rem;
+      a {
+        text-decoration: none;
+        color: $white-color;
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+    }
+  }
+  .account-cart {
+    display: flex;
+    width: 28%;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
