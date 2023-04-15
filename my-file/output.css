@@ -202,10 +202,46 @@
   line-height: 30px;
   color: #3f3f3f;
 }
-#catalog-products .product {
+#catalog-products .brand__header {
+  display: flex;
+  justify-content: space-between;
+}
+#catalog-products .brand__header h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+#catalog-products .brand ul {
+  padding: 0;
+}
+#catalog-products .brand ul li {
+  list-style: none;
+}
+#catalog-products .dress__header {
+  display: flex;
+  justify-content: space-between;
+}
+#catalog-products .dress__header h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+#catalog-products .dress ul {
+  padding: 0;
+}
+#catalog-products .dress ul li {
+  list-style: none;
+}
+#catalog-products .about h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+#catalog-products .catalog-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+#catalog-products .catalog-products .product {
   position: relative;
 }
-#catalog-products .product .discount {
+#catalog-products .catalog-products .product .discount {
   position: absolute;
   width: 40px;
   height: 20px;
@@ -223,7 +259,7 @@
   background-color: #292a2d;
   justify-content: center;
 }
-#catalog-products .product .top-product {
+#catalog-products .catalog-products .product .top-product {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -235,7 +271,7 @@
   /* Gray 4 */
   color: #bdbdbd;
 }
-#catalog-products .product p {
+#catalog-products .catalog-products .product p {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
@@ -246,12 +282,12 @@
   color: #000000;
   margin: 0px;
 }
-#catalog-products .product .price {
+#catalog-products .catalog-products .product .price {
   display: flex;
   position: relative;
 }
-#catalog-products .product .price .low-price,
-#catalog-products .product .price .current-price {
+#catalog-products .catalog-products .product .price .low-price,
+#catalog-products .catalog-products .product .price .current-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -263,10 +299,10 @@
   /* Black */
   color: #000000;
 }
-#catalog-products .product .price .low-price {
+#catalog-products .catalog-products .product .price .low-price {
   color: #eb5757;
 }
-#catalog-products .product .price .discount-price {
+#catalog-products .catalog-products .product .price .discount-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -280,26 +316,26 @@
   bottom: 10%;
   right: 42%;
 }
-#catalog-products .product ul {
+#catalog-products .catalog-products .product ul {
   padding: 0;
   display: flex;
 }
-#catalog-products .product ul li {
+#catalog-products .catalog-products .product ul li {
   width: 15px;
   height: 15px;
   background-color: black;
   list-style: none;
 }
-#catalog-products .product ul li:not(:first-child) {
+#catalog-products .catalog-products .product ul li:not(:first-child) {
   margin-left: 0.4rem;
 }
-#catalog-products .product ul .red {
+#catalog-products .catalog-products .product ul .red {
   background-color: red;
 }
-#catalog-products .product ul .green {
+#catalog-products .catalog-products .product ul .green {
   background-color: green;
 }
-#catalog-products .product ul .blue {
+#catalog-products .catalog-products .product ul .blue {
   background-color: blue;
 }
 
