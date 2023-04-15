@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.custom-container {
+  position: relative;
+  width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 #products .product {
   position: relative;
 }
@@ -215,6 +224,27 @@
 }
 #catalog-products .brand ul li {
   list-style: none;
+}
+#catalog-products .size__header {
+  display: flex;
+  justify-content: space-between;
+}
+#catalog-products .size__header h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+#catalog-products .size__body ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  width: 85%;
+}
+#catalog-products .size__body ul li {
+  list-style: none;
+}
+#catalog-products .size__body ul li a {
+  text-decoration: none;
 }
 #catalog-products .dress__header {
   display: flex;
