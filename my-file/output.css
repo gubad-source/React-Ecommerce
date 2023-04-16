@@ -9,10 +9,43 @@
   flex-wrap: wrap;
 }
 
-#products .product {
+#products .wear h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-transform: capitalize;
+}
+#products .wear ul {
+  padding: 0;
+}
+#products .wear ul li {
+  list-style: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+#products .wear ul li input {
+  margin-right: 0.4rem;
+}
+#products .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+#products .products .product {
   position: relative;
 }
-#products .product .discount {
+#products .products .product .discount {
   position: absolute;
   width: 40px;
   height: 20px;
@@ -30,7 +63,7 @@
   background-color: #292a2d;
   justify-content: center;
 }
-#products .product .top-product {
+#products .products .product .top-product {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -42,7 +75,7 @@
   /* Gray 4 */
   color: #bdbdbd;
 }
-#products .product p {
+#products .products .product p {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
@@ -53,12 +86,12 @@
   color: #000000;
   margin: 0px;
 }
-#products .product .price {
+#products .products .product .price {
   display: flex;
   position: relative;
 }
-#products .product .price .low-price,
-#products .product .price .current-price {
+#products .products .product .price .low-price,
+#products .products .product .price .current-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -70,10 +103,10 @@
   /* Black */
   color: #000000;
 }
-#products .product .price .low-price {
+#products .products .product .price .low-price {
   color: #eb5757;
 }
-#products .product .price .discount-price {
+#products .products .product .price .discount-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -434,6 +467,26 @@ footer #crisp-footer .foot-subscribe p {
   text-transform: uppercase;
   color: #828282;
 }
+footer #crisp-footer .foot-subscribe .subscribe-input {
+  background: #000000;
+  border: 1px solid #ffffff;
+  padding: 0.4rem 1rem;
+}
+footer #crisp-footer .foot-subscribe .subscribe-button {
+  background-color: #ffffff;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3f3f3f;
+  padding: 0.4rem 4.9rem;
+  margin-top: 0.4rem;
+}
 footer #crisp-footer .copyright {
   color: #ffffff;
 }
@@ -443,6 +496,11 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 0px 10px;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem !important;
 }
 nav ul {
   display: flex;
@@ -473,5 +531,22 @@ nav .account-cart {
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  color: #ffffff;
+}
+nav .account-cart .storage-info__text {
+  font-family: "Roboto";
+  font-size: 9px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+nav .account-cart .storage-info__price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
   color: #ffffff;
 }/*# sourceMappingURL=output.css.map */

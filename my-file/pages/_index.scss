@@ -1,75 +1,64 @@
 #products {
-  .product {
-    // padding: 30px 13px 48px 13px;
-    position: relative;
-    .discount {
-      position: absolute;
-      width: 40px;
-      height: 20px;
-      left: 0px;
-      top: 15px;
-
+  .wear {
+    h1 {
       font-family: "Oswald";
       font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 68px;
       display: flex;
       align-items: center;
-      text-align: center;
-      color: $white-color;
-
-      background-color: $secondary-black;
-      justify-content: center;
-    }
-    .top-product {
-      font-family: "Oswald";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 18px;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-
-      /* Gray 4 */
-
-      color: $grey-color;
-    }
-    p {
-      font-family: "Oswald";
-      font-style: normal;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 27px;
-      display: flex;
-      align-items: center;
-
       color: $black-color;
-      margin: 0px;
+      text-transform: capitalize;
     }
-    .price {
-      display: flex;
-      position: relative;
-      .low-price,
-      .current-price {
-        font-family: "Oswald";
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        font-family: "Roboto";
         font-style: normal;
-        font-weight: 900;
-        font-size: 22px;
-        line-height: 33px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 40px;
         display: flex;
         align-items: center;
         text-transform: uppercase;
+        color: $grey-color-3f;
 
-        /* Black */
+        input {
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
 
-        color: $black-color;
+    .product {
+      // padding: 30px 13px 48px 13px;
+      position: relative;
+      .discount {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        left: 0px;
+        top: 15px;
+
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $white-color;
+
+        background-color: $secondary-black;
+        justify-content: center;
       }
-      .low-price {
-        color: $pink-color;
-      }
-      .discount-price {
+      .top-product {
         font-family: "Oswald";
         font-style: normal;
         font-weight: 600;
@@ -78,10 +67,58 @@
         display: flex;
         align-items: center;
         text-transform: uppercase;
+
+        /* Gray 4 */
+
         color: $grey-color;
-        position: absolute;
-        bottom: 10%;
-        right: 42%;
+      }
+      p {
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: $black-color;
+        margin: 0px;
+      }
+      .price {
+        display: flex;
+        position: relative;
+        .low-price,
+        .current-price {
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 22px;
+          line-height: 33px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+
+          /* Black */
+
+          color: $black-color;
+        }
+        .low-price {
+          color: $pink-color;
+        }
+        .discount-price {
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          color: $grey-color;
+          position: absolute;
+          bottom: 10%;
+          right: 42%;
+        }
       }
     }
   }
