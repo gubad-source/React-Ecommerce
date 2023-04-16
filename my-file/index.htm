@@ -11,6 +11,13 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
@@ -41,6 +48,21 @@
       </ul>
     </nav>
 
+    <section id="mobile-nav">
+      <div class="hamburger"><i class="fa-solid fa-bars text-light"></i></div>
+      <div class="logo"><img src="./images/crisp.svg" alt="" /></div>
+      <ul class="search-cart">
+        <li>
+          <a href="#"
+            ><i class="text-light fa-solid fa-magnifying-glass"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/cart.svg" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+
     <section id="products">
       <div class="container-fluid">
         <div class="row">
@@ -63,7 +85,7 @@
           </div>
           <div class="col-lg-9">
             <div class="products">
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -78,7 +100,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <span class="discount">-30%</span>
                   <img
@@ -93,7 +115,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -107,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -122,7 +144,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <span class="discount">-30%</span>
                   <img
@@ -137,7 +159,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -151,7 +173,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -166,7 +188,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-6">
                 <div class="product">
                   <img
                     src="./images/Rectangle 7.png"
@@ -299,7 +321,11 @@
             </div>
             <div class="col-lg-2">
               <ul class="foot-col">
-                <h3>FEATURES</h3>
+                <div class="foot-col__header">
+                  <h3>FEATURES</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
+
                 <li><a href="#">MEN</a></li>
                 <li><a href="#">WOMEN</a></li>
                 <li><a href="#">BOYS</a></li>
@@ -312,7 +338,10 @@
             </div>
             <div class="col-lg-2">
               <ul class="foot-col">
-                <h3>MENU</h3>
+                <div class="foot-col__header">
+                  <h3>Menu</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#">CONTACT US</a></li>
                 <li><a href="#">MY ACCOUNT</a></li>
@@ -325,7 +354,10 @@
             </div>
             <div class="col-lg-2">
               <ul class="foot-col">
-                <h3>CONTACT US</h3>
+                <div class="foot-col__header">
+                  <h3>Contact us</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
                 <li>
                   <div class="content">
                     <p>ADDRESS:</p>
@@ -355,7 +387,10 @@
 
             <div class="col-lg-2">
               <ul class="foot-col">
-                <h3>FOLLOW US</h3>
+                <div class="foot-col__header">
+                  <h3>Follow us</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
                 <li><a href="#">FACEBOOK</a></li>
                 <li><a href="#">TWITTER</a></li>
                 <li><a href="#">INSTAGRAM</a></li>
@@ -391,6 +426,7 @@
         </div>
       </section>
     </footer>
+
     <script src="./app.js"></script>
   </body>
 </html>

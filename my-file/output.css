@@ -227,6 +227,11 @@
   padding: 5px 15px;
 }
 
+#mobile-nav {
+  display: none;
+  background-color: #000000;
+}
+
 #blog .blog h1 {
   font-family: "Oswald";
   font-style: normal;
@@ -429,8 +434,11 @@ footer #crisp-footer {
   background-color: #000000;
   padding: 30px 10px 20px;
 }
-footer #crisp-footer .foot-col h3 {
+footer #crisp-footer .foot-col .foot-col__header h3 {
   color: #ffffff;
+}
+footer #crisp-footer .foot-col .foot-col__header i {
+  display: none;
 }
 footer #crisp-footer .foot-col li {
   list-style: none;
@@ -549,4 +557,93 @@ nav .account-cart .storage-info__price {
   align-items: center;
   letter-spacing: 0.01em;
   color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  #mobile-nav .search-cart {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  #mobile-nav .search-cart li {
+    list-style: none;
+  }
+  #mobile-nav .search-cart li:not(:last-child) {
+    margin-right: 1rem;
+  }
+  #mobile-nav .search-cart li a {
+    text-decoration: none;
+  }
+  #products,
+  #explore,
+  #blogs {
+    display: none;
+  }
+  footer #footer-top .footer-top__list {
+    display: flex;
+    flex-direction: column;
+  }
+  footer #crisp-footer .crisp-foot {
+    display: flex;
+    justify-content: center;
+  }
+  footer #crisp-footer .foot-col {
+    margin: 0;
+    padding: 0;
+  }
+  footer #crisp-footer .foot-col .foot-col__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer #crisp-footer .foot-col .foot-col__header h3 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  footer #crisp-footer .foot-col .foot-col__header i {
+    display: block;
+  }
+  footer #crisp-footer .foot-col li {
+    display: none;
+  }
+  footer #crisp-footer .foot-subscribe h3 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  footer #crisp-footer .foot-subscribe form input {
+    width: 100%;
+  }
+  footer #crisp-footer .foot-subscribe form .subscribe-button {
+    width: 100%;
+    padding: 0.4rem 10rem;
+  }
+  footer #crisp-footer .copyright {
+    margin-top: 4rem;
+  }
 }/*# sourceMappingURL=output.css.map */

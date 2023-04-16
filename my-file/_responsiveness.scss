@@ -1,0 +1,100 @@
+@media screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    .search-cart {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #products,
+  #explore,
+  #blogs {
+    display: none;
+  }
+  footer {
+    #footer-top {
+      .footer-top__list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    #crisp-footer {
+      .crisp-foot {
+        display: flex;
+        justify-content: center;
+      }
+      .foot-col {
+        margin: 0;
+        padding: 0;
+        .foot-col__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            color: #ffffff;
+          }
+          i {
+            display: block;
+          }
+        }
+        li {
+          display: none;
+        }
+      }
+      .foot-subscribe {
+        h3 {
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+
+          color: #ffffff;
+        }
+        form {
+          input {
+            width: 100%;
+          }
+          .subscribe-button {
+            width: 100%;
+            padding: 0.4rem 10rem;
+          }
+        }
+      }
+      .copyright {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

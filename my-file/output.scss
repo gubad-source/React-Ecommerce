@@ -1,4 +1,6 @@
 @import "variables";
+// @import "reset";
+
 // pages
 @import "pages/index";
 @import "pages/blog";
@@ -6,3 +8,5 @@
 // sections
 @import "sections/footer";
 @import "sections/header";
+
+@import "responsiveness";

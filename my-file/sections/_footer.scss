@@ -27,9 +27,15 @@ footer {
     background-color: $black-color;
     padding: 30px 10px 20px;
     .foot-col {
-      h3 {
-        color: $white-color;
+      .foot-col__header {
+        h3 {
+          color: $white-color;
+        }
+        i {
+          display: none;
+        }
       }
+
       li {
         list-style: none;
 
