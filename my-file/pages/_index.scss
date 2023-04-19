@@ -196,6 +196,7 @@
 #explore {
   .explore {
     display: flex;
+    padding: 4rem 0rem;
     h2 {
       box-sizing: border-box;
       font-family: "Oswald";
@@ -215,21 +216,6 @@
       line-height: 30px;
       letter-spacing: 0.01em;
       color: $black-color;
-    }
-    button {
-      font-family: "Oswald";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 27px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: $black-color;
-      background-color: $white-color;
-      padding: 5px 15px;
     }
   }
 }

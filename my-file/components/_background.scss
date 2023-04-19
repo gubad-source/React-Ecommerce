@@ -1,0 +1,36 @@
+.limits {
+  background-image: url("./images/Group 825.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .info {
+    padding: 6rem 0rem;
+    h1 {
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 72px;
+      text-transform: uppercase;
+      color: $black-color;
+    }
+    h5 {
+      font-family: "Roboto";
+      font-size: 25px;
+      line-height: 37px;
+      /* or 148% */
+
+      letter-spacing: 0.01em;
+
+      color: $black-color;
+    }
+  }
+}
+.limits-light {
+  @extend .limits;
+  .info {
+    h1,
+    h5 {
+      color: $white-color;
+    }
+  }
+}

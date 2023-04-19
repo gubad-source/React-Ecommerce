@@ -1,12 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-.custom-container {
-  position: relative;
-  width: 1500px;
+.shop-btn {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 5px 15px;
+  border: 2px solid #000000;
+}
+
+.limits, .limits-light {
+  background-image: url("./images/Group 825.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.limits .info, .limits-light .info {
+  padding: 6rem 0rem;
+}
+.limits .info h1, .limits-light .info h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.limits .info h5, .limits-light .info h5 {
+  font-family: "Roboto";
+  font-size: 25px;
+  line-height: 37px;
+  /* or 148% */
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.limits-light .info h1,
+.limits-light .info h5 {
+  color: #ffffff;
 }
 
 #products .wear h1 {
@@ -190,6 +229,7 @@
 
 #explore .explore {
   display: flex;
+  padding: 4rem 0rem;
 }
 #explore .explore h2 {
   box-sizing: border-box;
@@ -210,21 +250,6 @@
   line-height: 30px;
   letter-spacing: 0.01em;
   color: #000000;
-}
-#explore .explore button {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #000000;
-  background-color: #ffffff;
-  padding: 5px 15px;
 }
 
 #mobile-nav {

@@ -1,0 +1,16 @@
+.shop-btn {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $black-color;
+  background-color: $white-color;
+  padding: 5px 15px;
+  border: 2px solid $black-color;
+}
