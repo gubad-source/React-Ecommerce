@@ -1,0 +1,21 @@
+@mixin brand-background($area, $background) {
+  grid-area: $area;
+  background-image: $background;
+  background-size: cover;
+  h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: $black-color;
+  }
+  p {
+    font-family: "Roboto";
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    color: $black-color;
+  }
+}

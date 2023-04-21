@@ -223,3 +223,44 @@
   display: none;
   background-color: $black-color;
 }
+#brands {
+  .brand-items {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "left1 right1"
+      "left2 right1";
+    .item {
+      padding: 6rem;
+    }
+    .item1 {
+      @include brand-background(
+        $area: left1,
+        $background: url("./images/brand1.png")
+      );
+    }
+    .item2 {
+      @include brand-background(
+        $area: left2,
+        $background: url("./images/brand3.png")
+      );
+    }
+    .item3 {
+      @include brand-background(
+        $area: right1,
+        $background: url("./images/brand2.png")
+      );
+      h1 {
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 110px;
+        text-transform: uppercase;
+        color: #131313;
+      }
+    }
+  }
+}

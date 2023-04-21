@@ -14,3 +14,7 @@
   padding: 5px 15px;
   border: 2px solid $black-color;
 }
+.shop-btn-transparent {
+  @extend .shop-btn;
+  background: transparent;
+}

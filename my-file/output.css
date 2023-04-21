@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-.shop-btn {
+.shop-btn, .shop-btn-transparent {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -15,6 +15,10 @@
   background-color: #ffffff;
   padding: 5px 15px;
   border: 2px solid #000000;
+}
+
+.shop-btn-transparent {
+  background: transparent;
 }
 
 .limits, .limits-light {
@@ -257,6 +261,89 @@
   background-color: #000000;
 }
 
+#brands .brand-items {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "left1 right1" "left2 right1";
+}
+#brands .brand-items .item {
+  padding: 6rem;
+}
+#brands .brand-items .item1 {
+  grid-area: left1;
+  background-image: url("./images/brand1.png");
+  background-size: cover;
+}
+#brands .brand-items .item1 h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #000000;
+}
+#brands .brand-items .item1 p {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+#brands .brand-items .item2 {
+  grid-area: left2;
+  background-image: url("./images/brand3.png");
+  background-size: cover;
+}
+#brands .brand-items .item2 h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #000000;
+}
+#brands .brand-items .item2 p {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+#brands .brand-items .item3 {
+  grid-area: right1;
+  background-image: url("./images/brand2.png");
+  background-size: cover;
+}
+#brands .brand-items .item3 h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #000000;
+}
+#brands .brand-items .item3 p {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+#brands .brand-items .item3 h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 110px;
+  text-transform: uppercase;
+  color: #131313;
+}
+
 #blog .blog h1 {
   font-family: "Oswald";
   font-style: normal;
@@ -430,6 +517,29 @@
 }
 #catalog-products .catalog-products .product ul .blue {
   background-color: blue;
+}
+#catalog-products .catalog-background {
+  background-image: url("./images/Group 840.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#catalog-products .catalog-background .info {
+  padding: 6rem;
+  width: 70%;
+}
+#catalog-products .catalog-background .info h1 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 72px;
+}
+#catalog-products .catalog-background .info h5 {
+  font-family: "Roboto";
+  letter-spacing: 0.01em;
+  color: #ffffff;
 }
 
 footer #footer-top {
