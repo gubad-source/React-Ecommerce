@@ -22,8 +22,8 @@
 }
 
 .limits, .limits-light {
-  background-image: url("./images/Group 825.png");
-  background-size: cover;
+  background-image: url("./images/woman in hat.png");
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .limits .info, .limits-light .info {
@@ -32,17 +32,17 @@
 .limits .info h1, .limits-light .info h1 {
   font-family: "Oswald";
   font-style: normal;
-  font-weight: 500;
-  font-size: 56px;
-  line-height: 72px;
+  font-weight: 900;
+  font-size: 57px;
+  line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+  padding: 0rem 0rem 2rem;
 }
 .limits .info h5, .limits-light .info h5 {
   font-family: "Roboto";
-  font-size: 25px;
+  font-size: 22px;
   line-height: 37px;
-  /* or 148% */
   letter-spacing: 0.01em;
   color: #000000;
 }
@@ -261,6 +261,34 @@
   background-color: #000000;
 }
 
+#brands .brand-tabs {
+  position: relative;
+}
+#brands .brand-tabs__logo {
+  position: absolute;
+  top: -12px;
+  left: 38%;
+  background-color: #ffffff;
+  padding: 0rem 6rem;
+}
+#brands .brand-tabs ul {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #c4c4c4;
+  margin: 2rem 0rem;
+}
+#brands .brand-tabs ul a {
+  text-decoration: none;
+}
+#brands .brand-tabs ul a span {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 110px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
 #brands .brand-items {
   display: grid;
   grid-gap: 1em;
@@ -275,6 +303,7 @@
   grid-area: left1;
   background-image: url("./images/brand1.png");
   background-size: cover;
+  position: relative;
 }
 #brands .brand-items .item1 h1 {
   font-family: "Oswald";
@@ -291,6 +320,10 @@
   line-height: 37px;
   letter-spacing: 0.01em;
   color: #000000;
+}
+#brands .brand-items .item1 .info1 {
+  position: absolute;
+  right: 3rem;
 }
 #brands .brand-items .item2 {
   grid-area: left2;
@@ -317,6 +350,7 @@
   grid-area: right1;
   background-image: url("./images/brand2.png");
   background-size: cover;
+  position: relative;
 }
 #brands .brand-items .item3 h1 {
   font-family: "Oswald";
@@ -333,6 +367,11 @@
   line-height: 37px;
   letter-spacing: 0.01em;
   color: #000000;
+}
+#brands .brand-items .item3 .info3 {
+  position: relative;
+  top: 20rem;
+  left: 3rem;
 }
 #brands .brand-items .item3 h1 {
   font-family: "Oswald";

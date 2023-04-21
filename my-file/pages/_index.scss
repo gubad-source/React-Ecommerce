@@ -224,6 +224,34 @@
   background-color: $black-color;
 }
 #brands {
+  .brand-tabs {
+    position: relative;
+    &__logo {
+      position: absolute;
+      top: -12px;
+      left: 38%;
+      background-color: $white-color;
+      padding: 0rem 6rem;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      border: 2px solid #c4c4c4;
+      margin: 2rem 0rem;
+      a {
+        text-decoration: none;
+        span {
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 45px;
+          line-height: 110px;
+          text-transform: uppercase;
+          color: $grey-color-3f;
+        }
+      }
+    }
+  }
   .brand-items {
     display: grid;
     grid-gap: 1em;
@@ -240,6 +268,11 @@
         $area: left1,
         $background: url("./images/brand1.png")
       );
+      position: relative;
+      .info1 {
+        position: absolute;
+        right: 3rem;
+      }
     }
     .item2 {
       @include brand-background(
@@ -252,6 +285,12 @@
         $area: right1,
         $background: url("./images/brand2.png")
       );
+      position: relative;
+      .info3 {
+        position: relative;
+        top: 20rem;
+        left: 3rem;
+      }
       h1 {
         font-family: "Oswald";
         font-style: normal;
