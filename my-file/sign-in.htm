@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <section id="sign-in">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="sign-in">
+              <span>home/create new customer account</span>
+              <h1>create new customer account</h1>
+              <form method="#">
+                <h3>personal information</h3>
+                <div class="input-field">
+                  <label for="firstname">first name</label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    value=""
+                    placeholder="Mabus"
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label for="lastname">last name</label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    placeholder="Quinsey"
+                  />
+                </div>
+
+                <div class="input-field-checkbox">
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  <label for="checkbox">sign up for news letter</label>
+                </div>
+                <h3>sign up for newsletter</h3>
+                <div class="input-field">
+                  <label for="email">email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="mabusquinsey@gmail.com"
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label for="password">password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="password"
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label for="repeat-password">confirm password</label>
+
+                  <input
+                    type="password"
+                    name="repeat-password"
+                    id="repeat-password"
+                    placeholder="repeat-password"
+                  />
+                </div>
+
+                <div class="input-field">
+                  <button class="shop-btn-black" type="submit">
+                    create an account
+                  </button>
+                  <p>back</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

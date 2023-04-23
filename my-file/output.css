@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-.shop-btn, .shop-btn-transparent {
+.shop-btn, .shop-btn-black, .shop-btn-transparent {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -19,6 +19,22 @@
 
 .shop-btn-transparent {
   background: transparent;
+}
+
+.shop-btn-black {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .limits, .limits-light {
@@ -383,6 +399,21 @@
   color: #131313;
 }
 
+#blog-background {
+  background-image: url("./images/article-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#blog-background .blog-background-title {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0rem;
+}
+#blog-background .blog-background-title h1 {
+  background: #ffffff;
+  padding: 2rem;
+}
+
 #blog .blog h1 {
   font-family: "Oswald";
   font-style: normal;
@@ -579,6 +610,91 @@
   font-family: "Roboto";
   letter-spacing: 0.01em;
   color: #ffffff;
+}
+
+#sign-in .sign-in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#sign-in .sign-in span {
+  color: #c4c4c4;
+  text-transform: capitalize;
+}
+#sign-in .sign-in h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: center;
+  color: #000000;
+  text-transform: capitalize;
+}
+#sign-in .sign-in form {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 10rem;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+}
+#sign-in .sign-in form h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-transform: capitalize;
+}
+#sign-in .sign-in form .input-field {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#sign-in .sign-in form .input-field label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #3f3f3f;
+  text-transform: capitalize;
+}
+#sign-in .sign-in form .input-field input {
+  width: 75%;
+  padding: 0.4rem;
+}
+#sign-in .sign-in form .input-field p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  /* Gray 1 */
+  color: #828282;
+}
+#sign-in .sign-in form .input-field-checkbox {
+  width: 100%;
+  display: flex;
+}
+#sign-in .sign-in form .input-field-checkbox input {
+  margin: 0 0.4rem 0 0;
 }
 
 footer #footer-top {

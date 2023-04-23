@@ -18,3 +18,19 @@
   @extend .shop-btn;
   background: transparent;
 }
+.shop-btn-black {
+  @extend .shop-btn;
+  background-color: $black-color;
+  color: $white-color;
+  padding: 0.5rem 2rem;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
