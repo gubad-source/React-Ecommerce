@@ -1,18 +1,32 @@
 #dashboard {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   .dashboard-title {
     display: flex;
     flex-direction: column;
     text-align: center;
+    span {
+      color: $grey-color-c4;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 68px;
+      text-align: center;
+      color: $black-color;
+      text-transform: capitalize;
+    }
   }
   .dashboard-body {
     display: flex;
     justify-content: space-between;
     border: 1px solid $grey-color-c4;
-    width: 50rem;
+    width: 66rem;
     padding: 2rem 4rem;
     .dashboard-list {
       ul {
@@ -42,27 +56,114 @@
     }
     .account-address {
       display: flex;
+      flex-direction: column;
       .account {
         .account-title {
           h3 {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            color: $black-color;
           }
         }
         .account-information {
+          display: flex;
+          justify-content: space-between;
           &__contact {
+            width: 50%;
+            h3 {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
           }
           &__newsletters {
+            width: 50%;
+            h3 {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
           }
         }
       }
       .address {
         .address-title {
           h3 {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            color: $black-color;
           }
         }
         .address-book {
+          display: flex;
+          justify-content: space-between;
           &__billing {
+            width: 50%;
+            h3 {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
           }
           &__shipping {
+            width: 50%;
+            h3 {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
           }
         }
       }

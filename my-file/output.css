@@ -37,6 +37,13 @@
   text-transform: uppercase;
 }
 
+.dashboard-btn {
+  background: #e6f1fa;
+  padding: 0.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 .limits, .limits-light {
   background-image: url("./images/woman in hat.png");
   background-size: contain;
@@ -386,7 +393,7 @@
 }
 #brands .brand-items .item3 .info3 {
   position: relative;
-  top: 20rem;
+  top: 18rem;
   left: 3rem;
 }
 #brands .brand-items .item3 h1 {
@@ -612,13 +619,6 @@
   color: #ffffff;
 }
 
-#sign-in .sign-in {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 #sign-in .sign-in span {
   color: #c4c4c4;
   text-transform: capitalize;
@@ -634,7 +634,7 @@
   text-transform: capitalize;
 }
 #sign-in .sign-in form {
-  width: 50rem;
+  width: 66rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -697,22 +697,30 @@
   margin: 0 0.4rem 0 0;
 }
 
-#dashboard {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 #dashboard .dashboard-title {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+#dashboard .dashboard-title span {
+  color: #c4c4c4;
+  text-transform: capitalize;
+}
+#dashboard .dashboard-title h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: center;
+  color: #000000;
+  text-transform: capitalize;
+}
 #dashboard .dashboard-body {
   display: flex;
   justify-content: space-between;
   border: 1px solid #c4c4c4;
-  width: 50rem;
+  width: 66rem;
   padding: 2rem 4rem;
 }
 #dashboard .dashboard-body .dashboard-list ul {
@@ -740,7 +748,111 @@
 }
 #dashboard .dashboard-body .account-address {
   display: flex;
+  flex-direction: column;
 }
+#dashboard .dashboard-body .account-address .account .account-title h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+}
+#dashboard .dashboard-body .account-address .account .account-information {
+  display: flex;
+  justify-content: space-between;
+}
+#dashboard .dashboard-body .account-address .account .account-information__contact {
+  width: 50%;
+}
+#dashboard .dashboard-body .account-address .account .account-information__contact h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+#dashboard .dashboard-body .account-address .account .account-information__contact p {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #828282;
+}
+#dashboard .dashboard-body .account-address .account .account-information__newsletters {
+  width: 50%;
+}
+#dashboard .dashboard-body .account-address .account .account-information__newsletters h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+#dashboard .dashboard-body .account-address .account .account-information__newsletters p {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #828282;
+}
+#dashboard .dashboard-body .account-address .address .address-title h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+}
+#dashboard .dashboard-body .account-address .address .address-book {
+  display: flex;
+  justify-content: space-between;
+}
+#dashboard .dashboard-body .account-address .address .address-book__billing {
+  width: 50%;
+}
+#dashboard .dashboard-body .account-address .address .address-book__billing h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+#dashboard .dashboard-body .account-address .address .address-book__billing p {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #828282;
+}
+#dashboard .dashboard-body .account-address .address .address-book__shipping {
+  width: 50%;
+}
+#dashboard .dashboard-body .account-address .address .address-book__shipping h3 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+#dashboard .dashboard-body .account-address .address .address-book__shipping p {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #828282;
+}
+
 footer #footer-top {
   height: 100px;
   background: #e6f1fa;
