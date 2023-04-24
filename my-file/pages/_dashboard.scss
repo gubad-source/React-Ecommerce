@@ -1,0 +1,71 @@
+#dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .dashboard-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .dashboard-body {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $grey-color-c4;
+    width: 50rem;
+    padding: 2rem 4rem;
+    .dashboard-list {
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          line-height: 2rem;
+
+          a {
+            text-decoration: none;
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            color: $grey-color-82;
+            &.active {
+              background: #f0f2f2;
+              color: $black-color;
+              font-weight: 900;
+              padding: 0.4rem 4rem 0.4rem 0.4rem;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+    .account-address {
+      display: flex;
+      .account {
+        .account-title {
+          h3 {
+          }
+        }
+        .account-information {
+          &__contact {
+          }
+          &__newsletters {
+          }
+        }
+      }
+      .address {
+        .address-title {
+          h3 {
+          }
+        }
+        .address-book {
+          &__billing {
+          }
+          &__shipping {
+          }
+        }
+      }
+    }
+  }
+}

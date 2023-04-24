@@ -10,3 +10,21 @@
 
 //   // document.querySelector(".color").innerHTML = div;
 // }
+function signIn() {
+  let firstname = document.querySelector("#firstname").value;
+  let lastname = document.querySelector("#lastname").value;
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
+  let repeatPassword = document.querySelector("#repeat-password").value;
+  let checkbox = document.querySelector("#checkbox");
+
+  if (checkbox.checked == true && password == repeatPassword) {
+    const user = {
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      password: password,
+    };
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+}
