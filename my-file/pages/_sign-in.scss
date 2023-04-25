@@ -1,19 +1,26 @@
 #sign-in {
   .sign-in {
-    span {
-      color: $grey-color-c4;
-      text-transform: capitalize;
+    .sign-in__title {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      @include dash-title;
+      // span {
+      //   color: $grey-color-c4;
+      //   text-transform: capitalize;
+      // }
+      // h1 {
+      //   font-family: "Oswald";
+      //   font-style: normal;
+      //   font-weight: 900;
+      //   font-size: 48px;
+      //   line-height: 68px;
+      //   text-align: center;
+      //   color: $black-color;
+      //   text-transform: capitalize;
+      // }
     }
-    h1 {
-      font-family: "Oswald";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 68px;
-      text-align: center;
-      color: $black-color;
-      text-transform: capitalize;
-    }
+
     // position: absolute;
     // top: 50%;
     // left: 50%;
@@ -40,25 +47,26 @@
         text-transform: capitalize;
       }
       .input-field {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 1rem;
-        label {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 16px;
-          line-height: 20px;
-          display: flex;
-          align-items: center;
-          color: $grey-color-3f;
-          text-transform: capitalize;
-        }
-        input {
-          width: 75%;
-          padding: 0.4rem;
-        }
+        @include input-field;
+        // display: flex;
+        // justify-content: space-between;
+        // width: 100%;
+        // margin-bottom: 1rem;
+        // label {
+        //   font-family: "Roboto";
+        //   font-style: normal;
+        //   font-weight: 900;
+        //   font-size: 16px;
+        //   line-height: 20px;
+        //   display: flex;
+        //   align-items: center;
+        //   color: $grey-color-3f;
+        //   text-transform: capitalize;
+        // }
+        // input {
+        //   width: 75%;
+        //   padding: 0.4rem;
+        // }
         p {
           font-family: "Oswald";
           font-style: normal;

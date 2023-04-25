@@ -19,3 +19,69 @@
     color: $black-color;
   }
 }
+@mixin dashboard-list {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      line-height: 2rem;
+
+      a {
+        text-decoration: none;
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: $grey-color-82;
+        &.active {
+          background: #f0f2f2;
+          color: $black-color;
+          font-weight: 900;
+          padding: 0.4rem 4rem 0.4rem 0.4rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+@mixin input-field {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: $grey-color-3f;
+    text-transform: capitalize;
+  }
+  input {
+    width: 75%;
+    padding: 0.4rem;
+  }
+}
+@mixin dash-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    color: $grey-color-c4;
+    text-transform: capitalize;
+  }
+  h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 68px;
+    text-align: center;
+    color: $black-color;
+    text-transform: capitalize;
+  }
+}
