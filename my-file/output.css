@@ -927,6 +927,82 @@
   padding: 0.4rem;
 }
 
+#add-address .add-address__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#add-address .add-address__title span {
+  color: #c4c4c4;
+  text-transform: capitalize;
+}
+#add-address .add-address__title h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: center;
+  color: #000000;
+  text-transform: capitalize;
+}
+#add-address .add-address__body {
+  display: flex;
+}
+#add-address .add-address__body .dashboard-list ul {
+  padding: 0;
+}
+#add-address .add-address__body .dashboard-list ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+#add-address .add-address__body .dashboard-list ul li a {
+  text-decoration: none;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #828282;
+}
+#add-address .add-address__body .dashboard-list ul li a.active {
+  background: #f0f2f2;
+  color: #000000;
+  font-weight: 900;
+  padding: 0.4rem 4rem 0.4rem 0.4rem;
+  text-transform: capitalize;
+}
+#add-address .add-address__body form .input-field {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#add-address .add-address__body form .input-field label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #3f3f3f;
+  text-transform: capitalize;
+}
+#add-address .add-address__body form .input-field input {
+  width: 75%;
+  padding: 0.4rem;
+}
+#add-address .add-address__body form .input-field-select {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#add-address .add-address__body form .input-field-select select {
+  width: 75%;
+  padding: 0.4rem;
+}
+
 footer #footer-top {
   height: 100px;
   background: #e6f1fa;
