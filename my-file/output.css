@@ -1003,6 +1003,92 @@
   padding: 0.4rem;
 }
 
+#wishlist .wishlist__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wishlist .wishlist__title span {
+  color: #c4c4c4;
+  text-transform: capitalize;
+}
+#wishlist .wishlist__title h1 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: center;
+  color: #000000;
+  text-transform: capitalize;
+}
+#wishlist .wishlist__body {
+  display: flex;
+}
+#wishlist .wishlist__body__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame .item p {
+  margin: 0;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame .item .count-cart {
+  display: flex;
+  justify-content: space-between;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame .item .count-cart .add-to-cart {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 21px;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame .item .count-cart span {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3f3f3f;
+  border: 1px solid #c4c4c4;
+  padding: 0.2rem 0.7rem;
+}
+#wishlist .wishlist__body__items .wishlist__body__items__frame .buttons button {
+  border-style: none;
+}
+#wishlist .wishlist__body .dashboard-list ul {
+  padding: 0;
+}
+#wishlist .wishlist__body .dashboard-list ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+#wishlist .wishlist__body .dashboard-list ul li a {
+  text-decoration: none;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #828282;
+}
+#wishlist .wishlist__body .dashboard-list ul li a.active {
+  background: #f0f2f2;
+  color: #000000;
+  font-weight: 900;
+  padding: 0.4rem 4rem 0.4rem 0.4rem;
+  text-transform: capitalize;
+}
+
 footer #footer-top {
   height: 100px;
   background: #e6f1fa;

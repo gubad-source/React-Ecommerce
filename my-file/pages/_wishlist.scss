@@ -1,0 +1,55 @@
+#wishlist {
+  .wishlist__title {
+    @include dash-title;
+  }
+  .wishlist__body {
+    display: flex;
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      .wishlist__body__items__frame {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        .item {
+          p {
+            margin: 0;
+          }
+          .count-cart {
+            display: flex;
+            justify-content: space-between;
+            .add-to-cart {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 11px;
+              line-height: 21px;
+            }
+            span {
+              font-family: "Oswald";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+              border: 1px solid $grey-color-c4;
+              padding: 0.2rem 0.7rem;
+            }
+          }
+        }
+        .buttons {
+          button {
+            border-style: none;
+          }
+        }
+      }
+    }
+    .dashboard-list {
+      @include dashboard-list;
+    }
+  }
+}
