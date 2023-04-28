@@ -1,4 +1,26 @@
 #wishlist {
+  position: relative;
+  .contact-side {
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: fixed;
+    right: -62px;
+    top: 40%;
+
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $white-color;
+    background-color: $black-color;
+    padding: 0.6rem 3rem;
+  }
   .wishlist__title {
     @include dash-title;
   }
@@ -46,6 +68,25 @@
             border-style: none;
           }
         }
+      }
+    }
+    .wishlist__footer {
+      display: flex;
+      &__item {
+        background: #f0f2f2;
+        border: 2px solid #c4c4c4;
+        display: inline-block;
+        padding: 0.4rem 1.6rem;
+
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #828282;
       }
     }
     .dashboard-list {
