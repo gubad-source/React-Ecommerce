@@ -111,6 +111,12 @@
 #products .products .product {
   position: relative;
 }
+#products .products .product .liked-basket {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
 #products .products .product .discount {
   position: absolute;
   width: 40px;
@@ -1338,9 +1344,13 @@ nav .account-cart .storage-info__price {
   #mobile-nav .search-cart li a {
     text-decoration: none;
   }
-  #products,
   #explore,
-  #blogs {
+  #blogs,
+  .cookie-wrapper,
+  .brand-items .info1,
+  .info2,
+  .info3,
+  #shoping-limits {
     display: none;
   }
   footer #footer-top .footer-top__list {
@@ -1399,5 +1409,119 @@ nav .account-cart .storage-info__price {
   }
   footer #crisp-footer .copyright {
     margin-top: 4rem;
+  }
+  #brands .brand-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  #brands .brand-tabs__logo {
+    display: none;
+  }
+  #brands .brand-tabs ul {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+  #brands .brand-tabs ul a {
+    width: 40%;
+    text-align: center;
+    border: 2px solid #828282;
+    margin: 0.6rem;
+  }
+  #brands .brand-tabs ul a span {
+    font-size: 25px;
+  }
+  #brands .brand-items {
+    display: flex;
+    flex-direction: column;
+  }
+  #brands .brand-items .item1 {
+    grid-area: none;
+    background-image: url("./images/brand1.png");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #brands .brand-items .item1 h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  #brands .brand-items .item1 p {
+    font-family: "Roboto";
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  #brands .brand-items .item2 {
+    grid-area: none;
+    background-image: url("./images/brand2.png");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #brands .brand-items .item2 h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  #brands .brand-items .item2 p {
+    font-family: "Roboto";
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  #brands .brand-items .item3 {
+    grid-area: none;
+    background-image: url("./images/brand3.png");
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #brands .brand-items .item3 h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  #brands .brand-items .item3 p {
+    font-family: "Roboto";
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  #brands .brand-items .item h1 {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  #brands .brand-items .item p {
+    font-size: 12px;
+  }
+  #brands .brand-items .item button {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=output.css.map */

@@ -23,9 +23,14 @@
       }
     }
   }
-  #products,
+
   #explore,
-  #blogs {
+  #blogs,
+  .cookie-wrapper,
+  .brand-items .info1,
+  .info2,
+  .info3,
+  #shoping-limits {
     display: none;
   }
   footer {
@@ -94,6 +99,80 @@
       }
       .copyright {
         margin-top: 4rem;
+      }
+    }
+  }
+  #brands {
+    .brand-tabs {
+      display: flex;
+      justify-content: center;
+      &__logo {
+        display: none;
+      }
+      ul {
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        a {
+          width: 40%;
+          text-align: center;
+          border: 2px solid $grey-color-82;
+          margin: 0.6rem;
+          span {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .brand-items {
+      display: flex;
+      flex-direction: column;
+
+      .item1 {
+        @include brand-background(
+          $area: none,
+          $background: url("./images/brand1.png")
+        );
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+      .item2 {
+        @include brand-background(
+          $area: none,
+          $background: url("./images/brand2.png")
+        );
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+      .item3 {
+        @include brand-background(
+          $area: none,
+          $background: url("./images/brand3.png")
+        );
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .item {
+        h1 {
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          text-transform: uppercase;
+          color: $black-color;
+        }
+        p {
+          font-size: 12px;
+        }
+        button {
+          font-size: 10px;
+        }
       }
     }
   }
