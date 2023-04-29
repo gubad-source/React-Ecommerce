@@ -218,7 +218,8 @@
     padding: 1rem 0rem;
   }
   // products
-  #shoping-limits {
+  #shoping-limits,
+  #shoping-limits-catalog1 {
     .limits {
       background-size: 100% 100%;
       .info {
@@ -295,6 +296,63 @@
     height: 100%;
     .article-tips {
       margin-top: 30px;
+    }
+  }
+  #catalog-products {
+    .brand,
+    .size,
+    .dress,
+    .color,
+    .about {
+      display: none;
+    }
+    .catalog-background {
+      .info {
+        margin-left: 1rem;
+        padding: 0;
+        h1 {
+          font-size: 14px;
+          line-height: 19px;
+        }
+        h5 {
+          font-size: 10px;
+          line-height: 13px;
+        }
+        button {
+          font-size: 10px;
+          padding: 0 15px;
+        }
+      }
+    }
+    .catalog-products {
+      .product {
+        ul {
+          display: none;
+        }
+        .price {
+          .discount-price {
+            bottom: 15%;
+            right: 2%;
+          }
+        }
+      }
+    }
+  }
+  #blog-background {
+    display: none;
+  }
+  #blog {
+    h1 {
+      text-align: center;
+    }
+  }
+  #wishlist {
+    .wishlist__body {
+      display: flex;
+      flex-direction: column;
+      .dashboard-list {
+        display: none;
+      }
     }
   }
 }

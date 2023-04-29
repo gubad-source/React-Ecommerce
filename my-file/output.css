@@ -1560,25 +1560,35 @@ nav .account-cart .storage-info__price {
   #products .products .product {
     padding: 1rem 0rem;
   }
-  #shoping-limits .limits, #shoping-limits .limits-light {
+  #shoping-limits .limits, #shoping-limits .limits-light,
+  #shoping-limits-catalog1 .limits,
+  #shoping-limits-catalog1 .limits-light {
     background-size: 100% 100%;
   }
-  #shoping-limits .limits .info, #shoping-limits .limits-light .info {
+  #shoping-limits .limits .info, #shoping-limits .limits-light .info,
+  #shoping-limits-catalog1 .limits .info,
+  #shoping-limits-catalog1 .limits-light .info {
     padding: 1rem;
   }
-  #shoping-limits .limits .info h1, #shoping-limits .limits-light .info h1 {
+  #shoping-limits .limits .info h1, #shoping-limits .limits-light .info h1,
+  #shoping-limits-catalog1 .limits .info h1,
+  #shoping-limits-catalog1 .limits-light .info h1 {
     font-size: 14px;
     padding: 0;
     margin: 0;
     line-height: 2;
   }
-  #shoping-limits .limits .info h5, #shoping-limits .limits-light .info h5 {
+  #shoping-limits .limits .info h5, #shoping-limits .limits-light .info h5,
+  #shoping-limits-catalog1 .limits .info h5,
+  #shoping-limits-catalog1 .limits-light .info h5 {
     font-size: 10px;
     padding: 0;
     margin: 0;
     line-height: 1;
   }
-  #shoping-limits .limits .info button, #shoping-limits .limits-light .info button {
+  #shoping-limits .limits .info button, #shoping-limits .limits-light .info button,
+  #shoping-limits-catalog1 .limits .info button,
+  #shoping-limits-catalog1 .limits-light .info button {
     font-size: 10px;
     padding: 0 15px;
     margin-top: 0.4rem;
@@ -1628,5 +1638,48 @@ nav .account-cart .storage-info__price {
   }
   #blogs .article-tips {
     margin-top: 30px;
+  }
+  #catalog-products .brand,
+  #catalog-products .size,
+  #catalog-products .dress,
+  #catalog-products .color,
+  #catalog-products .about {
+    display: none;
+  }
+  #catalog-products .catalog-background .info {
+    margin-left: 1rem;
+    padding: 0;
+  }
+  #catalog-products .catalog-background .info h1 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  #catalog-products .catalog-background .info h5 {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  #catalog-products .catalog-background .info button {
+    font-size: 10px;
+    padding: 0 15px;
+  }
+  #catalog-products .catalog-products .product ul {
+    display: none;
+  }
+  #catalog-products .catalog-products .product .price .discount-price {
+    bottom: 15%;
+    right: 2%;
+  }
+  #blog-background {
+    display: none;
+  }
+  #blog h1 {
+    text-align: center;
+  }
+  #wishlist .wishlist__body {
+    display: flex;
+    flex-direction: column;
+  }
+  #wishlist .wishlist__body .dashboard-list {
+    display: none;
   }
 }/*# sourceMappingURL=output.css.map */
