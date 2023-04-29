@@ -353,6 +353,25 @@
       .dashboard-list {
         display: none;
       }
+      &__items {
+        &__frame {
+          .item {
+            .count-cart {
+              .add-to-cart {
+                padding: 0 1rem;
+              }
+            }
+          }
+        }
+      }
+      .wishlist__footer {
+        display: flex;
+        flex-direction: column;
+        &__item {
+          width: 100%;
+          margin-top: 0.6rem;
+        }
+      }
     }
   }
 }

@@ -29,7 +29,7 @@
     &__items {
       display: flex;
       flex-wrap: wrap;
-      .wishlist__body__items__frame {
+      &__frame {
         display: flex;
         justify-content: space-between;
         margin-bottom: 2rem;
