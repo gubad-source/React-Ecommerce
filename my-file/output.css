@@ -264,6 +264,9 @@
   display: flex;
   padding: 4rem 0rem;
 }
+#explore .explore .explore-image .responsive-image {
+  display: none;
+}
 #explore .explore h2 {
   box-sizing: border-box;
   font-family: "Oswald";
@@ -1344,13 +1347,11 @@ nav .account-cart .storage-info__price {
   #mobile-nav .search-cart li a {
     text-decoration: none;
   }
-  #explore,
   #blogs,
   .cookie-wrapper,
   .brand-items .info1,
   .info2,
-  .info3,
-  #shoping-limits {
+  .info3 {
     display: none;
   }
   footer #footer-top .footer-top__list {
@@ -1523,5 +1524,92 @@ nav .account-cart .storage-info__price {
   }
   #brands .brand-items .item button {
     font-size: 10px;
+  }
+  #products .wear h1 {
+    padding: 0 1rem;
+  }
+  #products .wear ul {
+    display: none;
+  }
+  #products .wear .products .product {
+    padding: 1rem 0rem;
+  }
+  #products .wear .products .product .top-product {
+    font-size: 10px;
+    margin-top: 0.3rem;
+  }
+  #products .wear .products .product p {
+    font-size: 12px;
+  }
+  #products .wear .products .product .price .low-price {
+    font-size: 14px;
+  }
+  #products .products .product .price .low-price,
+  #products .products .product .price .current-price {
+    font-size: 17px;
+  }
+  #products .products .product .price .discount-price {
+    bottom: 19%;
+    right: 2%;
+  }
+  #products .products .product {
+    padding: 1rem 0rem;
+  }
+  #shoping-limits .limits, #shoping-limits .limits-light {
+    background-size: 100% 100%;
+  }
+  #shoping-limits .limits .info, #shoping-limits .limits-light .info {
+    padding: 1rem;
+  }
+  #shoping-limits .limits .info h1, #shoping-limits .limits-light .info h1 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+  }
+  #shoping-limits .limits .info h5, #shoping-limits .limits-light .info h5 {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  #shoping-limits .limits .info button, #shoping-limits .limits-light .info button {
+    font-size: 10px;
+    padding: 0 15px;
+    margin-top: 0.4rem;
+  }
+  #explore .explore {
+    flex-direction: column;
+  }
+  #explore .explore .explore-image .web-image {
+    display: none;
+  }
+  #explore .explore .explore-image .responsive-image {
+    display: block;
+  }
+  #explore .explore .explore-info {
+    position: absolute;
+    width: 70%;
+    bottom: 1rem;
+    right: 100px;
+    background: white;
+    padding: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #explore .explore .explore-info h2 {
+    border: none;
+    font-size: 14px;
+    line-height: 1rem;
+  }
+  #explore .explore .explore-info p {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  #explore .explore .explore-info button {
+    font-size: 10px;
+    line-height: 15px;
   }
 }/*# sourceMappingURL=output.css.map */

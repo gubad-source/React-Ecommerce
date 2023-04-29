@@ -203,6 +203,11 @@
   .explore {
     display: flex;
     padding: 4rem 0rem;
+    .explore-image {
+      .responsive-image {
+        display: none;
+      }
+    }
     h2 {
       box-sizing: border-box;
       font-family: "Oswald";

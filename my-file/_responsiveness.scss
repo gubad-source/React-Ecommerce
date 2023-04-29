@@ -24,13 +24,11 @@
     }
   }
 
-  #explore,
   #blogs,
   .cookie-wrapper,
   .brand-items .info1,
   .info2,
-  .info3,
-  #shoping-limits {
+  .info3 {
     display: none;
   }
   footer {
@@ -172,6 +170,114 @@
         }
         button {
           font-size: 10px;
+        }
+      }
+    }
+  }
+
+  // products
+  #products {
+    .wear {
+      h1 {
+        padding: 0 1rem;
+      }
+      ul {
+        display: none;
+      }
+      .products {
+        .product {
+          padding: 1rem 0rem;
+          .top-product {
+            font-size: 10px;
+            margin-top: 0.3rem;
+          }
+          p {
+            font-size: 12px;
+          }
+          .price {
+            .low-price {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #products .products .product .price .low-price,
+  #products .products .product .price .current-price {
+    font-size: 17px;
+  }
+  #products .products .product .price .discount-price {
+    bottom: 19%;
+    right: 2%;
+  }
+  #products .products .product {
+    padding: 1rem 0rem;
+  }
+  // products
+  #shoping-limits {
+    .limits {
+      background-size: 100% 100%;
+      .info {
+        padding: 1rem;
+        h1 {
+          font-size: 14px;
+          padding: 0;
+          margin: 0;
+          line-height: 2;
+        }
+        h5 {
+          font-size: 10px;
+          padding: 0;
+          margin: 0;
+          line-height: 1;
+        }
+        button {
+          font-size: 10px;
+          padding: 0 15px;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+  #explore {
+    .explore {
+      // background: url("./images/image 2.1.png");
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      flex-direction: column;
+      .explore-image {
+        // display: none;
+        .web-image {
+          display: none;
+        }
+        .responsive-image {
+          display: block;
+        }
+      }
+      .explore-info {
+        position: absolute;
+        width: 70%;
+        bottom: 1rem;
+        right: 100px;
+        background: white;
+        padding: 6px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          border: none;
+          font-size: 14px;
+          line-height: 1rem;
+        }
+        p {
+          font-size: 10px;
+          line-height: 13px;
+        }
+        button {
+          font-size: 10px;
+          line-height: 15px;
         }
       }
     }
