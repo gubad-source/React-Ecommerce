@@ -1,4 +1,7 @@
 @media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
   nav {
     display: none;
   }
@@ -24,7 +27,6 @@
     }
   }
 
-  #blogs,
   .cookie-wrapper,
   .brand-items .info1,
   .info2,
@@ -33,6 +35,7 @@
   }
   footer {
     #footer-top {
+      height: 100%;
       .footer-top__list {
         display: flex;
         flex-direction: column;
@@ -245,6 +248,12 @@
       // background: url("./images/image 2.1.png");
       // background-size: contain;
       // background-repeat: no-repeat;
+      .responsive-image {
+        display: block;
+      }
+      image {
+        width: 100%;
+      }
       flex-direction: column;
       .explore-image {
         // display: none;
@@ -280,6 +289,12 @@
           line-height: 15px;
         }
       }
+    }
+  }
+  #blogs {
+    height: 100%;
+    .article-tips {
+      margin-top: 30px;
     }
   }
 }

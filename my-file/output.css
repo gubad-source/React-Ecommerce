@@ -264,7 +264,7 @@
   display: flex;
   padding: 4rem 0rem;
 }
-#explore .explore .explore-image .responsive-image {
+#explore .explore .responsive-image {
   display: none;
 }
 #explore .explore h2 {
@@ -1323,6 +1323,9 @@ nav .account-cart .storage-info__price {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
   nav {
     display: none;
   }
@@ -1347,12 +1350,14 @@ nav .account-cart .storage-info__price {
   #mobile-nav .search-cart li a {
     text-decoration: none;
   }
-  #blogs,
   .cookie-wrapper,
   .brand-items .info1,
   .info2,
   .info3 {
     display: none;
+  }
+  footer #footer-top {
+    height: 100%;
   }
   footer #footer-top .footer-top__list {
     display: flex;
@@ -1581,6 +1586,12 @@ nav .account-cart .storage-info__price {
   #explore .explore {
     flex-direction: column;
   }
+  #explore .explore .responsive-image {
+    display: block;
+  }
+  #explore .explore image {
+    width: 100%;
+  }
   #explore .explore .explore-image .web-image {
     display: none;
   }
@@ -1611,5 +1622,11 @@ nav .account-cart .storage-info__price {
   #explore .explore .explore-info button {
     font-size: 10px;
     line-height: 15px;
+  }
+  #blogs {
+    height: 100%;
+  }
+  #blogs .article-tips {
+    margin-top: 30px;
   }
 }/*# sourceMappingURL=output.css.map */
