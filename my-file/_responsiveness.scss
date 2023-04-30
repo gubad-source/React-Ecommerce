@@ -346,6 +346,7 @@
       text-align: center;
     }
   }
+  // wishlist
   #wishlist {
     .wishlist__body {
       display: flex;
@@ -411,5 +412,90 @@
   }
   #sign-in .col-lg-12 .sign-in .sign-in__title {
     align-items: flex-start;
+  }
+  // wishlist
+
+  #dashboard {
+    .dashboard-title {
+      display: contents;
+      span {
+        margin-left: 4%;
+      }
+      h1 {
+        display: none;
+      }
+    }
+    .dashboard-body {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      border: none;
+      span {
+        display: inline-block;
+        margin-top: 0.4rem;
+      }
+      .dashboard-list {
+        display: none;
+      }
+      .account-address {
+        .account {
+          display: flex;
+          flex-direction: column;
+          .account-title {
+            margin-bottom: 1rem;
+            h3 {
+              margin: 0;
+              font-size: 30px;
+            }
+          }
+          .account-information {
+            display: flex;
+            flex-direction: column;
+            &__contact {
+              margin-bottom: 2rem;
+              h3 {
+                margin: 0;
+                font-size: 16px;
+              }
+            }
+            &__newsletters {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+        .address {
+          &-title {
+            margin: 0;
+            margin-bottom: 1rem;
+
+            h3 {
+              color: $grey-color-3f;
+              font-size: 30px;
+            }
+          }
+          &-book {
+            flex-direction: column;
+            &__billing,
+            &__shipping {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  #dashboard
+    .dashboard-body
+    .account-address
+    .account
+    .account-information__contact,
+  #dashboard
+    .dashboard-body
+    .account-address
+    .account
+    .account-information__newsletters,
+  #dashboard .dashboard-body .account-address .address .address-book__shipping,
+  #dashboard .dashboard-body .account-address .address .address-book__billing {
+    width: 100%;
   }
 }
