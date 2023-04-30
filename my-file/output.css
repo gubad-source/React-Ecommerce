@@ -659,16 +659,20 @@
   color: #ffffff;
 }
 
-#sign-in .sign-in .sign-in__title {
+#sign-in .col-lg-12 {
+  display: flex;
+  justify-content: center;
+}
+#sign-in .col-lg-12 .sign-in .sign-in__title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#sign-in .sign-in .sign-in__title span {
+#sign-in .col-lg-12 .sign-in .sign-in__title span {
   color: #c4c4c4;
   text-transform: capitalize;
 }
-#sign-in .sign-in .sign-in__title h1 {
+#sign-in .col-lg-12 .sign-in .sign-in__title h1 {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -678,7 +682,7 @@
   color: #000000;
   text-transform: capitalize;
 }
-#sign-in .sign-in form {
+#sign-in .col-lg-12 .sign-in form {
   width: 66rem;
   display: flex;
   flex-direction: column;
@@ -688,7 +692,7 @@
   background: #ffffff;
   border: 1px solid #c4c4c4;
 }
-#sign-in .sign-in form h3 {
+#sign-in .col-lg-12 .sign-in form h3 {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -699,13 +703,13 @@
   color: #000000;
   text-transform: capitalize;
 }
-#sign-in .sign-in form .input-field {
+#sign-in .col-lg-12 .sign-in form .input-field {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 1rem;
 }
-#sign-in .sign-in form .input-field label {
+#sign-in .col-lg-12 .sign-in form .input-field label {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
@@ -716,11 +720,11 @@
   color: #3f3f3f;
   text-transform: capitalize;
 }
-#sign-in .sign-in form .input-field input {
+#sign-in .col-lg-12 .sign-in form .input-field input {
   width: 75%;
   padding: 0.4rem;
 }
-#sign-in .sign-in form .input-field p {
+#sign-in .col-lg-12 .sign-in form .input-field p {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -731,14 +735,13 @@
   text-align: right;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  /* Gray 1 */
   color: #828282;
 }
-#sign-in .sign-in form .input-field-checkbox {
+#sign-in .col-lg-12 .sign-in form .input-field-checkbox {
   width: 100%;
   display: flex;
 }
-#sign-in .sign-in form .input-field-checkbox input {
+#sign-in .col-lg-12 .sign-in form .input-field-checkbox input {
   margin: 0 0.4rem 0 0;
 }
 
@@ -1692,5 +1695,37 @@ nav .account-cart .storage-info__price {
   #wishlist .wishlist__body .wishlist__footer__item {
     width: 100%;
     margin-top: 0.6rem;
+  }
+  #sign-in .col-lg-12 .sign-in {
+    width: 100%;
+  }
+  #sign-in .col-lg-12 .sign-in__title {
+    align-items: flex-start;
+  }
+  #sign-in .col-lg-12 .sign-in form {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-top: 1px solid #000000;
+    display: contents;
+  }
+  #sign-in .col-lg-12 .sign-in form h3 {
+    font-size: 14px;
+  }
+  #sign-in .col-lg-12 .sign-in form .input-field:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+  }
+  #sign-in .col-lg-12 .sign-in form .input-field:not(:last-child) input {
+    width: 100%;
+  }
+  #sign-in .col-lg-12 .sign-in form .input-field:last-child p {
+    margin: 0;
+  }
+  #sign-in .col-lg-12 .sign-in .sign-in__title h1 {
+    font-size: 1.3rem;
+  }
+  #sign-in .col-lg-12 .sign-in .sign-in__title {
+    align-items: flex-start;
   }
 }/*# sourceMappingURL=output.css.map */

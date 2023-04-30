@@ -1,94 +1,55 @@
 #sign-in {
-  .sign-in {
-    .sign-in__title {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      @include dash-title;
-      // span {
-      //   color: $grey-color-c4;
-      //   text-transform: capitalize;
-      // }
-      // h1 {
-      //   font-family: "Oswald";
-      //   font-style: normal;
-      //   font-weight: 900;
-      //   font-size: 48px;
-      //   line-height: 68px;
-      //   text-align: center;
-      //   color: $black-color;
-      //   text-transform: capitalize;
-      // }
-    }
-
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // text-align: center;
-    form {
-      width: 66rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 6rem 10rem;
-      background: $white-color;
-      border: 1px solid $grey-color-c4;
-      h3 {
-        font-family: "Oswald";
-        font-style: normal;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 68px;
-        display: flex;
-        align-items: center;
-        color: $black-color;
-        text-transform: capitalize;
+  .col-lg-12 {
+    display: flex;
+    justify-content: center;
+    .sign-in {
+      .sign-in__title {
+        @include dash-title;
       }
-      .input-field {
-        @include input-field;
-        // display: flex;
-        // justify-content: space-between;
-        // width: 100%;
-        // margin-bottom: 1rem;
-        // label {
-        //   font-family: "Roboto";
-        //   font-style: normal;
-        //   font-weight: 900;
-        //   font-size: 16px;
-        //   line-height: 20px;
-        //   display: flex;
-        //   align-items: center;
-        //   color: $grey-color-3f;
-        //   text-transform: capitalize;
-        // }
-        // input {
-        //   width: 75%;
-        //   padding: 0.4rem;
-        // }
-        p {
+
+      form {
+        width: 66rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 10rem;
+        background: $white-color;
+        border: 1px solid $grey-color-c4;
+        h3 {
           font-family: "Oswald";
           font-style: normal;
           font-weight: 900;
-          font-size: 14px;
-          line-height: 21px;
+          font-size: 24px;
+          line-height: 68px;
           display: flex;
           align-items: center;
-          text-align: right;
-          letter-spacing: 0.5px;
-          text-transform: uppercase;
-
-          /* Gray 1 */
-
-          color: $grey-color-82;
+          color: $black-color;
+          text-transform: capitalize;
         }
-      }
-      .input-field-checkbox {
-        width: 100%;
-        display: flex;
-        input {
-          margin: 0 0.4rem 0 0;
+        .input-field {
+          @include input-field;
+
+          p {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: $grey-color-82;
+          }
+        }
+        .input-field-checkbox {
+          width: 100%;
+          display: flex;
+          input {
+            margin: 0 0.4rem 0 0;
+          }
         }
       }
     }
