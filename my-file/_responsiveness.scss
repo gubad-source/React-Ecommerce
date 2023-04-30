@@ -537,4 +537,34 @@
     }
   }
   //edit-account
+
+  //add-address
+  #add-address {
+    .add-address__title {
+      span {
+      }
+      h1 {
+        display: none;
+      }
+    }
+    .add-address__body {
+      display: flex;
+      flex-direction: column;
+      .dashboard-list {
+        display: none;
+      }
+      form {
+        .input-field,
+        .input-field-select {
+          display: flex;
+          flex-direction: column;
+          input,
+          select {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  //add-address
 }

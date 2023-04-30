@@ -1824,4 +1824,25 @@ nav .account-cart .storage-info__price {
   #edit-account .edit-account__body form .input-field input {
     width: 100%;
   }
+  #add-address .add-address__title h1 {
+    display: none;
+  }
+  #add-address .add-address__body {
+    display: flex;
+    flex-direction: column;
+  }
+  #add-address .add-address__body .dashboard-list {
+    display: none;
+  }
+  #add-address .add-address__body form .input-field,
+  #add-address .add-address__body form .input-field-select {
+    display: flex;
+    flex-direction: column;
+  }
+  #add-address .add-address__body form .input-field input,
+  #add-address .add-address__body form .input-field select,
+  #add-address .add-address__body form .input-field-select input,
+  #add-address .add-address__body form .input-field-select select {
+    width: 100%;
+  }
 }/*# sourceMappingURL=output.css.map */
