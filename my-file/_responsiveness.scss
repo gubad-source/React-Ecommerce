@@ -415,6 +415,7 @@
   }
   // wishlist
 
+  //dashboard
   #dashboard {
     .dashboard-title {
       display: contents;
@@ -498,4 +499,42 @@
   #dashboard .dashboard-body .account-address .address .address-book__billing {
     width: 100%;
   }
+  //dashboard
+
+  //edit-account
+  #edit-account {
+    .edit-account__title {
+      display: contents;
+      span {
+        margin-left: 8%;
+      }
+      h1 {
+        display: none;
+      }
+    }
+    .edit-account__body {
+      padding: 0 1rem;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      .dashboard-list {
+        display: none;
+      }
+      form {
+        h3 {
+          font-size: 24px;
+          color: $grey-color-82;
+        }
+        .input-field {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  //edit-account
 }

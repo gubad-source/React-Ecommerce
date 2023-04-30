@@ -1795,4 +1795,33 @@ nav .account-cart .storage-info__price {
   #dashboard .dashboard-body .account-address .address .address-book__billing {
     width: 100%;
   }
+  #edit-account .edit-account__title {
+    display: contents;
+  }
+  #edit-account .edit-account__title span {
+    margin-left: 8%;
+  }
+  #edit-account .edit-account__title h1 {
+    display: none;
+  }
+  #edit-account .edit-account__body {
+    padding: 0 1rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #edit-account .edit-account__body .dashboard-list {
+    display: none;
+  }
+  #edit-account .edit-account__body form h3 {
+    font-size: 24px;
+    color: #828282;
+  }
+  #edit-account .edit-account__body form .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+  #edit-account .edit-account__body form .input-field input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=output.css.map */
