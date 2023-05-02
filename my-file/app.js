@@ -10,6 +10,7 @@
 
 //   // document.querySelector(".color").innerHTML = div;
 // }
+
 function signIn() {
   let firstname = document.querySelector("#firstname").value;
   let lastname = document.querySelector("#lastname").value;

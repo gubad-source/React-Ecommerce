@@ -1,4 +1,8 @@
 #products {
+  margin-top: 2rem;
+  .see-more {
+    display: none;
+  }
   .wear {
     h1 {
       font-family: "Oswald";
@@ -38,6 +42,7 @@
     .product {
       // padding: 30px 13px 48px 13px;
       position: relative;
+      margin-bottom: 1rem;
       .liked-basket {
         display: inline-block;
         position: absolute;
@@ -299,15 +304,15 @@
       position: relative;
       .info3 {
         position: relative;
-        top: 18rem;
-        left: 3rem;
+        top: 22rem;
+        left: -4rem;
       }
       h1 {
         font-family: "Oswald";
         font-style: normal;
         font-weight: 600;
-        font-size: 96px;
-        line-height: 110px;
+        font-size: 82px;
+        line-height: 94px;
         text-transform: uppercase;
         color: #131313;
       }

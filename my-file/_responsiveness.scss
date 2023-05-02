@@ -27,10 +27,7 @@
     }
   }
 
-  .cookie-wrapper,
-  .brand-items .info1,
-  .info2,
-  .info3 {
+  .cookie-wrapper {
     display: none;
   }
   footer {
@@ -131,32 +128,71 @@
       }
     }
     .brand-items {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
 
+      display: grid;
+      grid-template-rows: 11rem 23.2rem 11rem;
+      grid-template-columns: 1fr;
       .item1 {
         @include brand-background(
           $area: none,
           $background: url("./images/brand1.png")
         );
-        background-size: 100% 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+        background-size: contain;
         background-repeat: no-repeat;
+        position: relative;
+        .info1 {
+          position: absolute;
+          right: 1rem;
+          top: 2rem;
+          h1 {
+            font-size: 24px;
+            line-height: 23px;
+          }
+        }
       }
       .item2 {
         @include brand-background(
           $area: none,
           $background: url("./images/brand2.png")
         );
+        grid-column: 1/6;
+        grid-row: 2/3;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        position: relative;
+        .info2 {
+          position: absolute;
+          top: 12rem;
+          left: 2rem;
+          h1 {
+            font-size: 24px;
+            line-height: 23px;
+          }
+        }
       }
       .item3 {
         @include brand-background(
           $area: none,
           $background: url("./images/brand3.png")
         );
+        grid-column: 1/6;
+        grid-row: 3/4;
         background-size: contain;
         background-repeat: no-repeat;
+        position: relative;
+        .info3 {
+          position: absolute;
+          top: 2rem;
+          left: 2rem;
+          h1 {
+            font-size: 24px;
+            line-height: 23px;
+          }
+        }
       }
       .item {
         h1 {
@@ -180,6 +216,7 @@
 
   // products
   #products {
+    margin-top: 0;
     .wear {
       h1 {
         padding: 0 1rem;
@@ -189,7 +226,7 @@
       }
       .products {
         .product {
-          padding: 1rem 0rem;
+          padding: 0rem;
           .top-product {
             font-size: 10px;
             margin-top: 0.3rem;
@@ -205,6 +242,16 @@
         }
       }
     }
+    .see-more {
+      display: block;
+      width: 100%;
+      background: white;
+      color: 2px solid $grey-color-82;
+      margin: 2rem 0;
+      padding: 0.4rem;
+      text-transform: uppercase;
+      font-family: "Oswald";
+    }
   }
   #products .products .product .price .low-price,
   #products .products .product .price .current-price {
@@ -216,6 +263,14 @@
   }
   #products .products .product {
     padding: 1rem 0rem;
+  }
+
+  #products .products .product .liked-basket {
+    top: 7%;
+    right: 10%;
+  }
+  #products .products .product .discount {
+    top: 7%;
   }
   // products
   #shoping-limits,
@@ -267,9 +322,9 @@
       }
       .explore-info {
         position: absolute;
-        width: 70%;
         bottom: 1rem;
-        right: 100px;
+        right: 28%;
+        width: 70%;
         background: white;
         padding: 6px;
         text-align: center;

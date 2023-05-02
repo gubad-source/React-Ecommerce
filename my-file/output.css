@@ -44,15 +44,15 @@
   text-transform: capitalize;
 }
 
-.limits, .limits-light {
+.limits {
   background-image: url("./images/woman in hat.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
-.limits .info, .limits-light .info {
+.limits .info {
   padding: 6rem 0rem;
 }
-.limits .info h1, .limits-light .info h1 {
+.limits .info h1 {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -62,7 +62,7 @@
   color: #000000;
   padding: 0rem 0rem 2rem;
 }
-.limits .info h5, .limits-light .info h5 {
+.limits .info h5 {
   font-family: "Roboto";
   font-size: 22px;
   line-height: 37px;
@@ -70,11 +70,12 @@
   color: #000000;
 }
 
-.limits-light .info h1,
-.limits-light .info h5 {
-  color: #ffffff;
+#products {
+  margin-top: 2rem;
 }
-
+#products .see-more {
+  display: none;
+}
 #products .wear h1 {
   font-family: "Oswald";
   font-style: normal;
@@ -110,6 +111,7 @@
 }
 #products .products .product {
   position: relative;
+  margin-bottom: 1rem;
 }
 #products .products .product .liked-basket {
   display: inline-block;
@@ -402,15 +404,15 @@
 }
 #brands .brand-items .item3 .info3 {
   position: relative;
-  top: 18rem;
-  left: 3rem;
+  top: 22rem;
+  left: -4rem;
 }
 #brands .brand-items .item3 h1 {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
-  font-size: 96px;
-  line-height: 110px;
+  font-size: 82px;
+  line-height: 94px;
   text-transform: uppercase;
   color: #131313;
 }
@@ -1353,10 +1355,7 @@ nav .account-cart .storage-info__price {
   #mobile-nav .search-cart li a {
     text-decoration: none;
   }
-  .cookie-wrapper,
-  .brand-items .info1,
-  .info2,
-  .info3 {
+  .cookie-wrapper {
     display: none;
   }
   footer #footer-top {
@@ -1446,15 +1445,19 @@ nav .account-cart .storage-info__price {
     font-size: 25px;
   }
   #brands .brand-items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 11rem 23.2rem 11rem;
+    grid-template-columns: 1fr;
   }
   #brands .brand-items .item1 {
     grid-area: none;
     background-image: url("./images/brand1.png");
     background-size: cover;
-    background-size: 100% 100%;
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
   }
   #brands .brand-items .item1 h1 {
     font-family: "Oswald";
@@ -1472,12 +1475,24 @@ nav .account-cart .storage-info__price {
     letter-spacing: 0.01em;
     color: #000000;
   }
+  #brands .brand-items .item1 .info1 {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+  }
+  #brands .brand-items .item1 .info1 h1 {
+    font-size: 24px;
+    line-height: 23px;
+  }
   #brands .brand-items .item2 {
     grid-area: none;
     background-image: url("./images/brand2.png");
     background-size: cover;
+    grid-column: 1/6;
+    grid-row: 2/3;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: relative;
   }
   #brands .brand-items .item2 h1 {
     font-family: "Oswald";
@@ -1495,12 +1510,24 @@ nav .account-cart .storage-info__price {
     letter-spacing: 0.01em;
     color: #000000;
   }
+  #brands .brand-items .item2 .info2 {
+    position: absolute;
+    top: 12rem;
+    left: 2rem;
+  }
+  #brands .brand-items .item2 .info2 h1 {
+    font-size: 24px;
+    line-height: 23px;
+  }
   #brands .brand-items .item3 {
     grid-area: none;
     background-image: url("./images/brand3.png");
     background-size: cover;
+    grid-column: 1/6;
+    grid-row: 3/4;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
   }
   #brands .brand-items .item3 h1 {
     font-family: "Oswald";
@@ -1518,6 +1545,15 @@ nav .account-cart .storage-info__price {
     letter-spacing: 0.01em;
     color: #000000;
   }
+  #brands .brand-items .item3 .info3 {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+  #brands .brand-items .item3 .info3 h1 {
+    font-size: 24px;
+    line-height: 23px;
+  }
   #brands .brand-items .item h1 {
     font-family: "Oswald";
     font-style: normal;
@@ -1533,6 +1569,9 @@ nav .account-cart .storage-info__price {
   #brands .brand-items .item button {
     font-size: 10px;
   }
+  #products {
+    margin-top: 0;
+  }
   #products .wear h1 {
     padding: 0 1rem;
   }
@@ -1540,7 +1579,7 @@ nav .account-cart .storage-info__price {
     display: none;
   }
   #products .wear .products .product {
-    padding: 1rem 0rem;
+    padding: 0rem;
   }
   #products .wear .products .product .top-product {
     font-size: 10px;
@@ -1551,6 +1590,16 @@ nav .account-cart .storage-info__price {
   }
   #products .wear .products .product .price .low-price {
     font-size: 14px;
+  }
+  #products .see-more {
+    display: block;
+    width: 100%;
+    background: white;
+    color: 2px solid #828282;
+    margin: 2rem 0;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    font-family: "Oswald";
   }
   #products .products .product .price .low-price,
   #products .products .product .price .current-price {
@@ -1563,35 +1612,37 @@ nav .account-cart .storage-info__price {
   #products .products .product {
     padding: 1rem 0rem;
   }
-  #shoping-limits .limits, #shoping-limits .limits-light,
-  #shoping-limits-catalog1 .limits,
-  #shoping-limits-catalog1 .limits-light {
+  #products .products .product .liked-basket {
+    top: 7%;
+    right: 10%;
+  }
+  #products .products .product .discount {
+    top: 7%;
+  }
+  #shoping-limits .limits,
+  #shoping-limits-catalog1 .limits {
     background-size: 100% 100%;
   }
-  #shoping-limits .limits .info, #shoping-limits .limits-light .info,
-  #shoping-limits-catalog1 .limits .info,
-  #shoping-limits-catalog1 .limits-light .info {
+  #shoping-limits .limits .info,
+  #shoping-limits-catalog1 .limits .info {
     padding: 1rem;
   }
-  #shoping-limits .limits .info h1, #shoping-limits .limits-light .info h1,
-  #shoping-limits-catalog1 .limits .info h1,
-  #shoping-limits-catalog1 .limits-light .info h1 {
+  #shoping-limits .limits .info h1,
+  #shoping-limits-catalog1 .limits .info h1 {
     font-size: 14px;
     padding: 0;
     margin: 0;
     line-height: 2;
   }
-  #shoping-limits .limits .info h5, #shoping-limits .limits-light .info h5,
-  #shoping-limits-catalog1 .limits .info h5,
-  #shoping-limits-catalog1 .limits-light .info h5 {
+  #shoping-limits .limits .info h5,
+  #shoping-limits-catalog1 .limits .info h5 {
     font-size: 10px;
     padding: 0;
     margin: 0;
     line-height: 1;
   }
-  #shoping-limits .limits .info button, #shoping-limits .limits-light .info button,
-  #shoping-limits-catalog1 .limits .info button,
-  #shoping-limits-catalog1 .limits-light .info button {
+  #shoping-limits .limits .info button,
+  #shoping-limits-catalog1 .limits .info button {
     font-size: 10px;
     padding: 0 15px;
     margin-top: 0.4rem;
@@ -1613,9 +1664,9 @@ nav .account-cart .storage-info__price {
   }
   #explore .explore .explore-info {
     position: absolute;
-    width: 70%;
     bottom: 1rem;
-    right: 100px;
+    right: 28%;
+    width: 70%;
     background: white;
     padding: 6px;
     text-align: center;
