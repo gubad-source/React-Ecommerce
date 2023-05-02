@@ -194,25 +194,31 @@
     }
   }
   .catalog-background {
-    background-image: url("./images/Group 840.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    .info {
-      padding: 6rem;
-      width: 70%;
-      h1 {
-        text-transform: uppercase;
-        color: $white-color;
-        font-family: "Oswald";
-        font-style: normal;
-        font-weight: 900;
-        font-size: 56px;
-        line-height: 72px;
-      }
-      h5 {
-        font-family: "Roboto";
-        letter-spacing: 0.01em;
-        color: $white-color;
+    // background-image: url("./images/Group 840.png");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    .info-background {
+      background-image: url("./images/Group 840.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      .info {
+        padding: 6rem;
+        width: 70%;
+
+        h1 {
+          text-transform: uppercase;
+          color: $white-color;
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 56px;
+          line-height: 72px;
+        }
+        h5 {
+          font-family: "Roboto";
+          letter-spacing: 0.01em;
+          color: $white-color;
+        }
       }
     }
   }
