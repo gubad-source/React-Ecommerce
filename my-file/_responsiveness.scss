@@ -220,7 +220,7 @@
     }
   }
 
-  // products
+  // products----->
   #products {
     margin-top: 0;
     .wear {
@@ -278,7 +278,7 @@
   #products .products .product .discount {
     top: 7%;
   }
-  // products
+  // <-----products
   #shoping-limits,
   #shoping-limits-catalog1 {
     margin: 2rem 2rem 1rem;
@@ -360,6 +360,7 @@
       margin-top: 30px;
     }
   }
+  //catalog---->
   #catalog-products {
     .brand,
     .size,
@@ -403,6 +404,22 @@
       }
     }
   }
+  #catalog-select {
+    display: block;
+    margin: 1rem;
+    span {
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      color: $grey-color-82;
+      font-size: 10px;
+    }
+    select {
+      width: 100%;
+      padding: 0.4rem;
+      font-family: "Oswald";
+    }
+  }
+  //<----catalog
   #blog-background {
     display: none;
   }
@@ -411,7 +428,7 @@
       text-align: center;
     }
   }
-  // wishlist
+  // wishlist----->
   #wishlist {
     .wishlist__body {
       display: flex;
@@ -478,9 +495,9 @@
   #sign-in .col-lg-12 .sign-in .sign-in__title {
     align-items: flex-start;
   }
-  // wishlist
+  // <-----wishlist
 
-  //dashboard
+  //dashboard------>
   #dashboard {
     .dashboard-title {
       display: contents;
@@ -564,9 +581,9 @@
   #dashboard .dashboard-body .account-address .address .address-book__billing {
     width: 100%;
   }
-  //dashboard
+  //<-----dashboard
 
-  //edit-account
+  //edit-account----->
   #edit-account {
     .edit-account__title {
       display: contents;
@@ -601,9 +618,9 @@
       }
     }
   }
-  //edit-account
+  //<-----edit-account
 
-  //add-address
+  //add-address----->
   #add-address {
     .add-address__title {
       span {
@@ -631,5 +648,5 @@
       }
     }
   }
-  //add-address
+  //<-----add-address
 }

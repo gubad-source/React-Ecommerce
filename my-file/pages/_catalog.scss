@@ -63,6 +63,7 @@
       text-transform: capitalize;
     }
   }
+
   .catalog-products {
     display: flex;
     flex-wrap: wrap;
@@ -222,4 +223,7 @@
       }
     }
   }
+}
+#catalog-select {
+  display: none;
 }

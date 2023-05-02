@@ -661,6 +661,10 @@
   color: #ffffff;
 }
 
+#catalog-select {
+  display: none;
+}
+
 #sign-in .col-lg-12 {
   display: flex;
   justify-content: center;
@@ -1732,6 +1736,21 @@ nav .account-cart .storage-info__price {
   #catalog-products .catalog-products .product .price .discount-price {
     bottom: 15%;
     right: 2%;
+  }
+  #catalog-select {
+    display: block;
+    margin: 1rem;
+  }
+  #catalog-select span {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    color: #828282;
+    font-size: 10px;
+  }
+  #catalog-select select {
+    width: 100%;
+    padding: 0.4rem;
+    font-family: "Oswald";
   }
   #blog-background {
     display: none;
