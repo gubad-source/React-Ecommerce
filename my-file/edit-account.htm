@@ -21,6 +21,11 @@
             <div class="edit-account__title">
               <span>home/my dashboard</span>
               <h1>edit account information</h1>
+              <select name="" id="">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+              </select>
             </div>
             <div class="edit-account__body">
               <div class="col-lg-4">
@@ -39,7 +44,9 @@
                 <form action="#">
                   <h3>account information</h3>
                   <div class="input-field">
-                    <label for="firstname">first name</label>
+                    <label for="firstname"
+                      >first name <span class="text-danger ml-1">*</span></label
+                    >
                     <input
                       type="text"
                       name="firstname"
@@ -48,7 +55,9 @@
                     />
                   </div>
                   <div class="input-field">
-                    <label for="lastname">last name</label>
+                    <label for="lastname"
+                      >last name <span class="text-danger ml-1">*</span></label
+                    >
                     <input
                       type="text"
                       name="lastname"

@@ -634,9 +634,22 @@
   //edit-account----->
   #edit-account {
     .edit-account__title {
-      display: contents;
+      display: flex;
+      padding: 0 2rem;
+      align-items: flex-start;
       span {
-        margin-left: 8%;
+        margin: 0;
+      }
+      select {
+        display: block;
+        width: 100%;
+        margin: 0 0;
+        text-transform: uppercase;
+        font-family: "Oswald";
+        padding: 0.6rem;
+        background-color: $grey-color-c4;
+        margin: 1rem 0;
+        font-weight: 700;
       }
       h1 {
         display: none;
@@ -662,6 +675,10 @@
           input {
             width: 100%;
           }
+        }
+        button {
+          width: 100%;
+          justify-content: center;
         }
       }
     }

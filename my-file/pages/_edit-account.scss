@@ -1,23 +1,9 @@
 #edit-account {
   .edit-account__title {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     @include dash-title;
-    // span {
-    //   color: $grey-color-c4;
-    //   text-transform: capitalize;
-    // }
-    // h1 {
-    //   font-family: "Oswald";
-    //   font-style: normal;
-    //   font-weight: 900;
-    //   font-size: 48px;
-    //   line-height: 68px;
-    //   text-align: center;
-    //   color: $black-color;
-    //   text-transform: capitalize;
-    // }
+    select {
+      display: none;
+    }
   }
   .edit-account__body {
     display: flex;
@@ -27,27 +13,18 @@
       @include dashboard-list;
     }
     form {
+      h3 {
+        text-transform: uppercase;
+        font-family: "Oswald";
+        font-weight: 700;
+      }
       .input-field {
         @include input-field;
-        // display: flex;
-        // justify-content: space-between;
-        // width: 100%;
-        // margin-bottom: 1rem;
-        // label {
-        //   font-family: "Roboto";
-        //   font-style: normal;
-        //   font-weight: 900;
-        //   font-size: 16px;
-        //   line-height: 20px;
-        //   display: flex;
-        //   align-items: center;
-        //   color: $grey-color-3f;
-        //   text-transform: capitalize;
-        // }
-        // input {
-        //   width: 75%;
-        //   padding: 0.4rem;
-        // }
+      }
+      .input-field-checkbox {
+        font-family: "Oswald";
+        text-transform: uppercase;
+        color: $grey-color-82;
       }
     }
   }

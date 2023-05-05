@@ -938,6 +938,9 @@
   color: #000000;
   text-transform: capitalize;
 }
+#edit-account .edit-account__title select {
+  display: none;
+}
 #edit-account .edit-account__body {
   display: flex;
   border: 1px solid #e6f1fa;
@@ -966,6 +969,11 @@
   padding: 0.4rem 4rem 0.4rem 0.4rem;
   text-transform: capitalize;
 }
+#edit-account .edit-account__body form h3 {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: 700;
+}
 #edit-account .edit-account__body form .input-field {
   display: flex;
   justify-content: space-between;
@@ -986,6 +994,11 @@
 #edit-account .edit-account__body form .input-field input {
   width: 75%;
   padding: 0.4rem;
+}
+#edit-account .edit-account__body form .input-field-checkbox {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: #828282;
 }
 
 #add-address .add-address__title {
@@ -1947,10 +1960,23 @@ nav .account-cart .storage-info__price {
     width: 100%;
   }
   #edit-account .edit-account__title {
-    display: contents;
+    display: flex;
+    padding: 0 2rem;
+    align-items: flex-start;
   }
   #edit-account .edit-account__title span {
-    margin-left: 8%;
+    margin: 0;
+  }
+  #edit-account .edit-account__title select {
+    display: block;
+    width: 100%;
+    margin: 0 0;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    padding: 0.6rem;
+    background-color: #c4c4c4;
+    margin: 1rem 0;
+    font-weight: 700;
   }
   #edit-account .edit-account__title h1 {
     display: none;
@@ -1974,6 +2000,10 @@ nav .account-cart .storage-info__price {
   }
   #edit-account .edit-account__body form .input-field input {
     width: 100%;
+  }
+  #edit-account .edit-account__body form button {
+    width: 100%;
+    justify-content: center;
   }
   #add-address .add-address__title h1 {
     display: none;
