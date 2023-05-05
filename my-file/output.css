@@ -755,9 +755,6 @@
   text-transform: uppercase;
   color: #828282;
 }
-#sign-in .col-lg-12 .sign-in form #sign-in .col-lg-12 .sign-in form .input-field:last-child {
-  margin: 0;
-}
 #sign-in .col-lg-12 .sign-in form .input-field-checkbox {
   width: 100%;
   display: flex;
@@ -1109,8 +1106,14 @@
   color: #000000;
   text-transform: capitalize;
 }
+#wishlist .wishlist__title select {
+  display: none;
+}
 #wishlist .wishlist__body {
   display: flex;
+  border: 1px solid grey;
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
 }
 #wishlist .wishlist__body__items {
   display: flex;
@@ -1773,19 +1776,51 @@ nav .account-cart .storage-info__price {
   #blog h1 {
     text-align: center;
   }
+  #wishlist .wishlist__title {
+    align-items: flex-start;
+    margin-left: 1.6rem;
+  }
+  #wishlist .wishlist__title select {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.6rem 0;
+    background-color: #c4c4c4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Oswald";
+  }
+  #wishlist .wishlist__title h1 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #828282;
+  }
   #wishlist .wishlist__body {
     display: flex;
     flex-direction: column;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
   #wishlist .wishlist__body .dashboard-list {
     display: none;
   }
+  #wishlist .wishlist__body__items__frame .item p {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+  #wishlist .wishlist__body__items__frame .item .price .current-price {
+    font-weight: 500;
+    font-size: 14px;
+  }
   #wishlist .wishlist__body__items__frame .item .count-cart .add-to-cart {
     padding: 0 1rem;
+    font-size: 0.4rem;
   }
   #wishlist .wishlist__body .wishlist__footer {
     display: flex;
     flex-direction: column;
+    margin: 0 0 2rem;
   }
   #wishlist .wishlist__body .wishlist__footer__item {
     width: 100%;

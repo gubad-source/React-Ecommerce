@@ -23,9 +23,15 @@
   }
   .wishlist__title {
     @include dash-title;
+    select {
+      display: none;
+    }
   }
   .wishlist__body {
     display: flex;
+    border: 1px solid grey;
+    padding: 4rem 1rem;
+    margin-bottom: 4rem;
     &__items {
       display: flex;
       flex-wrap: wrap;
