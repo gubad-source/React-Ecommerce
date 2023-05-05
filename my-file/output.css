@@ -782,6 +782,12 @@
   color: #000000;
   text-transform: capitalize;
 }
+#dashboard .dashboard-title h1 {
+  margin-top: 2rem;
+}
+#dashboard .dashboard-title select {
+  display: none;
+}
 #dashboard .dashboard-body {
   display: flex;
   justify-content: space-between;
@@ -815,6 +821,9 @@
 #dashboard .dashboard-body .account-address {
   display: flex;
   flex-direction: column;
+}
+#dashboard .dashboard-body .account-address .account .account-title {
+  margin-bottom: 1.4rem;
 }
 #dashboard .dashboard-body .account-address .account .account-title h3 {
   font-family: "Oswald";
@@ -866,6 +875,9 @@
   font-weight: 400;
   font-size: 16px;
   color: #828282;
+}
+#dashboard .dashboard-body .account-address .address .address-title {
+  margin-bottom: 1.4rem;
 }
 #dashboard .dashboard-body .account-address .address .address-title h3 {
   font-family: "Oswald";
@@ -1893,10 +1905,22 @@ nav .account-cart .storage-info__price {
     border-bottom: 1px solid #bdbdbd;
   }
   #dashboard .dashboard-title {
-    display: contents;
+    padding: 0 1rem;
+    display: flex;
+    align-items: flex-start;
   }
   #dashboard .dashboard-title span {
-    margin-left: 4%;
+    margin: 0;
+  }
+  #dashboard .dashboard-title select {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    padding: 0.6rem;
+    background-color: #c4c4c4;
+    margin: 1rem 0;
+    font-weight: 700;
   }
   #dashboard .dashboard-title h1 {
     display: none;
@@ -1923,7 +1947,9 @@ nav .account-cart .storage-info__price {
   }
   #dashboard .dashboard-body .account-address .account .account-title h3 {
     margin: 0;
-    font-size: 30px;
+    font-size: 24px;
+    color: #828282;
+    text-transform: uppercase;
   }
   #dashboard .dashboard-body .account-address .account .account-information {
     display: flex;
@@ -1937,14 +1963,13 @@ nav .account-cart .storage-info__price {
     font-size: 16px;
   }
   #dashboard .dashboard-body .account-address .account .account-information__newsletters {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
   #dashboard .dashboard-body .account-address .address-title {
     margin: 0;
     margin-bottom: 1rem;
   }
   #dashboard .dashboard-body .account-address .address-title h3 {
-    color: #3f3f3f;
     font-size: 30px;
   }
   #dashboard .dashboard-body .account-address .address-book {
@@ -1958,6 +1983,10 @@ nav .account-cart .storage-info__price {
   #dashboard .dashboard-body .account-address .address .address-book__shipping,
   #dashboard .dashboard-body .account-address .address .address-book__billing {
     width: 100%;
+  }
+  #dashboard .dashboard-body .account-address .address .address-title h3 {
+    color: #828282;
+    text-transform: uppercase;
   }
   #edit-account .edit-account__title {
     display: flex;

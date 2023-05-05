@@ -548,9 +548,21 @@
   //dashboard------>
   #dashboard {
     .dashboard-title {
-      display: contents;
+      padding: 0 1rem;
+      display: flex;
+      align-items: flex-start;
       span {
-        margin-left: 4%;
+        margin: 0;
+      }
+      select {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: "Oswald";
+        padding: 0.6rem;
+        background-color: #c4c4c4;
+        margin: 1rem 0;
+        font-weight: 700;
       }
       h1 {
         display: none;
@@ -576,7 +588,9 @@
             margin-bottom: 1rem;
             h3 {
               margin: 0;
-              font-size: 30px;
+              font-size: 24px;
+              color: $grey-color-82;
+              text-transform: uppercase;
             }
           }
           .account-information {
@@ -590,7 +604,7 @@
               }
             }
             &__newsletters {
-              margin-bottom: 2rem;
+              margin-bottom: 0rem;
             }
           }
         }
@@ -598,9 +612,7 @@
           &-title {
             margin: 0;
             margin-bottom: 1rem;
-
             h3 {
-              color: $grey-color-3f;
               font-size: 30px;
             }
           }
@@ -628,6 +640,10 @@
   #dashboard .dashboard-body .account-address .address .address-book__shipping,
   #dashboard .dashboard-body .account-address .address .address-book__billing {
     width: 100%;
+  }
+  #dashboard .dashboard-body .account-address .address .address-title h3 {
+    color: $grey-color-82;
+    text-transform: uppercase;
   }
   //<-----dashboard
 
