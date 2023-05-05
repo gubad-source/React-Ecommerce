@@ -28,9 +28,6 @@
   }
 
   .cookie-wrapper {
-    // bottom: 30%;
-    // left: 10%;
-    // width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -308,9 +305,6 @@
   }
   #explore {
     .explore {
-      // background: url("./images/image 2.1.png");
-      // background-size: contain;
-      // background-repeat: no-repeat;
       .responsive-image {
         display: block;
       }
@@ -463,6 +457,10 @@
         width: 100%;
         &__title {
           align-items: flex-start;
+          span {
+            font-size: 0.8rem;
+            line-height: 1.6rem;
+          }
         }
         form {
           width: 100%;
@@ -472,7 +470,11 @@
           display: contents;
           h3 {
             font-size: 14px;
+            font-size: 1.2rem;
+            color: $grey-color-82;
+            line-height: 3rem;
           }
+
           .input-field:not(:last-child) {
             display: flex;
             flex-direction: column;
@@ -481,6 +483,8 @@
             }
           }
           .input-field:last-child {
+            margin-top: 4rem;
+            align-items: baseline;
             p {
               margin: 0;
             }
@@ -489,11 +493,21 @@
       }
     }
   }
+  #sign-in .col-lg-12 .sign-in form .input-field:last-child {
+    margin: 0;
+  }
+  #sign-in .col-lg-12 .sign-in form .input-field-checkbox label {
+    margin: 0;
+    font-size: 0.8rem;
+  }
   #sign-in .col-lg-12 .sign-in .sign-in__title h1 {
     font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 1rem 0;
   }
   #sign-in .col-lg-12 .sign-in .sign-in__title {
     align-items: flex-start;
+    border-bottom: 1px solid $grey-color;
   }
   // <-----wishlist
 

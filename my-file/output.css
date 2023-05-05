@@ -669,6 +669,9 @@
   display: flex;
   justify-content: center;
 }
+#sign-in .col-lg-12 .sign-in {
+  margin: 0;
+}
 #sign-in .col-lg-12 .sign-in .sign-in__title {
   display: flex;
   flex-direction: column;
@@ -688,6 +691,12 @@
   color: #000000;
   text-transform: capitalize;
 }
+#sign-in .col-lg-12 .sign-in .sign-in__title span {
+  font-size: 0.9rem;
+}
+#sign-in .col-lg-12 .sign-in .sign-in__title h1 {
+  margin: 2rem 0;
+}
 #sign-in .col-lg-12 .sign-in form {
   width: 66rem;
   display: flex;
@@ -698,7 +707,10 @@
   background: #ffffff;
   border: 1px solid #c4c4c4;
 }
-#sign-in .col-lg-12 .sign-in form h3 {
+#sign-in .col-lg-12 .sign-in form .form-title {
+  width: 100%;
+}
+#sign-in .col-lg-12 .sign-in form .form-title h3 {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -742,6 +754,9 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #828282;
+}
+#sign-in .col-lg-12 .sign-in form #sign-in .col-lg-12 .sign-in form .input-field:last-child {
+  margin: 0;
 }
 #sign-in .col-lg-12 .sign-in form .input-field-checkbox {
   width: 100%;
@@ -1782,6 +1797,10 @@ nav .account-cart .storage-info__price {
   #sign-in .col-lg-12 .sign-in__title {
     align-items: flex-start;
   }
+  #sign-in .col-lg-12 .sign-in__title span {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
   #sign-in .col-lg-12 .sign-in form {
     width: 100%;
     padding: 0;
@@ -1791,6 +1810,9 @@ nav .account-cart .storage-info__price {
   }
   #sign-in .col-lg-12 .sign-in form h3 {
     font-size: 14px;
+    font-size: 1.2rem;
+    color: #828282;
+    line-height: 3rem;
   }
   #sign-in .col-lg-12 .sign-in form .input-field:not(:last-child) {
     display: flex;
@@ -1799,14 +1821,28 @@ nav .account-cart .storage-info__price {
   #sign-in .col-lg-12 .sign-in form .input-field:not(:last-child) input {
     width: 100%;
   }
+  #sign-in .col-lg-12 .sign-in form .input-field:last-child {
+    margin-top: 4rem;
+    align-items: baseline;
+  }
   #sign-in .col-lg-12 .sign-in form .input-field:last-child p {
     margin: 0;
   }
+  #sign-in .col-lg-12 .sign-in form .input-field:last-child {
+    margin: 0;
+  }
+  #sign-in .col-lg-12 .sign-in form .input-field-checkbox label {
+    margin: 0;
+    font-size: 0.8rem;
+  }
   #sign-in .col-lg-12 .sign-in .sign-in__title h1 {
     font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 1rem 0;
   }
   #sign-in .col-lg-12 .sign-in .sign-in__title {
     align-items: flex-start;
+    border-bottom: 1px solid #bdbdbd;
   }
   #dashboard .dashboard-title {
     display: contents;

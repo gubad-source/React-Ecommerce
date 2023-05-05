@@ -3,8 +3,15 @@
     display: flex;
     justify-content: center;
     .sign-in {
+      margin: 0;
       .sign-in__title {
         @include dash-title;
+        span {
+          font-size: 0.9rem;
+        }
+        h1 {
+          margin: 2rem 0;
+        }
       }
 
       form {
@@ -16,17 +23,21 @@
         padding: 6rem 10rem;
         background: $white-color;
         border: 1px solid $grey-color-c4;
-        h3 {
-          font-family: "Oswald";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 24px;
-          line-height: 68px;
-          display: flex;
-          align-items: center;
-          color: $black-color;
-          text-transform: capitalize;
+        .form-title {
+          width: 100%;
+          h3 {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 68px;
+            display: flex;
+            align-items: center;
+            color: $black-color;
+            text-transform: capitalize;
+          }
         }
+
         .input-field {
           @include input-field;
 
@@ -43,6 +54,9 @@
             text-transform: uppercase;
             color: $grey-color-82;
           }
+        }
+        #sign-in .col-lg-12 .sign-in form .input-field:last-child {
+          margin: 0;
         }
         .input-field-checkbox {
           width: 100%;
