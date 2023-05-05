@@ -726,7 +726,10 @@
   //add-address----->
   #add-address {
     .add-address__title {
+      padding: 0 2rem;
+      display: flow-root;
       span {
+        font-size: 0.8rem;
       }
       h1 {
         display: none;
@@ -735,10 +738,26 @@
     .add-address__body {
       display: flex;
       flex-direction: column;
+      border: none;
+      padding: 1rem;
       .dashboard-list {
         display: none;
       }
       form {
+        h3 {
+          margin: 0 0 1rem;
+          font-size: 1.4rem;
+          color: $grey-color-82;
+          text-transform: uppercase;
+        }
+        .input-field-select:first-child {
+          display: block;
+        }
+        .input-field-select select:first-child {
+          background-color: $grey-color-c4;
+          font-family: "Oswald";
+          font-weight: 700;
+        }
         .input-field,
         .input-field-select {
           display: flex;
@@ -747,6 +766,10 @@
           select {
             width: 100%;
           }
+        }
+        button {
+          width: 100%;
+          justify-content: center;
         }
       }
     }

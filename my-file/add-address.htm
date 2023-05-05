@@ -37,9 +37,17 @@
               </div>
               <div class="col-lg-8">
                 <form action="#">
+                  <div class="input-field-select">
+                    <select name="" id="">
+                      <option value="Address Book">Address Book</option>
+                      <option value="Province Book">Province Book</option>
+                    </select>
+                  </div>
                   <h3>contact information</h3>
                   <div class="input-field">
-                    <label for="firstname">first name</label>
+                    <label for="firstname"
+                      >first name <span class="text-danger ml-1">*</span></label
+                    >
                     <input
                       type="text"
                       name="firstname"
@@ -48,7 +56,9 @@
                     />
                   </div>
                   <div class="input-field">
-                    <label for="lastname">last name</label>
+                    <label for="lastname"
+                      >last name <span class="text-danger ml-1">*</span></label
+                    >
                     <input
                       type="text"
                       name="lastname"
@@ -61,7 +71,10 @@
                     <input type="text" name="company" id="company" />
                   </div>
                   <div class="input-field">
-                    <label for="phone">Phone Number</label>
+                    <label for="phone"
+                      >Phone Number
+                      <span class="text-danger ml-1">*</span></label
+                    >
                     <input type="number" name="phone" id="phone" />
                   </div>
                   <div class="input-field">
@@ -70,11 +83,16 @@
                   </div>
                   <h3>address</h3>
                   <div class="input-field">
-                    <label for="street">Street Address</label>
+                    <label for="street"
+                      >Street Address
+                      <span class="text-danger ml-1">*</span></label
+                    >
                     <input type="text" name="street" id="street" />
                   </div>
                   <div class="input-field-select">
-                    <label for="country">Country</label>
+                    <label for="country"
+                      >Country <span class="text-danger ml-1">*</span></label
+                    >
                     <select name="country" id="country">
                       <option value="" disabled selected>
                         Please Select Your Country
@@ -82,7 +100,10 @@
                     </select>
                   </div>
                   <div class="input-field-select">
-                    <label for="region">State/Province</label>
+                    <label for="region"
+                      >State/Province
+                      <span class="text-danger ml-1">*</span></label
+                    >
                     <select name="region" id="region">
                       <option value="" disabled selected>
                         Please Select a region/state or province

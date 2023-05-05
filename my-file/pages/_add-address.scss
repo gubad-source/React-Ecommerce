@@ -1,15 +1,29 @@
 #add-address {
   .add-address__title {
     @include dash-title;
+    h1 {
+      margin: 2rem 0;
+    }
   }
   .add-address__body {
     display: flex;
+    border: 1px solid $grey-color-82;
+    padding: 3rem;
     .dashboard-list {
       @include dashboard-list;
     }
     form {
+      h3 {
+        text-transform: capitalize;
+        font-family: "Oswald";
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
       .input-field {
         @include input-field;
+      }
+      .input-field-select:first-child {
+        display: none;
       }
       .input-field-select {
         display: flex;

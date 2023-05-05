@@ -1054,8 +1054,13 @@
   color: #000000;
   text-transform: capitalize;
 }
+#add-address .add-address__title h1 {
+  margin: 2rem 0;
+}
 #add-address .add-address__body {
   display: flex;
+  border: 1px solid #828282;
+  padding: 3rem;
 }
 #add-address .add-address__body .dashboard-list ul {
   padding: 0;
@@ -1080,6 +1085,12 @@
   padding: 0.4rem 4rem 0.4rem 0.4rem;
   text-transform: capitalize;
 }
+#add-address .add-address__body form h3 {
+  text-transform: capitalize;
+  font-family: "Oswald";
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
 #add-address .add-address__body form .input-field {
   display: flex;
   justify-content: space-between;
@@ -1100,6 +1111,9 @@
 #add-address .add-address__body form .input-field input {
   width: 75%;
   padding: 0.4rem;
+}
+#add-address .add-address__body form .input-field-select:first-child {
+  display: none;
 }
 #add-address .add-address__body form .input-field-select {
   display: flex;
@@ -2066,15 +2080,38 @@ nav .account-cart .storage-info__price {
     width: 100%;
     justify-content: center;
   }
+  #add-address .add-address__title {
+    padding: 0 2rem;
+    display: flow-root;
+  }
+  #add-address .add-address__title span {
+    font-size: 0.8rem;
+  }
   #add-address .add-address__title h1 {
     display: none;
   }
   #add-address .add-address__body {
     display: flex;
     flex-direction: column;
+    border: none;
+    padding: 1rem;
   }
   #add-address .add-address__body .dashboard-list {
     display: none;
+  }
+  #add-address .add-address__body form h3 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    color: #828282;
+    text-transform: uppercase;
+  }
+  #add-address .add-address__body form .input-field-select:first-child {
+    display: block;
+  }
+  #add-address .add-address__body form .input-field-select select:first-child {
+    background-color: #c4c4c4;
+    font-family: "Oswald";
+    font-weight: 700;
   }
   #add-address .add-address__body form .input-field,
   #add-address .add-address__body form .input-field-select {
@@ -2086,5 +2123,9 @@ nav .account-cart .storage-info__price {
   #add-address .add-address__body form .input-field-select input,
   #add-address .add-address__body form .input-field-select select {
     width: 100%;
+  }
+  #add-address .add-address__body form button {
+    width: 100%;
+    justify-content: center;
   }
 }/*# sourceMappingURL=output.css.map */
