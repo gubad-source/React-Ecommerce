@@ -543,14 +543,23 @@
   text-transform: capitalize;
   font-weight: 900;
 }
-#catalog-products .catalog-products {
+#catalog-products .products-background {
+  border-left: 2px solid #828282;
+}
+#catalog-products .products-background__select {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+#catalog-products .products-background .catalog-products {
   display: flex;
   flex-wrap: wrap;
 }
-#catalog-products .catalog-products .product {
+#catalog-products .products-background .catalog-products .product {
   position: relative;
 }
-#catalog-products .catalog-products .product .discount {
+#catalog-products .products-background .catalog-products .product .discount {
   position: absolute;
   width: 40px;
   height: 20px;
@@ -568,7 +577,7 @@
   background-color: #292a2d;
   justify-content: center;
 }
-#catalog-products .catalog-products .product .top-product {
+#catalog-products .products-background .catalog-products .product .top-product {
   margin-top: 1rem;
   font-family: "Oswald";
   font-style: normal;
@@ -580,7 +589,7 @@
   text-transform: uppercase;
   color: #bdbdbd;
 }
-#catalog-products .catalog-products .product p {
+#catalog-products .products-background .catalog-products .product p {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
@@ -591,12 +600,12 @@
   color: #000000;
   margin: 0px;
 }
-#catalog-products .catalog-products .product .price {
+#catalog-products .products-background .catalog-products .product .price {
   display: flex;
   position: relative;
 }
-#catalog-products .catalog-products .product .price .low-price,
-#catalog-products .catalog-products .product .price .current-price {
+#catalog-products .products-background .catalog-products .product .price .low-price,
+#catalog-products .products-background .catalog-products .product .price .current-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 900;
@@ -608,10 +617,10 @@
   /* Black */
   color: #000000;
 }
-#catalog-products .catalog-products .product .price .low-price {
+#catalog-products .products-background .catalog-products .product .price .low-price {
   color: #eb5757;
 }
-#catalog-products .catalog-products .product .price .discount-price {
+#catalog-products .products-background .catalog-products .product .price .discount-price {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -625,38 +634,41 @@
   bottom: 10%;
   right: 42%;
 }
-#catalog-products .catalog-products .product ul {
+#catalog-products .products-background .catalog-products .product ul {
   padding: 0;
   display: flex;
 }
-#catalog-products .catalog-products .product ul li {
+#catalog-products .products-background .catalog-products .product ul li {
   width: 15px;
   height: 15px;
   background-color: black;
   list-style: none;
 }
-#catalog-products .catalog-products .product ul li:not(:first-child) {
+#catalog-products .products-background .catalog-products .product ul li:not(:first-child) {
   margin-left: 0.4rem;
 }
-#catalog-products .catalog-products .product ul .red {
+#catalog-products .products-background .catalog-products .product ul .red {
   background-color: red;
 }
-#catalog-products .catalog-products .product ul .green {
+#catalog-products .products-background .catalog-products .product ul .green {
   background-color: green;
 }
-#catalog-products .catalog-products .product ul .blue {
+#catalog-products .products-background .catalog-products .product ul .blue {
   background-color: blue;
 }
-#catalog-products .catalog-background .info-background {
+#catalog-products .products-background .catalog-background {
+  margin-bottom: 1rem;
+}
+#catalog-products .products-background .catalog-background .info-background {
   background-image: url("./images/Group 840.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-#catalog-products .catalog-background .info-background .info {
+#catalog-products .products-background .catalog-background .info-background .info {
   padding: 6rem;
   width: 70%;
 }
-#catalog-products .catalog-background .info-background .info h1 {
+#catalog-products .products-background .catalog-background .info-background .info h1 {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Oswald";
@@ -665,7 +677,7 @@
   font-size: 56px;
   line-height: 72px;
 }
-#catalog-products .catalog-background .info-background .info h5 {
+#catalog-products .products-background .catalog-background .info-background .info h5 {
   font-family: "Roboto";
   letter-spacing: 0.01em;
   color: #ffffff;
@@ -1681,7 +1693,7 @@ nav .account-cart .storage-info__price {
   }
   #shoping-limits,
   #shoping-limits-catalog1 {
-    margin: 2rem 2rem 1rem;
+    margin: 1rem 2rem 1rem;
   }
   #shoping-limits .limits,
   #shoping-limits-catalog1 .limits {
@@ -1764,29 +1776,35 @@ nav .account-cart .storage-info__price {
   #catalog-products .about {
     display: none;
   }
-  #catalog-products .catalog-background .info-background {
+  #catalog-products .products-background {
+    border: none;
+  }
+  #catalog-products .products-background__select {
+    display: none;
+  }
+  #catalog-products .products-background .catalog-background .info-background {
     margin: 1.4rem 0;
   }
-  #catalog-products .catalog-background .info-background .info {
+  #catalog-products .products-background .catalog-background .info-background .info {
     margin-left: 1rem;
     padding: 1.4rem;
   }
-  #catalog-products .catalog-background .info-background .info h1 {
+  #catalog-products .products-background .catalog-background .info-background .info h1 {
     font-size: 14px;
     line-height: 19px;
   }
-  #catalog-products .catalog-background .info-background .info h5 {
+  #catalog-products .products-background .catalog-background .info-background .info h5 {
     font-size: 10px;
     line-height: 13px;
   }
-  #catalog-products .catalog-background .info-background .info button {
+  #catalog-products .products-background .catalog-background .info-background .info button {
     font-size: 10px;
     padding: 0 15px;
   }
-  #catalog-products .catalog-products .product ul {
+  #catalog-products .products-background .catalog-products .product ul {
     display: none;
   }
-  #catalog-products .catalog-products .product .price .discount-price {
+  #catalog-products .products-background .catalog-products .product .price .discount-price {
     bottom: 15%;
     right: 2%;
   }
@@ -1805,8 +1823,8 @@ nav .account-cart .storage-info__price {
     padding: 0.4rem;
     font-family: "Oswald";
   }
-  #catalog-products .catalog-products .product .price .low-price,
-  #catalog-products .catalog-products .product .price .current-price {
+  #catalog-products .products-background .catalog-products .product .price .low-price,
+  #catalog-products .products-background .catalog-products .product .price .current-price {
     font-size: 1.2rem;
   }
   #blog-background {
