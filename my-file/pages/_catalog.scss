@@ -1,4 +1,8 @@
 #catalog-products {
+  font-family: "Oswald";
+  input[type="checkbox"] {
+    accent-color: $black-color;
+  }
   .brand {
     &__header {
       display: flex;
@@ -6,6 +10,7 @@
       h1 {
         font-size: 1.5rem;
         text-transform: capitalize;
+        font-weight: 900;
       }
     }
     ul {
@@ -22,6 +27,7 @@
       h1 {
         font-size: 1.5rem;
         text-transform: capitalize;
+        font-weight: 900;
       }
     }
     &__body {
@@ -47,6 +53,7 @@
       h1 {
         font-size: 1.5rem;
         text-transform: capitalize;
+        font-weight: 900;
       }
     }
     ul {
@@ -61,6 +68,7 @@
     h1 {
       font-size: 1.5rem;
       text-transform: capitalize;
+      font-weight: 900;
     }
   }
 
@@ -91,12 +99,7 @@
         justify-content: center;
       }
       .top-product {
-        //   position: absolute;
-        //   left: 0%;
-        //   right: 0%;
-        //   top: 84.67%;
-        //   bottom: 11.31%;
-
+        margin-top: 1rem;
         font-family: "Oswald";
         font-style: normal;
         font-weight: 600;
@@ -105,18 +108,9 @@
         display: flex;
         align-items: center;
         text-transform: uppercase;
-
-        /* Gray 4 */
-
         color: $grey-color;
       }
       p {
-        //   position: absolute;
-        //   left: 0%;
-        //   right: 0%;
-        //   top: 88.69%;
-        //   bottom: 7.3%;
-
         font-family: "Oswald";
         font-style: normal;
         font-weight: 300;

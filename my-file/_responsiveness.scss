@@ -398,6 +398,7 @@
       }
     }
   }
+
   #catalog-select {
     display: block;
     margin: 1rem;
@@ -412,6 +413,10 @@
       padding: 0.4rem;
       font-family: "Oswald";
     }
+  }
+  #catalog-products .catalog-products .product .price .low-price,
+  #catalog-products .catalog-products .product .price .current-price {
+    font-size: 1.2rem;
   }
   //<----catalog
   #blog-background {

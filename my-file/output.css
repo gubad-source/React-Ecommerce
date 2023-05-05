@@ -480,6 +480,12 @@
   line-height: 30px;
   color: #3f3f3f;
 }
+#catalog-products {
+  font-family: "Oswald";
+}
+#catalog-products input[type=checkbox] {
+  accent-color: #000000;
+}
 #catalog-products .brand__header {
   display: flex;
   justify-content: space-between;
@@ -487,6 +493,7 @@
 #catalog-products .brand__header h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
+  font-weight: 900;
 }
 #catalog-products .brand ul {
   padding: 0;
@@ -501,6 +508,7 @@
 #catalog-products .size__header h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
+  font-weight: 900;
 }
 #catalog-products .size__body ul {
   padding: 0;
@@ -522,6 +530,7 @@
 #catalog-products .dress__header h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
+  font-weight: 900;
 }
 #catalog-products .dress ul {
   padding: 0;
@@ -532,6 +541,7 @@
 #catalog-products .about h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
+  font-weight: 900;
 }
 #catalog-products .catalog-products {
   display: flex;
@@ -559,6 +569,7 @@
   justify-content: center;
 }
 #catalog-products .catalog-products .product .top-product {
+  margin-top: 1rem;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
@@ -567,7 +578,6 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  /* Gray 4 */
   color: #bdbdbd;
 }
 #catalog-products .catalog-products .product p {
@@ -1794,6 +1804,10 @@ nav .account-cart .storage-info__price {
     width: 100%;
     padding: 0.4rem;
     font-family: "Oswald";
+  }
+  #catalog-products .catalog-products .product .price .low-price,
+  #catalog-products .catalog-products .product .price .current-price {
+    font-size: 1.2rem;
   }
   #blog-background {
     display: none;

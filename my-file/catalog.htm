@@ -11,9 +11,58 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <img src="./images/Group 4.png" alt="" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+
+      <ul class="account-cart">
+        <li class="sign-in">Sign-in</li>
+        <li class="create-account">Create an account</li>
+        <li class="liked"><img src="./images/heart.svg" alt="" /></li>
+        <li class="storage">
+          <img src="./images/card.svg" alt="" />
+        </li>
+        <li class="storage-info">
+          <div class="storage-info__text">Shopping Cart</div>
+          <div class="storage-info__price">0,00 eur</div>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="mobile-nav">
+      <div class="hamburger"><i class="fa-solid fa-bars text-light"></i></div>
+      <div class="logo"><img src="./images/crisp.svg" alt="" /></div>
+      <ul class="search-cart">
+        <li>
+          <a href="#"
+            ><i class="text-light fa-solid fa-magnifying-glass"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/cart.svg" alt="" /></a>
+        </li>
+      </ul>
+    </section>
     <section id="shoping-limits-catalog1">
       <div class="limits">
         <div class="container">
@@ -530,6 +579,142 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <section id="footer-top">
+        <ul class="footer-top__list">
+          <li class="footer-top__list__checked">
+            <img src="./images/tick.png" alt="" /> duties and taxes guaranteed
+          </li>
+          <li class="footer-top__list__checked">
+            <img src="./images/tick.png" alt="" /> duties
+          </li>
+          <li class="footer-top__list__checked">
+            <img src="./images/tick.png" alt="" /> notified
+          </li>
+          <li class="footer-top__list__checked">
+            <img src="./images/tick.png" alt="" /> taxes guaranteed
+          </li>
+          <li class="footer-top__list__checked">
+            <img src="./images/tick.png" alt="" /> duties and taxes guaranteed
+          </li>
+        </ul>
+      </section>
+      <section id="crisp-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="crisp-foot">
+                <img src="./images/Group 4.1.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <ul class="foot-col">
+                <div class="foot-col__header">
+                  <h3>FEATURES</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
+
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">BOYS</a></li>
+                <li><a href="#">GIRLS</a></li>
+                <li><a href="#">NEW ARRIVALS</a></li>
+                <li><a href="#">SHOES</a></li>
+                <li><a href="#">CLOTHES</a></li>
+                <li><a href="#">ACCESSORIES</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul class="foot-col">
+                <div class="foot-col__header">
+                  <h3>Menu</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">MY ACCOUNT</a></li>
+                <li><a href="#">ORDERS HISTORY</a></li>
+                <li><a href="#">NEW ARRIVALS</a></li>
+                <li><a href="#">MY WISHLIST</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">LOGIN</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul class="foot-col">
+                <div class="foot-col__header">
+                  <h3>Contact us</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
+                <li>
+                  <div class="content">
+                    <p>ADDRESS:</p>
+                    <span>123 STREET NAME,CITY,ENGLAND</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="content">
+                    <p>PHONE:</p>
+                    <span>0503785664</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="content">
+                    <p>EMAIL:</p>
+                    <span>MAIL@EXAMPLE.COM</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="content">
+                    <p>wORKING DAYS/HOURS:</p>
+                    <span>MON-SUN/09:00AM-08:00PM</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <ul class="foot-col">
+                <div class="foot-col__header">
+                  <h3>Follow us</h3>
+                  <i class="text-light fa-solid fa-plus"></i>
+                </div>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">TWITTER</a></li>
+                <li><a href="#">INSTAGRAM</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <div class="foot-subscribe">
+                <h3>JOIN US</h3>
+                <p>SUBSCRIBE TO OUR NEWSLETTERS</p>
+                <form>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Email Address"
+                    class="subscribe-input"
+                  />
+                  <button type="submit" class="subscribe-button">
+                    SUBSCRIBE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright">
+                <p>© 2019. Crisp theme Developed by Belvg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
 
     <script src="./app.js"></script>
   </body>
