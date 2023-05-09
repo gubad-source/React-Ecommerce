@@ -1,0 +1,20 @@
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+
+// components
+@import 'components/_background';
+@import 'components/_buttons';
+@import 'components/_mixins';
+
+//pages
+@import 'pages/_catalog';
+@import 'pages/_main';
+@import 'pages/_sign-in';
+@import 'pages/_edit-account';
+
+// sections
+@import 'sections/_footer';
+@import 'sections/_header';
+
+@import '_responsiveness';

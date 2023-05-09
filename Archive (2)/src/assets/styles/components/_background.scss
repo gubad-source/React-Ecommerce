@@ -1,0 +1,26 @@
+.limits {
+  background-image: url('./images/woman in hat.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  .info {
+    padding: 6rem 0rem;
+    h1 {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 57px;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: $black-color;
+      padding: 0rem 0rem 2rem;
+    }
+    h5 {
+      font-family: 'Roboto';
+      font-size: 22px;
+      line-height: 37px;
+      letter-spacing: 0.01em;
+
+      color: $black-color;
+    }
+  }
+}

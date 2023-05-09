@@ -1,0 +1,36 @@
+// @import '../components/mixins';
+#edit-account {
+  input {
+    border: 1px solid $black-color;
+  }
+  .edit-account__title {
+    @include dash-title;
+
+    select {
+      display: none;
+    }
+  }
+  .edit-account__body {
+    display: flex;
+    border: 1px solid $light-blue-color;
+    padding: 3rem 6rem;
+    .dashboard-list {
+      @include dashboard-list;
+    }
+    form {
+      h3 {
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        font-weight: 700;
+      }
+      .input-field {
+        @include input-field;
+      }
+      .input-field-checkbox {
+        font-family: 'Oswald';
+        text-transform: uppercase;
+        color: $grey-color-82;
+      }
+    }
+  }
+}

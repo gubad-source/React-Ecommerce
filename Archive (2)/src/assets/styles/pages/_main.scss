@@ -1,0 +1,362 @@
+#products {
+  margin-top: 2rem;
+  .see-more {
+    display: none;
+  }
+  .wear {
+    h1 {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 68px;
+      display: flex;
+      align-items: center;
+      color: $black-color;
+      text-transform: capitalize;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $grey-color-3f;
+
+        input {
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product {
+      // padding: 30px 13px 48px 13px;
+      position: relative;
+      margin-bottom: 1rem;
+      .liked-basket {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 16px;
+      }
+      .discount {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        left: 0px;
+        top: 15px;
+
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $white-color;
+
+        background-color: $secondary-black;
+        justify-content: center;
+      }
+      .top-product {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        margin-top: 0.6rem;
+        color: $grey-color;
+      }
+      p {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: $black-color;
+        margin: 0px;
+      }
+      .price {
+        display: flex;
+        position: relative;
+        .low-price,
+        .current-price {
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 900;
+          font-size: 22px;
+          line-height: 33px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+
+          /* Black */
+
+          color: $black-color;
+        }
+        .low-price {
+          color: $pink-color;
+        }
+        .discount-price {
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          color: $grey-color;
+          position: absolute;
+          bottom: 10%;
+          right: 42%;
+        }
+      }
+    }
+  }
+}
+#offers {
+  .offers {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+  .attachable1 {
+    position: absolute;
+    left: 43%;
+    width: 545px;
+    height: 434px;
+  }
+  .offer-image1 {
+    width: 448px;
+    height: 434px;
+  }
+}
+#blogs {
+  width: 100%;
+  height: 564px;
+  background: $secondary-white;
+  .blog-title {
+    h1 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+  }
+  .article-tips {
+    background: $white-color;
+    padding: 24px;
+    .info {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      color: $grey-color;
+    }
+    h1 {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 39px;
+      display: flex;
+      align-items: center;
+
+      color: $black-color;
+    }
+    p {
+      font-family: 'Roboto Light';
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+
+      color: $black-color;
+    }
+    .date {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 37px;
+      display: flex;
+      align-items: center;
+
+      color: $secondary-grey;
+      border-top: 2px solid $black-color;
+    }
+  }
+}
+#explore {
+  .explore {
+    display: flex;
+    padding: 4rem 0rem;
+    .responsive-image {
+      display: none;
+    }
+    .explore-image {
+    }
+    h2 {
+      box-sizing: border-box;
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 42px;
+      line-height: 72px;
+      text-transform: uppercase;
+      color: $black-color;
+      border: 2px solid $black-color;
+      border-left: none;
+      border-bottom: none;
+    }
+    p {
+      font-family: 'Roboto';
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.01em;
+      color: $black-color;
+    }
+  }
+}
+#mobile-nav {
+  display: none;
+  background-color: $black-color;
+}
+#brands {
+  .brand-tabs {
+    position: relative;
+    &__logo {
+      position: absolute;
+      top: -12px;
+      left: 38%;
+      background-color: $white-color;
+      padding: 0rem 6rem;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      border: 2px solid #c4c4c4;
+      margin: 2rem 0rem;
+      a {
+        text-decoration: none;
+        span {
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 45px;
+          line-height: 110px;
+          text-transform: uppercase;
+          color: $grey-color-3f;
+        }
+      }
+    }
+  }
+  .brand-items {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'left1 right1'
+      'left2 right1';
+    .item {
+      padding: 4rem;
+      h1 {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 94px;
+        text-transform: uppercase;
+        color: #131313;
+      }
+    }
+    .item1 {
+      @include brand-background(
+        $area: left1,
+        $background: url('./images/brand1.png')
+      );
+      position: relative;
+      .info1 {
+        position: absolute;
+        right: 3rem;
+      }
+    }
+    .item2 {
+      @include brand-background(
+        $area: left2,
+        $background: url('./images/brand3.png')
+      );
+    }
+    .item3 {
+      @include brand-background(
+        $area: right1,
+        $background: url('./images/brand2.png')
+      );
+      position: relative;
+      .info3 {
+        position: relative;
+        top: 25rem;
+        left: 0rem;
+      }
+    }
+  }
+}
+
+.cookie-wrapper {
+  max-width: 400px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  z-index: 1;
+  background: #eaeaea;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  img {
+    border-radius: 50%;
+  }
+  &__content {
+    h1 {
+      text-transform: capitalize;
+      font-family: 'Oswald';
+      font-weight: 700;
+    }
+    p {
+      font-family: 'Oswald';
+    }
+    .button {
+      button {
+        border-radius: 0.6rem;
+        background-color: #795c34;
+        color: $white-color;
+        padding: 0.4rem 1.4rem;
+      }
+      a {
+      }
+    }
+  }
+}
