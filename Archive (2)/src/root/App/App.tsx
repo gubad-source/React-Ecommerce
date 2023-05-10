@@ -7,10 +7,14 @@ import 'assets/styles/index.css'
 import Main from 'components/pages/Main'
 import SignIn from 'components/pages/SignIn'
 import EditAccount from 'components/pages/EditAccount'
+import Dashboard from 'components/pages/Dashboard'
+import Blog from 'components/pages/Blog'
 
 const App = () => {
   return (
-    <EditAccount />
+    <Blog />
+    // <Dashboard />
+    // <EditAccount />
     //<SignIn />
     //<Catalog />
     //<Main />

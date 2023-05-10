@@ -1,0 +1,41 @@
+#blog-background {
+  background-image: url('./images/article-background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  .blog-background-title {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0rem;
+    h1 {
+      background: $white-color;
+      padding: 2rem;
+    }
+  }
+}
+#blog {
+  .blog-row {
+    display: flex;
+    justify-content: center;
+  }
+  .blog {
+    h1 {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 68px;
+      color: #000000;
+      text-transform: capitalize;
+    }
+    p {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      color: #3f3f3f;
+    }
+    &__image {
+    }
+  }
+}

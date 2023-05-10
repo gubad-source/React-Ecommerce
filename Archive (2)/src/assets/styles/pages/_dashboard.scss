@@ -1,0 +1,137 @@
+#dashboard {
+  .dashboard-title {
+    @include dash-title;
+    h1 {
+      margin-top: 2rem;
+    }
+    select {
+      display: none;
+    }
+  }
+  .dashboard-body {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $grey-color-c4;
+    width: 100%;
+    padding: 2rem 4rem;
+    .dashboard-list {
+      @include dashboard-list;
+    }
+    .account-address {
+      display: flex;
+      flex-direction: column;
+      .account {
+        .account-title {
+          margin-bottom: 1.4rem;
+          h3 {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            color: $black-color;
+          }
+        }
+        .account-information {
+          display: flex;
+          justify-content: space-between;
+          &__contact {
+            width: 50%;
+            h3 {
+              font-family: 'Oswald';
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
+          }
+          &__newsletters {
+            width: 50%;
+            h3 {
+              font-family: 'Oswald';
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
+          }
+        }
+      }
+      .address {
+        .address-title {
+          margin-bottom: 1.4rem;
+          h3 {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            color: $black-color;
+          }
+        }
+        .address-book {
+          display: flex;
+          justify-content: space-between;
+          &__billing {
+            width: 50%;
+            h3 {
+              font-family: 'Oswald';
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
+          }
+          &__shipping {
+            width: 50%;
+            h3 {
+              font-family: 'Oswald';
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $grey-color-3f;
+            }
+            p {
+              margin: 0;
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: $grey-color-82;
+            }
+          }
+        }
+      }
+    }
+  }
+}
