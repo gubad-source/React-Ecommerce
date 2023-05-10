@@ -9,10 +9,12 @@ import SignIn from 'components/pages/SignIn'
 import EditAccount from 'components/pages/EditAccount'
 import Dashboard from 'components/pages/Dashboard'
 import Blog from 'components/pages/Blog'
+import Wishlist from 'components/pages/Wishlist'
 
 const App = () => {
   return (
-    <Blog />
+    <Wishlist />
+    //<Blog />
     // <Dashboard />
     // <EditAccount />
     //<SignIn />
