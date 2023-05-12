@@ -2,6 +2,8 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
+import catalog_product from '../../../assets/images/Rectangle 7.png'
 
 const Catalog = () => {
   return (
@@ -223,6 +225,7 @@ const Catalog = () => {
                 <div className="catalog-products">
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -246,11 +249,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -265,6 +264,7 @@ const Catalog = () => {
                   </Col>
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -288,11 +288,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -304,9 +300,10 @@ const Catalog = () => {
                         <li className="blue"></li>
                       </ul>
                     </div>
-                  </Col>
+                  </Col>{' '}
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -330,11 +327,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -346,9 +339,10 @@ const Catalog = () => {
                         <li className="blue"></li>
                       </ul>
                     </div>
-                  </Col>
+                  </Col>{' '}
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -372,11 +366,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -408,6 +398,7 @@ const Catalog = () => {
                 <div className="catalog-products">
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -431,11 +422,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -450,6 +437,7 @@ const Catalog = () => {
                   </Col>
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -473,53 +461,7 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
-                      <span className="top-product">TOP women</span>
-                      <p>Angels malu zip jeans slim black used</p>
-                      <div className="price">
-                        <span className="current-price">235,00 EUR</span>
-                      </div>
-                      <ul>
-                        <li className="red"></li>
-                        <li className="green"></li>
-                        <li className="blue"></li>
-                      </ul>
-                    </div>
-                  </Col>{' '}
-                  <Col lg={3} xs={6}>
-                    <div className="product">
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
-                      <span className="top-product">TOP women</span>
-                      <p>Angels malu zip jeans slim black used</p>
-                      <div className="price">
-                        <span className="low-price">235,00 EUR</span>
-                        <span className="discount-price">
-                          <del>35,00 EUR</del>
-                        </span>
-                      </div>
-                      <ul>
-                        <li className="red"></li>
-                        <li className="green"></li>
-                        <li className="blue"></li>
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col lg={3} xs={6}>
-                    <div className="product">
-                      <span className="discount">-30%</span>
-                      <img
-                        src="./images/Rectangle 7.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">
@@ -534,6 +476,7 @@ const Catalog = () => {
                   </Col>{' '}
                   <Col lg={3} xs={6}>
                     <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
@@ -557,11 +500,46 @@ const Catalog = () => {
                   <Col lg={3} xs={6}>
                     <div className="product">
                       <span className="discount">-30%</span>
+                      <Image src={catalog_product} style={{ width: '100%' }} />
+                      <span className="top-product">TOP women</span>
+                      <p>Angels malu zip jeans slim black used</p>
+                      <div className="price">
+                        <span className="current-price">235,00 EUR</span>
+                      </div>
+                      <ul>
+                        <li className="red"></li>
+                        <li className="green"></li>
+                        <li className="blue"></li>
+                      </ul>
+                    </div>
+                  </Col>{' '}
+                  <Col lg={3} xs={6}>
+                    <div className="product">
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <img
                         src="./images/Rectangle 7.png"
                         alt=""
                         className="img-fluid"
                       />
+                      <span className="top-product">TOP women</span>
+                      <p>Angels malu zip jeans slim black used</p>
+                      <div className="price">
+                        <span className="low-price">235,00 EUR</span>
+                        <span className="discount-price">
+                          <del>35,00 EUR</del>
+                        </span>
+                      </div>
+                      <ul>
+                        <li className="red"></li>
+                        <li className="green"></li>
+                        <li className="blue"></li>
+                      </ul>
+                    </div>
+                  </Col>
+                  <Col lg={3} xs={6}>
+                    <div className="product">
+                      <span className="discount">-30%</span>
+                      <Image src={catalog_product} style={{ width: '100%' }} />
                       <span className="top-product">TOP women</span>
                       <p>Angels malu zip jeans slim black used</p>
                       <div className="price">

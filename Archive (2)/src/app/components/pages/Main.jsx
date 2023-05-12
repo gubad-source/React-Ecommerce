@@ -4,14 +4,9 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import 'bootstrap/dist/css/bootstrap.css'
 import cookies from '../../../assets/images/cookies.png'
-// import logo from '../../../assets/images/Group 4.png'
-// import liked from '../../../assets/images/heart.svg'
-// import storage from '../../../assets/images/card.svg'
 import brand from '../../../assets/images/Rectangle 7.png'
 import girl_in_glasses from '../../../assets/images/image 2.19.png'
 import girl_in_glasses2 from '../../../assets/images/image 2.1.png'
-// import tick from '../../../assets/images/tick.png'
-// import logo_footer from '../../../assets/images/Group 4.1.png'
 import logo_brand from '../../../assets/images/chose your brand.png'
 import { useEffect } from 'react'
 
@@ -279,7 +274,86 @@ const Main = () => {
                     </div>
                   </div>
                 </Col>
-
+                <Col lg={3} xs={6}>
+                  <div className="product">
+                    <div className="liked-basket">
+                      <span>
+                        <i className="fa-solid fa-heart text-danger"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-basket-shopping text-info"></i>
+                      </span>
+                    </div>
+                    <Image fluid src={brand} style={{ width: '100%' }} />
+                    <span className="top-product">TOP women</span>
+                    <p>Angels malu zip jeans slim black used</p>
+                    <div className="price">
+                      <span className="low-price">235,00 EUR</span>
+                      <span className="discount-price">
+                        <del>35,00 EUR</del>
+                      </span>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} xs={6}>
+                  <div className="product">
+                    <span className="discount">-30%</span>
+                    <div className="liked-basket">
+                      <span>
+                        <i className="fa-solid fa-heart text-danger"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-basket-shopping text-info"></i>
+                      </span>
+                    </div>
+                    <Image fluid src={brand} style={{ width: '100%' }} />
+                    <span className="top-product">TOP women</span>
+                    <p>Angels malu zip jeans slim black used</p>
+                    <div className="price">
+                      <span className="current-price">235,00 EUR</span>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} xs={6}>
+                  <div className="product">
+                    <div className="liked-basket">
+                      <span>
+                        <i className="fa-solid fa-heart text-danger"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-basket-shopping text-info"></i>
+                      </span>
+                    </div>
+                    <Image fluid src={brand} style={{ width: '100%' }} />
+                    <span className="top-product">TOP women</span>
+                    <p>Angels malu zip jeans slim black used</p>
+                    <div className="price">
+                      <span className="low-price">235,00 EUR</span>
+                      <span className="discount-price">
+                        <del>35,00 EUR</del>
+                      </span>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} xs={6}>
+                  <div className="product">
+                    <span className="discount">-30%</span>
+                    <div className="liked-basket">
+                      <span>
+                        <i className="fa-solid fa-heart text-danger"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-basket-shopping text-info"></i>
+                      </span>
+                    </div>
+                    <Image fluid src={brand} style={{ width: '100%' }} />
+                    <span className="top-product">TOP women</span>
+                    <p>Angels malu zip jeans slim black used</p>
+                    <div className="price">
+                      <span className="current-price">235,00 EUR</span>
+                    </div>
+                  </div>
+                </Col>
                 <Col xs={12}>
                   <button className="see-more">see more</button>
                 </Col>

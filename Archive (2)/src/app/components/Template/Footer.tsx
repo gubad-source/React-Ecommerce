@@ -44,12 +44,12 @@ const FooterComponent: React.FC<any> = ({ translate }) => {
       <section id="crisp-footer">
         <Container fluid>
           <Row>
-            <Col lg={12}>
+            <Col lg={2}>
               <div className="crisp-foot">
                 <img src={logo_footer} alt="" />
               </div>
             </Col>
-            <Col lg={12}>
+            <Col lg={2}>
               <ul className="foot-col">
                 <div className="foot-col__header">
                   <h3>FEATURES</h3>

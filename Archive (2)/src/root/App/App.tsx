@@ -18,27 +18,16 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/" component={Main } />
-        <Route path="/catalog" component={Catalog } />
-        <Route path="/sign-in" component={SignIn } />
-        <Route path="/edit-account" component={EditAccount } />
-        <Route path="/dashboard" component={Dashboard } />
-        <Route path="/blog" component={Blog } />
-        <Route path="/wishlist" component={Wishlist } />
+        <Route exact path="/" component={Main} />
+        <Route path="/catalog" component={Catalog} />
+        <Route path="/sign-in" component={SignIn} />
+        <Route path="/edit-account" component={EditAccount} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/wishlist" component={Wishlist} />
       </Switch>
       <Footer />
     </BrowserRouter>
-
-    //<Wishlist />
-    //<Blog />
-    // <Dashboard />
-    // <EditAccount />
-    //<SignIn />
-    //<Catalog />
-    // <Main />
-    // <BrowserRouter>
-    //   <Routes />
-    // </BrowserRouter>
   )
 }
 
