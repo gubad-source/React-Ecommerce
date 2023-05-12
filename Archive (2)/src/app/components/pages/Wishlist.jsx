@@ -50,7 +50,12 @@ const Wishlist = () => {
                   <Col lg={4} xs={6}>
                     <div className="wishlist__body__items__frame">
                       <div className="item">
-                        <img className="img-fluid" src={wishlistImage} alt="" />
+                        <img
+                          className="img-fluid"
+                          style={{ width: '100%' }}
+                          src={wishlistImage}
+                          alt=""
+                        />
                         <p>Angels malu zip jeans slim black used</p>
                         <div className="price">
                           <span className="current-price">235,00 eur</span>
@@ -75,7 +80,12 @@ const Wishlist = () => {
                   <Col lg={4} xs={6}>
                     <div className="wishlist__body__items__frame">
                       <div className="item">
-                        <img className="img-fluid" src={wishlistImage} alt="" />
+                        <img
+                          className="img-fluid"
+                          style={{ width: '100%' }}
+                          src={wishlistImage}
+                          alt=""
+                        />
                         <p>Angels malu zip jeans slim black used</p>
                         <div className="price">
                           <span className="current-price">235,00 eur</span>
@@ -100,7 +110,12 @@ const Wishlist = () => {
                   <Col lg={4} xs={6}>
                     <div className="wishlist__body__items__frame">
                       <div className="item">
-                        <img className="img-fluid" src={wishlistImage} alt="" />
+                        <img
+                          className="img-fluid"
+                          style={{ width: '100%' }}
+                          src={wishlistImage}
+                          alt=""
+                        />
                         <p>Angels malu zip jeans slim black used</p>
                         <div className="price">
                           <span className="current-price">235,00 eur</span>
@@ -125,7 +140,12 @@ const Wishlist = () => {
                   <Col lg={4} xs={6}>
                     <div className="wishlist__body__items__frame">
                       <div className="item">
-                        <img className="img-fluid" src={wishlistImage} alt="" />
+                        <img
+                          className="img-fluid"
+                          style={{ width: '100%' }}
+                          src={wishlistImage}
+                          alt=""
+                        />
                         <p>Angels malu zip jeans slim black used</p>
                         <div className="price">
                           <span className="current-price">235,00 eur</span>

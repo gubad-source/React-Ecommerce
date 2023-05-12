@@ -2,15 +2,16 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import 'bootstrap/dist/css/bootstrap.css'
 import cookies from '../../../assets/images/cookies.png'
-import logo from '../../../assets/images/Group 4.png'
-import liked from '../../../assets/images/heart.svg'
-import storage from '../../../assets/images/card.svg'
+// import logo from '../../../assets/images/Group 4.png'
+// import liked from '../../../assets/images/heart.svg'
+// import storage from '../../../assets/images/card.svg'
 import brand from '../../../assets/images/Rectangle 7.png'
 import girl_in_glasses from '../../../assets/images/image 2.19.png'
 import girl_in_glasses2 from '../../../assets/images/image 2.1.png'
-import tick from '../../../assets/images/tick.png'
-import logo_footer from '../../../assets/images/Group 4.1.png'
+// import tick from '../../../assets/images/tick.png'
+// import logo_footer from '../../../assets/images/Group 4.1.png'
 import logo_brand from '../../../assets/images/chose your brand.png'
 import { useEffect } from 'react'
 
@@ -28,7 +29,7 @@ const Main = () => {
   })
   return (
     <>
-      <nav>
+      {/* <nav>
         <div class="logo">
           <img src={logo} alt="" />
         </div>
@@ -88,7 +89,7 @@ const Main = () => {
             </a>
           </li>
         </ul>
-      </section>
+      </section> */}
 
       <div class="cookie-wrapper">
         <Image src={cookies} />
@@ -168,7 +169,6 @@ const Main = () => {
           </Row>
         </Container>
       </section>
-
       <section id="products">
         <Container fluid>
           <Row>
@@ -209,7 +209,7 @@ const Main = () => {
                         <i className="fa-solid fa-basket-shopping text-info"></i>
                       </span>
                     </div>
-                    <Image fluid src={brand} />
+                    <Image fluid src={brand} style={{ width: '100%' }} />
                     <span className="top-product">TOP women</span>
                     <p>Angels malu zip jeans slim black used</p>
                     <div className="price">
@@ -231,7 +231,7 @@ const Main = () => {
                         <i className="fa-solid fa-basket-shopping text-info"></i>
                       </span>
                     </div>
-                    <img src={brand} alt="" className="img-fluid" />
+                    <Image fluid src={brand} style={{ width: '100%' }} />
                     <span className="top-product">TOP women</span>
                     <p>Angels malu zip jeans slim black used</p>
                     <div className="price">
@@ -249,7 +249,7 @@ const Main = () => {
                         <i className="fa-solid fa-basket-shopping text-info"></i>
                       </span>
                     </div>
-                    <Image src={brand} fluid />
+                    <Image fluid src={brand} style={{ width: '100%' }} />
                     <span className="top-product">TOP women</span>
                     <p>Angels malu zip jeans slim black used</p>
                     <div className="price">
@@ -271,7 +271,7 @@ const Main = () => {
                         <i className="fa-solid fa-basket-shopping text-info"></i>
                       </span>
                     </div>
-                    <img src={brand} alt="" className="img-fluid" />
+                    <Image fluid src={brand} style={{ width: '100%' }} />
                     <span className="top-product">TOP women</span>
                     <p>Angels malu zip jeans slim black used</p>
                     <div className="price">
@@ -288,6 +288,100 @@ const Main = () => {
           </Row>
         </Container>
       </section>
+
+      {/* <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-6 col-md-3">
+            <div className="wear">
+              <h1>shop some wear:</h1>
+              <ul>
+                <li>
+                  <input type="checkbox" name="" id="" /> best sellers
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="" /> new arrivals
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="" /> top women
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="" /> collection summer
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="" /> collection spring
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="" /> trending
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-9">
+            <div className="row g-5">
+              <div className="col-12 col-sm-6 col-md-3">
+                <div className="card">
+                  <Image fluid src={brand} style={{ width: '100%' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" className="btn btn-primary">
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-md-3">
+                <div className="card">
+                  <Image fluid src={brand} style={{ width: '100%' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" className="btn btn-primary">
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-md-3">
+                <div className="card">
+                  <Image fluid src={brand} style={{ width: '100%' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" className="btn btn-primary">
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-md-3">
+                <div className="card">
+                  <Image fluid src={brand} style={{ width: '100%' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" className="btn btn-primary">
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <section id="shoping-limits">
         <div class="limits">
@@ -320,11 +414,7 @@ const Main = () => {
                 />
                 <Col lg={7} xs={12}>
                   <div className="explore-image">
-                    <img
-                      src={girl_in_glasses2}
-                      alt=""
-                      className="img-fluid web-image"
-                    />
+                    <Image src={girl_in_glasses2} style={{ width: '100%' }} />
                   </div>
                 </Col>
                 <Col lg={4} className="ml-5">
@@ -416,7 +506,7 @@ const Main = () => {
         </Container>
       </section>
 
-      <footer>
+      {/* <footer>
         <section id="footer-top">
           <ul className="footer-top__list">
             <li className="footer-top__list__checked">
@@ -588,7 +678,7 @@ const Main = () => {
             </Row>
           </Container>
         </section>
-      </footer>
+      </footer> */}
     </>
   )
 }

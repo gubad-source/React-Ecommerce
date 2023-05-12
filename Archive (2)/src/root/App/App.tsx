@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Routes from '../Routes'
 import Catalog from 'components/pages/Catalog'
@@ -10,16 +10,32 @@ import EditAccount from 'components/pages/EditAccount'
 import Dashboard from 'components/pages/Dashboard'
 import Blog from 'components/pages/Blog'
 import Wishlist from 'components/pages/Wishlist'
+import Header from 'components/Template/Header'
+import Footer from 'components/Template/Footer'
 
 const App = () => {
   return (
-    <Wishlist />
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Main } />
+        <Route path="/catalog" component={Catalog } />
+        <Route path="/sign-in" component={SignIn } />
+        <Route path="/edit-account" component={EditAccount } />
+        <Route path="/dashboard" component={Dashboard } />
+        <Route path="/blog" component={Blog } />
+        <Route path="/wishlist" component={Wishlist } />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
+
+    //<Wishlist />
     //<Blog />
     // <Dashboard />
     // <EditAccount />
     //<SignIn />
     //<Catalog />
-    //<Main />
+    // <Main />
     // <BrowserRouter>
     //   <Routes />
     // </BrowserRouter>
