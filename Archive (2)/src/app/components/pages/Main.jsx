@@ -8,84 +8,95 @@ import brand from '../../../assets/images/Rectangle 7.png'
 import girl_in_glasses from '../../../assets/images/image 2.19.png'
 import girl_in_glasses2 from '../../../assets/images/image 2.1.png'
 import logo_brand from '../../../assets/images/chose your brand.png'
-import { useEffect } from 'react'
+import slider_background from '../../../assets/styles/images/slider-background.png'
+import { useEffect, useState } from 'react'
 
+import { Carousel } from 'antd'
+const contentStyle = {
+  margin: 0,
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+}
+const products = [
+  {
+    id: 1,
+    image: brand,
+    title: 'Angels malu zip jeans slim black used',
+    category: 'TOP WOMEN',
+    low_price: '235,00',
+    discount_price: '35,00',
+  },
+  {
+    id: 2,
+    image: brand,
+    title: 'Angels malu zip jeans slim black used',
+    category: 'TOP WOMEN',
+    low_price: '235,00',
+    discount_price: '35,00',
+  },
+  {
+    id: 3,
+    image: brand,
+    title: 'Angels malu zip jeans slim black used',
+    category: 'TOP WOMEN',
+    low_price: '235,00',
+    discount_price: '35,00',
+  },
+]
 const Main = () => {
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
     document.querySelector('.cookie-wrapper').style.display = 'none'
   }
+  const [liked, setLiked] = useState(
+    JSON.parse(localStorage.getItem('likedProducts') ?? '[]')
+  )
+  function addToLiked(productId) {
+    let findIndex = liked.indexOf(productId)
+    if (findIndex == -1) {
+      setLiked((old_data) => {
+        let new_array = [...old_data, productId]
+        localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        return new_array
+      })
+    } else {
+      setLiked((old_data) => {
+        let new_array = old_data.filter((row) => row !== productId)
+        localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        return new_array
+      })
+    }
+  }
+
   useEffect(() => {
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
     if (cookie != null) {
       document.querySelector('.cookie-wrapper').style.display = 'none'
     }
-  })
+  }, [liked])
+  const onChange = (currentSlide) => {
+    console.log(currentSlide)
+  }
   return (
     <>
-      {/* <nav>
-        <div class="logo">
-          <img src={logo} alt="" />
+      <Carousel afterChange={onChange} autoplay={true}>
+        <div>
+          <h3 style={contentStyle}>1</h3>
         </div>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Sale</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-          <li>
-            <a href="#">Search</a>
-          </li>
-        </ul>
-
-        <ul class="account-cart">
-          <li class="sign-in">Sign-in</li>
-          <li class="create-account">Create an account</li>
-          <li class="liked">
-            <img src={liked} alt="" />
-          </li>
-          <li class="storage">
-            <img src={storage} alt="" />
-          </li>
-          <li class="storage-info">
-            <div class="storage-info__text">Shopping Cart</div>
-            <div class="storage-info__price">0,00 eur</div>
-          </li>
-        </ul>
-      </nav>
-
-      <section id="mobile-nav">
-        <div class="hamburger">
-          <i class="fa-solid fa-bars text-light"></i>
+        <div>
+          <h3 style={contentStyle}>2</h3>
         </div>
-        <div class="logo">
-          <img src="./images/crisp.svg" alt="" />
+        <div>
+          <h3 style={contentStyle}>3</h3>
         </div>
-        <ul class="search-cart">
-          <li>
-            <a href="#">
-              <i class="text-light fa-solid fa-magnifying-glass"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./images/cart.svg" alt="" />
-            </a>
-          </li>
-        </ul>
-      </section> */}
-
+        <div>
+          <h3 style={contentStyle}>4</h3>
+        </div>
+      </Carousel>
       <div class="cookie-wrapper">
         <Image src={cookies} />
         <div class="cookie-wrapper__content">
@@ -194,268 +205,88 @@ const Main = () => {
             </Col>
             <Col lg={9}>
               <div className="products">
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="low-price">235,00 EUR</span>
-                      <span className="discount-price">
-                        <del>35,00 EUR</del>
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <span className="discount">-30%</span>
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="current-price">235,00 EUR</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="low-price">235,00 EUR</span>
-                      <span className="discount-price">
-                        <del>35,00 EUR</del>
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <span className="discount">-30%</span>
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="current-price">235,00 EUR</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="low-price">235,00 EUR</span>
-                      <span className="discount-price">
-                        <del>35,00 EUR</del>
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <span className="discount">-30%</span>
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="current-price">235,00 EUR</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="low-price">235,00 EUR</span>
-                      <span className="discount-price">
-                        <del>35,00 EUR</del>
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={3} xs={6}>
-                  <div className="product">
-                    <span className="discount">-30%</span>
-                    <div className="liked-basket">
-                      <span>
-                        <i className="fa-solid fa-heart text-danger"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-basket-shopping text-info"></i>
-                      </span>
-                    </div>
-                    <Image fluid src={brand} style={{ width: '100%' }} />
-                    <span className="top-product">TOP women</span>
-                    <p>Angels malu zip jeans slim black used</p>
-                    <div className="price">
-                      <span className="current-price">235,00 EUR</span>
-                    </div>
-                  </div>
-                </Col>
+                {products.map((product) => {
+                  return (
+                    <Col lg={3} xs={6}>
+                      <div className="product" data-productid={product.id}>
+                        <div className="liked-basket">
+                          <span>
+                            <i
+                              className="fa-solid fa-heart text-danger"
+                              onClick={() => addToLiked(product.id)}
+                            ></i>
+                          </span>
+                          <span>
+                            <i className="fa-solid fa-basket-shopping text-info"></i>
+                          </span>
+                        </div>
+                        <Image
+                          fluid
+                          src={product.image}
+                          style={{ width: '100%' }}
+                        />
+                        <span className="top-product">{product.category}</span>
+                        <p>{product.title}</p>
+                        <div className="price">
+                          <span className="low-price">
+                            {product.low_price} EUR
+                          </span>
+                          <span className="discount-price">
+                            <del>{product.discount_price} EUR</del>
+                          </span>
+                        </div>
+                      </div>
+                    </Col>
+                  )
+                })}
+
                 <Col xs={12}>
                   <button className="see-more">see more</button>
                 </Col>
+              </div>
+              <div className="liked-products products">
+                <h1>Liked</h1>
+                {liked?.map((productId) => {
+                  let product = products.find((row) => row.id == productId)
+                  console.log(productId)
+                  return (
+                    <Col lg={3} xs={6}>
+                      <div className="product" data-productid={product.id}>
+                        <div className="liked-basket">
+                          <span>
+                            <i
+                              className="fa-solid fa-heart text-danger"
+                              onClick={() => addToLiked(product.id)}
+                            ></i>
+                          </span>
+                          <span>
+                            <i className="fa-solid fa-basket-shopping text-info"></i>
+                          </span>
+                        </div>
+                        <Image
+                          fluid
+                          src={product.image}
+                          style={{ width: '100%' }}
+                        />
+                        <span className="top-product">{product.category}</span>
+                        <p>{product.title}</p>
+                        <div className="price">
+                          <span className="low-price">
+                            {product.low_price} EUR
+                          </span>
+                          <span className="discount-price">
+                            <del>{product.discount_price} EUR</del>
+                          </span>
+                        </div>
+                      </div>
+                    </Col>
+                  )
+                })}
               </div>
             </Col>
           </Row>
         </Container>
       </section>
-
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-3">
-            <div className="wear">
-              <h1>shop some wear:</h1>
-              <ul>
-                <li>
-                  <input type="checkbox" name="" id="" /> best sellers
-                </li>
-                <li>
-                  <input type="checkbox" name="" id="" /> new arrivals
-                </li>
-                <li>
-                  <input type="checkbox" name="" id="" /> top women
-                </li>
-                <li>
-                  <input type="checkbox" name="" id="" /> collection summer
-                </li>
-                <li>
-                  <input type="checkbox" name="" id="" /> collection spring
-                </li>
-                <li>
-                  <input type="checkbox" name="" id="" /> trending
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-9">
-            <div className="row g-5">
-              <div className="col-12 col-sm-6 col-md-3">
-                <div className="card">
-                  <Image fluid src={brand} style={{ width: '100%' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-md-3">
-                <div className="card">
-                  <Image fluid src={brand} style={{ width: '100%' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-md-3">
-                <div className="card">
-                  <Image fluid src={brand} style={{ width: '100%' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-md-3">
-                <div className="card">
-                  <Image fluid src={brand} style={{ width: '100%' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <section id="shoping-limits">
         <div class="limits">
@@ -579,180 +410,6 @@ const Main = () => {
           </Row>
         </Container>
       </section>
-
-      {/* <footer>
-        <section id="footer-top">
-          <ul className="footer-top__list">
-            <li className="footer-top__list__checked">
-              <img src={tick} alt="" /> duties and taxes guaranteed
-            </li>
-            <li className="footer-top__list__checked">
-              <img src={tick} alt="" /> duties
-            </li>
-            <li className="footer-top__list__checked">
-              <img src={tick} alt="" /> notified
-            </li>
-            <li className="footer-top__list__checked">
-              <img src={tick} alt="" /> taxes guaranteed
-            </li>
-            <li className="footer-top__list__checked">
-              <img src={tick} alt="" /> duties and taxes guaranteed
-            </li>
-          </ul>
-        </section>
-        <section id="crisp-footer">
-          <Container fluid>
-            <Row>
-              <Col lg={12}>
-                <div className="crisp-foot">
-                  <img src={logo_footer} alt="" />
-                </div>
-              </Col>
-              <Col lg={12}>
-                <ul className="foot-col">
-                  <div className="foot-col__header">
-                    <h3>FEATURES</h3>
-                    <i className="text-light fa-solid fa-plus"></i>
-                  </div>
-
-                  <li>
-                    <a href="#">MEN</a>
-                  </li>
-                  <li>
-                    <a href="#">WOMEN</a>
-                  </li>
-                  <li>
-                    <a href="#">BOYS</a>
-                  </li>
-                  <li>
-                    <a href="#">GIRLS</a>
-                  </li>
-                  <li>
-                    <a href="#">NEW ARRIVALS</a>
-                  </li>
-                  <li>
-                    <a href="#">SHOES</a>
-                  </li>
-                  <li>
-                    <a href="#">CLOTHES</a>
-                  </li>
-                  <li>
-                    <a href="#">ACCESSORIES</a>
-                  </li>
-                </ul>
-              </Col>
-              <Col lg={2}>
-                <ul className="foot-col">
-                  <div className="foot-col__header">
-                    <h3>Menu</h3>
-                    <i className="text-light fa-solid fa-plus"></i>
-                  </div>
-                  <li>
-                    <a href="#">ABOUT US</a>
-                  </li>
-                  <li>
-                    <a href="#">CONTACT US</a>
-                  </li>
-                  <li>
-                    <a href="#">MY ACCOUNT</a>
-                  </li>
-                  <li>
-                    <a href="#">ORDERS HISTORY</a>
-                  </li>
-                  <li>
-                    <a href="#">NEW ARRIVALS</a>
-                  </li>
-                  <li>
-                    <a href="#">MY WISHLIST</a>
-                  </li>
-                  <li>
-                    <a href="#">BLOG</a>
-                  </li>
-                  <li>
-                    <a href="#">LOGIN</a>
-                  </li>
-                </ul>
-              </Col>
-              <Col lg={2}>
-                <ul className="foot-col">
-                  <div className="foot-col__header">
-                    <h3>Contact us</h3>
-                    <i className="text-light fa-solid fa-plus"></i>
-                  </div>
-                  <li>
-                    <div className="content">
-                      <p>ADDRESS:</p>
-                      <span>123 STREET NAME,CITY,ENGLAND</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="content">
-                      <p>PHONE:</p>
-                      <span>0503785664</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="content">
-                      <p>EMAIL:</p>
-                      <span>MAIL@EXAMPLE.COM</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="content">
-                      <p>wORKING DAYS/HOURS:</p>
-                      <span>MON-SUN/09:00AM-08:00PM</span>
-                    </div>
-                  </li>
-                </ul>
-              </Col>
-
-              <Col lg={2}>
-                <ul className="foot-col">
-                  <div className="foot-col__header">
-                    <h3>Follow us</h3>
-                    <i className="text-light fa-solid fa-plus"></i>
-                  </div>
-                  <li>
-                    <a href="#">FACEBOOK</a>
-                  </li>
-                  <li>
-                    <a href="#">TWITTER</a>
-                  </li>
-                  <li>
-                    <a href="#">INSTAGRAM</a>
-                  </li>
-                </ul>
-              </Col>
-
-              <Col lg={2}>
-                <div className="foot-subscribe">
-                  <h3>JOIN US</h3>
-                  <p>SUBSCRIBE TO OUR NEWSLETTERS</p>
-                  <form>
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Email Address"
-                      className="subscribe-input"
-                    />
-                    <button type="submit" className="subscribe-button">
-                      SUBSCRIBE
-                    </button>
-                  </form>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg={12}>
-                <div className="copyright">
-                  <p>© 2019. Crisp theme Developed by Belvg</p>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </section>
-      </footer> */}
     </>
   )
 }
