@@ -10,6 +10,7 @@ import girl_in_glasses2 from '../../../assets/images/image 2.1.png'
 import logo_brand from '../../../assets/images/chose your brand.png'
 import slider_background from '../../../assets/styles/images/slider-background.png'
 import { useEffect, useState } from 'react'
+import products from '../../../constants/products'
 
 import { Carousel } from 'antd'
 const contentStyle = {
@@ -20,32 +21,32 @@ const contentStyle = {
   textAlign: 'center',
   background: '#364d79',
 }
-const products = [
-  {
-    id: 1,
-    image: brand,
-    title: 'Angels malu zip jeans slim black used',
-    category: 'TOP WOMEN',
-    low_price: '235,00',
-    discount_price: '35,00',
-  },
-  {
-    id: 2,
-    image: brand,
-    title: 'Angels malu zip jeans slim black used',
-    category: 'TOP WOMEN',
-    low_price: '235,00',
-    discount_price: '35,00',
-  },
-  {
-    id: 3,
-    image: brand,
-    title: 'Angels malu zip jeans slim black used',
-    category: 'TOP WOMEN',
-    low_price: '235,00',
-    discount_price: '35,00',
-  },
-]
+// const products = [
+//   {
+//     id: 1,
+//     image: brand,
+//     title: 'Angels malu zip jeans slim black used',
+//     category: 'TOP WOMEN',
+//     low_price: '235,00',
+//     discount_price: '35,00',
+//   },
+//   {
+//     id: 2,
+//     image: brand,
+//     title: 'Angels malu zip jeans slim black used',
+//     category: 'TOP WOMEN',
+//     low_price: '235,00',
+//     discount_price: '35,00',
+//   },
+//   {
+//     id: 3,
+//     image: brand,
+//     title: 'Angels malu zip jeans slim black used',
+//     category: 'TOP WOMEN',
+//     low_price: '235,00',
+//     discount_price: '35,00',
+//   },
+// ]
 const Main = () => {
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
@@ -77,7 +78,7 @@ const Main = () => {
     if (cookie != null) {
       document.querySelector('.cookie-wrapper').style.display = 'none'
     }
-  }, [liked])
+  }, [])
   const onChange = (currentSlide) => {
     console.log(currentSlide)
   }
@@ -217,7 +218,10 @@ const Main = () => {
                             ></i>
                           </span>
                           <span>
-                            <i className="fa-solid fa-basket-shopping text-info"></i>
+                            <i
+                              className="fa-solid fa-basket-shopping text-info"
+                              onClick={() => addToStorage(product.id)}
+                            ></i>
                           </span>
                         </div>
                         <Image
@@ -244,7 +248,7 @@ const Main = () => {
                   <button className="see-more">see more</button>
                 </Col>
               </div>
-              <div className="liked-products products">
+              {/* <div className="liked-products products">
                 <h1>Liked</h1>
                 {liked?.map((productId) => {
                   let product = products.find((row) => row.id == productId)
@@ -282,7 +286,7 @@ const Main = () => {
                     </Col>
                   )
                 })}
-              </div>
+              </div> */}
             </Col>
           </Row>
         </Container>
