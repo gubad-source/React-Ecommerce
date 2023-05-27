@@ -95,7 +95,6 @@ const Main = () => {
       product.total += item.qty * item.price
       product.count++
     })
-
     return product
   }
   useEffect(() => {

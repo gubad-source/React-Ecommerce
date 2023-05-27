@@ -53,6 +53,30 @@ const Card = () => {
         cartItems.prepend(tr)
       })
     }
+    var removeBtns = document.querySelectorAll('.remote-from-basket')
+    function calcTotalAndCount(storage) {
+      storage.count = 0
+      storage.total = 0
+      storage.items?.forEach((item) => {
+        storage.total += item.qty * item.price
+        storage.count++
+      })
+      return storage
+    }
+    removeBtns.forEach((item) => {
+      item.addEventListener('click', function () {
+        let index = item.parentNode.parentNode.dataset.index
+        storage.items.splice(index, 1)
+        item.parentNode.parentNode.remove()
+
+        //storage = calcTotalAndCount(storage)
+        setStorage((old_data) => {
+          let dd = (old_data = calcTotalAndCount(old_data))
+          localStorage.setItem('storedProducts', JSON.stringify(dd))
+          return dd
+        })
+      })
+    })
   }
   return (
     <Container>
