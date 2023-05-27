@@ -4,11 +4,9 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import 'bootstrap/dist/css/bootstrap.css'
 import cookies from '../../../assets/images/cookies.png'
-import brand from '../../../assets/images/Rectangle 7.png'
 import girl_in_glasses from '../../../assets/images/image 2.19.png'
 import girl_in_glasses2 from '../../../assets/images/image 2.1.png'
 import logo_brand from '../../../assets/images/chose your brand.png'
-import slider_background from '../../../assets/styles/images/slider-background.png'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import regex from '../../../constants/regex'
@@ -60,6 +58,7 @@ const Main = () => {
     const price_items = document
       .querySelector('.product .price .low-price')
       .innerHTML.match(regex)
+    const items = storage.items
     if (storeIndex == -1) {
       console.log('test' + productId + ' ' + storeIndex)
       let productid = productId
@@ -71,19 +70,22 @@ const Main = () => {
         price: +price_items[0],
         qty: 1,
       }
-      const items = storage.items
+
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
         return new_object
       })
-      // setStorage((old_data) => {
-      //   let arr = [...old_data.items, product]
-      //   localStorage.setItem('storedProducts', JSON.stringify(arr))
-      //   return arr
-      // })
     } else {
-      storage.items[storeIndex].qty++
+      setStorage((old_data) => {
+        let new_object2 = {
+          ...old_data,
+          items: [...items, items[storeIndex].qty++],
+        }
+
+        localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        return new_object2
+      })
     }
   }
   function calcTotalAndCount(product) {

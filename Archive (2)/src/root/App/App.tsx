@@ -10,6 +10,7 @@ import EditAccount from 'components/pages/EditAccount'
 import Dashboard from 'components/pages/Dashboard'
 import Blog from 'components/pages/Blog'
 import Wishlist from 'components/pages/Wishlist'
+import Storage from 'components/pages/Card'
 import Header from 'components/Template/Header'
 import Footer from 'components/Template/Footer'
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/blog" component={Blog} />
         <Route path="/wishlist" component={Wishlist} />
+        <Route path="/storage" component={Storage} />
       </Switch>
       <Footer />
     </BrowserRouter>

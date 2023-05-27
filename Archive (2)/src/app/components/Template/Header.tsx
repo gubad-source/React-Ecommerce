@@ -59,7 +59,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
             <img src={storage} alt="" />
           </li>
           <li className="storage-info">
-            <div className="storage-info__text">Shopping Cart</div>
+            <div className="storage-info__text"><Link to="/storage">Storage</Link></div>
             <div className="storage-info__price">0,00 eur</div>
           </li>
         </ul>
