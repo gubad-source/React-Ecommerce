@@ -11,6 +11,7 @@ import logo_brand from '../../../assets/images/chose your brand.png'
 import slider_background from '../../../assets/styles/images/slider-background.png'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
+import regex from '../../../constants/regex'
 
 import { Carousel } from 'antd'
 const contentStyle = {
@@ -21,32 +22,7 @@ const contentStyle = {
   textAlign: 'center',
   background: '#364d79',
 }
-// const products = [
-//   {
-//     id: 1,
-//     image: brand,
-//     title: 'Angels malu zip jeans slim black used',
-//     category: 'TOP WOMEN',
-//     low_price: '235,00',
-//     discount_price: '35,00',
-//   },
-//   {
-//     id: 2,
-//     image: brand,
-//     title: 'Angels malu zip jeans slim black used',
-//     category: 'TOP WOMEN',
-//     low_price: '235,00',
-//     discount_price: '35,00',
-//   },
-//   {
-//     id: 3,
-//     image: brand,
-//     title: 'Angels malu zip jeans slim black used',
-//     category: 'TOP WOMEN',
-//     low_price: '235,00',
-//     discount_price: '35,00',
-//   },
-// ]
+
 const Main = () => {
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
@@ -56,8 +32,8 @@ const Main = () => {
     JSON.parse(localStorage.getItem('likedProducts') ?? '[]')
   )
   function addToLiked(productId) {
-    let findIndex = liked.indexOf(productId)
-    if (findIndex == -1) {
+    let likedIndex = liked.indexOf(productId)
+    if (likedIndex == -1) {
       setLiked((old_data) => {
         let new_array = [...old_data, productId]
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
@@ -71,7 +47,55 @@ const Main = () => {
       })
     }
   }
+  const [storage, setStorage] = useState(
+    JSON.parse(
+      localStorage.getItem('storedProducts') ??
+        '{"items":[],"count":0,"total":0}'
+    )
+  )
+  function addToStorage(productId) {
+    let storeIndex = storage.items?.findIndex((item) => {
+      return item.id == productId
+    })
+    const price_items = document
+      .querySelector('.product .price .low-price')
+      .innerHTML.match(regex)
+    if (storeIndex == -1) {
+      console.log('test' + productId + ' ' + storeIndex)
+      let productid = productId
+      let product = {
+        id: productid,
+        title: document.querySelector('.product p').innerHTML,
+        category: document.querySelector('.product .top-product').innerHTML,
+        image: document.querySelector('.product img').getAttribute('src'),
+        price: +price_items[0],
+        qty: 1,
+      }
+      const items = storage.items
+      setStorage((old_data) => {
+        let new_object = { ...old_data, items: [...items, product] }
+        localStorage.setItem('storedProducts', JSON.stringify(new_object))
+        return new_object
+      })
+      // setStorage((old_data) => {
+      //   let arr = [...old_data.items, product]
+      //   localStorage.setItem('storedProducts', JSON.stringify(arr))
+      //   return arr
+      // })
+    } else {
+      storage.items[storeIndex].qty++
+    }
+  }
+  function calcTotalAndCount(product) {
+    product.count = 0
+    product.total = 0
+    product.items?.forEach((item) => {
+      product.total += item.qty * item.price
+      product.count++
+    })
 
+    return product
+  }
   useEffect(() => {
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
@@ -86,7 +110,14 @@ const Main = () => {
     <>
       <Carousel afterChange={onChange} autoplay={true}>
         <div>
-          <h3 style={contentStyle}>1</h3>
+          <h3
+            style={{
+              backgroundImage:
+                '../../assets/styles/images/article-background.png',
+            }}
+          >
+            1
+          </h3>
         </div>
         <div>
           <h3 style={contentStyle}>2</h3>
@@ -248,45 +279,6 @@ const Main = () => {
                   <button className="see-more">see more</button>
                 </Col>
               </div>
-              {/* <div className="liked-products products">
-                <h1>Liked</h1>
-                {liked?.map((productId) => {
-                  let product = products.find((row) => row.id == productId)
-                  console.log(productId)
-                  return (
-                    <Col lg={3} xs={6}>
-                      <div className="product" data-productid={product.id}>
-                        <div className="liked-basket">
-                          <span>
-                            <i
-                              className="fa-solid fa-heart text-danger"
-                              onClick={() => addToLiked(product.id)}
-                            ></i>
-                          </span>
-                          <span>
-                            <i className="fa-solid fa-basket-shopping text-info"></i>
-                          </span>
-                        </div>
-                        <Image
-                          fluid
-                          src={product.image}
-                          style={{ width: '100%' }}
-                        />
-                        <span className="top-product">{product.category}</span>
-                        <p>{product.title}</p>
-                        <div className="price">
-                          <span className="low-price">
-                            {product.low_price} EUR
-                          </span>
-                          <span className="discount-price">
-                            <del>{product.discount_price} EUR</del>
-                          </span>
-                        </div>
-                      </div>
-                    </Col>
-                  )
-                })}
-              </div> */}
             </Col>
           </Row>
         </Container>
