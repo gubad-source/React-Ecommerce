@@ -8,44 +8,59 @@ import { useActions } from 'hooks/useActions'
 import logo from '../../../assets/images/Group 4.png'
 import liked from '../../../assets/images/heart.svg'
 import storage from '../../../assets/images/card.svg'
+import { useSelector, useDispatch } from 'react-redux'
+import { changeLanguage } from '../../../redux/languageSwitcher'
+import type { RootState } from '../../../redux/store'
+import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
-  const { translateListData } = useActions()
-  //   const location = useLocation()
-  //   const navigate = useHistory()
-  //   const pathname = location.pathname
-  //   const scrollY = useScrollYPosition()
+  const defaultLang = useSelector((state: RootState) => state.lngSwitcher.value)
+  const dispatch = useDispatch()
+  //const { translateListData } = useActions()
 
-  useLayoutEffect(() => {
-    translateListData()
-  }, [])
+  // const location = useLocation()
+  // const navigate = useHistory()
+  // const pathname = location.pathname
+  // const scrollY = useScrollYPosition()
 
-  useEffect(() => {}, [translate])
+  // useLayoutEffect(() => {
+  //   translateListData()
+  // }, [])
+
+  // useEffect(() => {}, [translate])
 
   return (
     <>
       <nav>
         <div className="logo">
           <img src={logo} alt="" />
+          <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
+            <option value={'en'}>Eng</option>
+            <option value={'az'}>Aze</option>
+          </select>
         </div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">{Menu[defaultLang as keyof typeof Menu][0].home}</Link>
           </li>
           <li>
-            <a href="#">Shop</a>
+            <a href="#">{Menu[defaultLang as keyof typeof Menu][1].shop}</a>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">
+              {Menu[defaultLang as keyof typeof Menu][2].blog}
+            </Link>
           </li>
           <li>
-            <Link to="/catalog">Catalog</Link>
+            <Link to="/catalog">
+              {Menu[defaultLang as keyof typeof Menu][3].catalog}
+            </Link>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="#">{Menu[defaultLang as keyof typeof Menu][4].contact}</a>
           </li>
           <li>
-            <a href="#">Search</a>
+            <a href="#">{Menu[defaultLang as keyof typeof Menu][5].search}</a>
           </li>
         </ul>
 
@@ -59,7 +74,9 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
             <img src={storage} alt="" />
           </li>
           <li className="storage-info">
-            <div className="storage-info__text"><Link to="/storage">Storage</Link></div>
+            <div className="storage-info__text">
+              <Link to="/storage">Storage</Link>
+            </div>
             <div className="storage-info__price">0,00 eur</div>
           </li>
         </ul>
@@ -89,12 +106,14 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
   )
 }
 
-const mapDispatchToProps = { translateListData }
+// const mapDispatchToProps = { translateListData }
 
-const mapStateToProps = (state: any) => {
-  return {
-    translate: state.translate.translateData?.result,
-  }
-}
+// const mapStateToProps = (state: any) => {
+//   return {
+//     translate: state.translate.translateData?.result,
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent)
+//export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent)
+
+export default HeaderComponent

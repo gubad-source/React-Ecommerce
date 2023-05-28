@@ -10,6 +10,7 @@ import logo_brand from '../../../assets/images/chose your brand.png'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import regex from '../../../constants/regex'
+//import slider_image from '../../assets/styles/images/article-background.png'
 
 import { Carousel } from 'antd'
 const contentStyle = {
@@ -19,6 +20,7 @@ const contentStyle = {
   lineHeight: '160px',
   textAlign: 'center',
   background: '#364d79',
+  // backgroundImage: `${slider_image}`,
 }
 
 const Main = () => {
@@ -111,14 +113,7 @@ const Main = () => {
     <>
       <Carousel afterChange={onChange} autoplay={true}>
         <div>
-          <h3
-            style={{
-              backgroundImage:
-                '../../assets/styles/images/article-background.png',
-            }}
-          >
-            1
-          </h3>
+          <h3 style={contentStyle}>1</h3>
         </div>
         <div>
           <h3 style={contentStyle}>2</h3>

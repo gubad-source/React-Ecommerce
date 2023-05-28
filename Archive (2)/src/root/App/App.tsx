@@ -13,11 +13,16 @@ import Wishlist from 'components/pages/Wishlist'
 import Storage from 'components/pages/Card'
 import Header from 'components/Template/Header'
 import Footer from 'components/Template/Footer'
+import { Provider } from 'react-redux'
+import { store } from '../../redux/store'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <Provider store={store}>
+        <Header />
+      </Provider>
+
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/catalog" component={Catalog} />
