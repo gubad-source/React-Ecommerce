@@ -39,13 +39,13 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
       <nav>
         <div className="logo">
           <img src={logo} alt="" />
-          <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
+          {/* <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
             <option selected disabled>
               Select
             </option>
             <option value={'en'}>Eng</option>
             <option value={'az'}>Aze</option>
-          </select>
+          </select> */}
         </div>
         <ul>
           <li>
@@ -86,6 +86,15 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
               <Link to="/storage">Storage</Link>
             </div>
             <div className="storage-info__price">0,00 eur</div>
+          </li>
+          <li style={{ color: '#000000' }}>
+            <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
+              <option selected disabled>
+                Language
+              </option>
+              <option value={'en'}>Eng</option>
+              <option value={'az'}>Aze</option>
+            </select>
           </li>
         </ul>
       </nav>

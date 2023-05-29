@@ -10,17 +10,23 @@ import logo_brand from '../../../assets/images/chose your brand.png'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import regex from '../../../constants/regex'
-//import slider_image from '../../assets/styles/images/article-background.png'
+import slider_image from '../../../assets/styles/images/slider-background.png'
+import slider_info from '../../../assets/styles/images/slider-info.png'
 
 import { Carousel } from 'antd'
 const contentStyle = {
   margin: 0,
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
   textAlign: 'center',
-  background: '#364d79',
-  // backgroundImage: `${slider_image}`,
+  height: '50rem',
+  width: '100%',
+  backgroundImage: `url(${slider_image})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+}
+const sliderImageStyle = {
+  width: '80%',
+  height: '100%',
+  margin: '0 15rem 0',
 }
 
 const Main = () => {
@@ -113,16 +119,24 @@ const Main = () => {
     <>
       <Carousel afterChange={onChange} autoplay={true}>
         <div>
-          <h3 style={contentStyle}>1</h3>
+          <div style={contentStyle}>
+            <Image src={slider_info} style={sliderImageStyle} />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+          <div style={contentStyle}>
+            <Image src={slider_info} style={sliderImageStyle} />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+          <div style={contentStyle}>
+            <Image src={slider_info} style={sliderImageStyle} />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>4</h3>
+          <div style={contentStyle}>
+            <Image src={slider_info} style={sliderImageStyle} />
+          </div>
         </div>
       </Carousel>
       <div class="cookie-wrapper">
