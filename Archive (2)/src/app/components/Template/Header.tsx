@@ -14,8 +14,13 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
-  const defaultLang = useSelector((state: RootState) => state.lngSwitcher.value)
+  const defaultLang = useSelector(
+    (state: RootState) => state.lngSwitcher.value ?? 'az'
+  )
   const dispatch = useDispatch()
+
+  console.log('test: ' + defaultLang)
+
   //const { translateListData } = useActions()
 
   // const location = useLocation()
@@ -35,6 +40,9 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
         <div className="logo">
           <img src={logo} alt="" />
           <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
+            <option selected disabled>
+              Select
+            </option>
             <option value={'en'}>Eng</option>
             <option value={'az'}>Aze</option>
           </select>

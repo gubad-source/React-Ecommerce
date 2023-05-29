@@ -8,7 +8,7 @@ export interface LangString {
 }
 
 const initialState: LangString = {
-  defaultLang: 'az',
+  defaultLang: 'en',
 }
 
 export const languageSwitcher = createSlice({
