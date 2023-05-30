@@ -6,6 +6,7 @@ const Menu = {
     { catalog: 'catalog' },
     { contact: 'contact-us' },
     { search: 'search' },
+    { products: 'products' },
   ],
   az: [
     { home: 'ana sehife' },
@@ -14,6 +15,7 @@ const Menu = {
     { catalog: 'kataloq' },
     { contact: 'elaqe' },
     { search: 'axtaris' },
+    { products: 'mehsul' },
   ],
 }
 export default Menu

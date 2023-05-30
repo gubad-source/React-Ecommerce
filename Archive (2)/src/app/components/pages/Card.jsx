@@ -82,7 +82,7 @@ const Card = () => {
     <Container>
       <Row className="mt-5">
         <Col sm={12} md={12}>
-          <table className="table table-hover">
+          <table className="table table-hover" style={{ minHeight: '66rem' }}>
             <thead>
               <tr>
                 <th>Product</th>

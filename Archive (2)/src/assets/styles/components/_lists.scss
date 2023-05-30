@@ -1,0 +1,33 @@
+#product-lists {
+  font-family: 'Oswald';
+
+  .row {
+    display: flex;
+    justify-content: center;
+    .product-lists {
+      cursor: pointer;
+      .product-information {
+        background-color: $light-blue-color;
+        margin-bottom: 1rem;
+        padding: 0.6rem 2rem;
+        &__title {
+          display: flex;
+          justify-content: space-between;
+        }
+        &__body {
+          position: relative;
+          padding-top: 1rem;
+          &::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            display: block;
+            background: black;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}

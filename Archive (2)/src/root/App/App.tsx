@@ -13,6 +13,7 @@ import Wishlist from 'components/pages/Wishlist'
 import Storage from 'components/pages/Card'
 import Header from 'components/Template/Header'
 import Footer from 'components/Template/Footer'
+import Product from 'components/post/Product'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store'
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/blog" component={Blog} />
         <Route path="/wishlist" component={Wishlist} />
         <Route path="/storage" component={Storage} />
+        <Route path="/product" component={Product} />
       </Switch>
       <Footer />
     </BrowserRouter>

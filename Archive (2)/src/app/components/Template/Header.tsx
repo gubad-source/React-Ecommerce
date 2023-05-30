@@ -39,13 +39,6 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
       <nav>
         <div className="logo">
           <img src={logo} alt="" />
-          {/* <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
-            <option selected disabled>
-              Select
-            </option>
-            <option value={'en'}>Eng</option>
-            <option value={'az'}>Aze</option>
-          </select> */}
         </div>
         <ul>
           <li>
@@ -69,6 +62,11 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           </li>
           <li>
             <a href="#">{Menu[defaultLang as keyof typeof Menu][5].search}</a>
+          </li>
+          <li>
+            <Link to="/product">
+              {Menu[defaultLang as keyof typeof Menu][6].products}
+            </Link>
           </li>
         </ul>
 
