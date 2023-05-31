@@ -27,6 +27,8 @@ footer {
     background-color: $black-color;
     padding: 30px 10px 20px;
     .foot-col {
+      display: flex;
+      flex-direction: column;
       .foot-col__header {
         h3 {
           color: $white-color;
@@ -80,6 +82,7 @@ footer {
         background: $black-color;
         border: 1px solid $white-color;
         padding: 0.4rem 1rem;
+        width: 100%;
       }
       .subscribe-button {
         background-color: $white-color;
@@ -88,13 +91,13 @@ footer {
         font-weight: 400;
         font-size: 14px;
         line-height: 21px;
-        display: flex;
-        align-items: center;
-        text-align: center;
         text-transform: uppercase;
         color: $grey-color-3f;
         padding: 0.4rem 4.9rem;
         margin-top: 0.4rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
     }
     .copyright {

@@ -30,6 +30,13 @@ const sliderImageStyle = {
 }
 
 const Main = () => {
+  const signedUser = () => {
+    const signed = JSON.parse(localStorage.getItem('user'))
+    if (signed != null) {
+      const sign_in = document.querySelector('.sign-in')
+      sign_in.innerHTML = signed.firstname
+    }
+  }
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
     document.querySelector('.cookie-wrapper').style.display = 'none'
@@ -106,6 +113,7 @@ const Main = () => {
     return product
   }
   useEffect(() => {
+    signedUser()
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
     if (cookie != null) {

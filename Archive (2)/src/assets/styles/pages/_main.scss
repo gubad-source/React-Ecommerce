@@ -4,6 +4,9 @@
     display: none;
   }
   .wear {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     h1 {
       font-family: 'Oswald';
       font-style: normal;
