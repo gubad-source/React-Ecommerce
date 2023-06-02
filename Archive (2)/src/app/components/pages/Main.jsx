@@ -14,6 +14,7 @@ import slider_image from '../../../assets/styles/images/slider-background.png'
 import slider_info from '../../../assets/styles/images/slider-info.png'
 
 import { Carousel } from 'antd'
+import TopToScroll from 'components/Template/TopToScroll'
 const contentStyle = {
   margin: 0,
   textAlign: 'center',
@@ -74,6 +75,16 @@ const Main = () => {
         '{"items":[],"count":0,"total":0}'
     )
   )
+
+  function calcTotalAndCount(product) {
+    product.count = 0
+    product.total = 0
+    product.items?.forEach((item) => {
+      product.total += item.qty * item.price
+      product.count++
+    })
+    return product
+  }
   function addToStorage(productId) {
     let storeIndex = storage.items?.findIndex((item) => {
       return item.id == productId
@@ -97,6 +108,7 @@ const Main = () => {
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
+
         alert('elave olundu')
         return new_object
       })
@@ -108,6 +120,7 @@ const Main = () => {
         }
 
         localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        //old_data = calcTotalAndCount(old_data)
         alert('artirildi')
         return new_object2
       })
@@ -116,15 +129,7 @@ const Main = () => {
       return (old = calcTotalAndCount(old))
     })
   }
-  function calcTotalAndCount(product) {
-    product.count = 0
-    product.total = 0
-    product.items?.forEach((item) => {
-      product.total += item.qty * item.price
-      product.count++
-    })
-    return product
-  }
+
   useEffect(() => {
     showStorageCount()
     signedUser()
@@ -139,6 +144,7 @@ const Main = () => {
   }
   return (
     <>
+      <TopToScroll />
       <Carousel afterChange={onChange} autoplay={true}>
         <div>
           <div style={contentStyle}>

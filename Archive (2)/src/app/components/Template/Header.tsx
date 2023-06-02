@@ -30,7 +30,22 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     localStorage.setItem('language', e.target.value)
   }
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    showHaert()
+  }, [])
+  const showHaert = () => {
+    let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
+    document.querySelector('.wish-count').innerHTML =
+      aa[aa.length - 1] ?? '0'.toString()
+    console.log(aa.length)
+  }
+  // const [storage, setStoragee] = useState(
+  //   JSON.parse(
+  //     localStorage.getItem('storedProducts') ??
+  //       '{"items":[],"count":0,"total":0}'
+  //   )
+  // )
+
   //const { translateListData } = useActions()
 
   // const location = useLocation()
