@@ -15,9 +15,26 @@ import top2large from '../../../assets/images/post-images/top2large.jpg'
 import top3large from '../../../assets/images/post-images/top3large.jpg'
 import top4large from '../../../assets/images/post-images/top4large.jpg'
 import top5large from '../../../assets/images/post-images/top5large.jpg'
+import ProductSlider from './ProductSlider'
 
 const Product = () => {
   const [products, setProducts] = useState([
+    {
+      title: 'Details',
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      title: 'Details',
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      title: 'Details',
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      title: 'Details',
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    },
     {
       title: 'Details',
       body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
@@ -101,17 +118,22 @@ const Product = () => {
         </Row>
       </Container>
       <section id="product-lists">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-10">
+        <Container>
+          <Row>
+            <Col lg={10}>
               <div className="product-lists" style={{ minHeight: '66rem' }}>
                 {products.map((product) => (
                   <ListComponent title={product.title} body={product.body} />
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section id="product-slider" style={{ overflow: 'hidden' }}>
+        <Container fluid>
+          <ProductSlider />
+        </Container>
       </section>
     </>
   )
