@@ -5,6 +5,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
 
 const Card = () => {
+  const makeAppointment = () => {
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (user == null) {
+      alert('login olun')
+    } else {
+      alert('sifaris oldu')
+    }
+  }
   useEffect(() => {
     reloadStorage()
   })
@@ -94,6 +102,7 @@ const Card = () => {
             </thead>
             <tbody className="cart-items"></tbody>
           </table>
+          <button onClick={makeAppointment}>Order</button>
         </Col>
       </Row>
     </Container>

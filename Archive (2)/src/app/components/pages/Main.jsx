@@ -56,12 +56,14 @@ const Main = () => {
       setLiked((old_data) => {
         let new_array = [...old_data, productId]
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        alert('elave olundu')
         return new_array
       })
     } else {
       setLiked((old_data) => {
         let new_array = old_data.filter((row) => row !== productId)
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        alert('cixarildi')
         return new_array
       })
     }
@@ -95,6 +97,7 @@ const Main = () => {
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
+        alert('elave olundu')
         return new_object
       })
     } else {
@@ -105,6 +108,7 @@ const Main = () => {
         }
 
         localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        alert('artirildi')
         return new_object2
       })
     }

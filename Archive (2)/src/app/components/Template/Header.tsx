@@ -82,7 +82,10 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
 
         <ul className="account-cart">
           <li className="sign-in">Sign-in</li>
-          <li className="create-account">Create an account</li>
+          <li className="create-account">
+            {' '}
+            <Link to="/sign-in">Create an account</Link>
+          </li>
           <li className="liked">
             <img src={liked} alt="" />
             <span className="wish-count">0</span>
