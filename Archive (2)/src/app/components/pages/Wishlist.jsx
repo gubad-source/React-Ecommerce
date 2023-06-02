@@ -6,6 +6,15 @@ import products from '../../../constants/products'
 import wishlistImage from '../../../assets/images/Rectangle 7.png'
 import regex from '../../../constants/regex'
 const Wishlist = () => {
+  useEffect(() => {
+    showHaert()
+  }, [])
+  const showHaert = () => {
+    let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
+    document.querySelector('.wish-count').innerHTML =
+      aa[aa.length - 1].toString()
+    console.log(aa.length)
+  }
   const [storage, setStorage] = useState(
     JSON.parse(
       localStorage.getItem('storedProducts') ??

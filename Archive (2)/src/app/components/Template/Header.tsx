@@ -29,10 +29,8 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     dispatch(changeLanguage(e.target.value))
     localStorage.setItem('language', e.target.value)
   }
-  useEffect(() => {
-    //languageLoading()
-  }, [])
 
+  useEffect(() => {}, [])
   //const { translateListData } = useActions()
 
   // const location = useLocation()
@@ -87,6 +85,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           <li className="create-account">Create an account</li>
           <li className="liked">
             <img src={liked} alt="" />
+            <span className="wish-count">0</span>
           </li>
           <li className="storage">
             <img src={storage} alt="" />
