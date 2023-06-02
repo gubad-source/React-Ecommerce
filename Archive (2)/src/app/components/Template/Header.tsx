@@ -14,12 +14,24 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
+  const loadedLanguage = localStorage.getItem('language')
   const defaultLang = useSelector(
     (state: RootState) => state.lngSwitcher.value ?? 'az'
   )
   const dispatch = useDispatch()
 
-  console.log('test: ' + defaultLang)
+  // const languageLoading = () => {
+  //   const loadedLanguage = localStorage.getItem('language') ?? 'az'
+  //   console.log(loadedLanguage)
+  //   dispatch(changeLanguage(loadedLanguage))
+  // }
+  const languageStoring = (e) => {
+    dispatch(changeLanguage(e.target.value))
+    localStorage.setItem('language', e.target.value)
+  }
+  useEffect(() => {
+    //languageLoading()
+  }, [])
 
   //const { translateListData } = useActions()
 
@@ -86,7 +98,8 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
             <div className="storage-info__price">0,00 eur</div>
           </li>
           <li style={{ color: '#000000' }}>
-            <select onChange={(e) => dispatch(changeLanguage(e.target.value))}>
+            {/* <select onChange={(e) => dispatch(changeLanguage(e.target.value))}> */}
+            <select onChange={(e) => languageStoring(e)}>
               <option selected disabled>
                 Language
               </option>

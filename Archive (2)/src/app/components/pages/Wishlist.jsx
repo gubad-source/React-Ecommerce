@@ -4,7 +4,58 @@ import Col from 'react-bootstrap/Col'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import wishlistImage from '../../../assets/images/Rectangle 7.png'
+import regex from '../../../constants/regex'
 const Wishlist = () => {
+  const [storage, setStorage] = useState(
+    JSON.parse(
+      localStorage.getItem('storedProducts') ??
+        '{"items":[],"count":0,"total":0}'
+    )
+  )
+  function addToStorage(productId) {
+    let storeIndex = storage.items?.findIndex((item) => {
+      return item.id == productId
+    })
+    const price_items = document
+      .querySelector(
+        '.wishlist__body__items__frame .item .price .current-price'
+      )
+      .innerHTML.match(regex)
+    const items = storage.items
+    if (storeIndex == -1) {
+      console.log('test' + productId + ' ' + storeIndex)
+      let productid = productId
+      let product = {
+        id: productid,
+        title: document.querySelector('.wishlist__body__items__frame .item p')
+          .innerHTML,
+        category: document.querySelector(
+          '.wishlist__body__items__frame .item img'
+        ).dataset.category,
+        image: document
+          .querySelector('.wishlist__body__items__frame .item img')
+          .getAttribute('src'),
+        price: +price_items[0],
+        qty: 1,
+      }
+
+      setStorage((old_data) => {
+        let new_object = { ...old_data, items: [...items, product] }
+        localStorage.setItem('storedProducts', JSON.stringify(new_object))
+        return new_object
+      })
+    } else {
+      setStorage((old_data) => {
+        let new_object2 = {
+          ...old_data,
+          items: [...items, items[storeIndex].qty++],
+        }
+
+        localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        return new_object2
+      })
+    }
+  }
   const [liked, setLiked] = useState(
     JSON.parse(localStorage.getItem('likedProducts') ?? '[]')
   )
@@ -82,6 +133,7 @@ const Wishlist = () => {
                               className="img-fluid"
                               style={{ width: '100%' }}
                               src={product.image}
+                              data-category={product.category}
                               alt=""
                             />
                             <p>{product.title}</p>
@@ -92,7 +144,10 @@ const Wishlist = () => {
                             </div>
                             <div className="count-cart">
                               <span>1</span>
-                              <div className="add-to-cart shop-btn-black">
+                              <div
+                                className="add-to-cart shop-btn-black"
+                                onClick={() => addToStorage(product.id)}
+                              >
                                 add to cart
                               </div>
                             </div>
@@ -109,97 +164,6 @@ const Wishlist = () => {
                       </Col>
                     )
                   })}
-
-                  {/* <Col lg={4} xs={6}>
-                    <div className="wishlist__body__items__frame">
-                      <div className="item">
-                        <img
-                          className="img-fluid"
-                          style={{ width: '100%' }}
-                          src={wishlistImage}
-                          alt=""
-                        />
-                        <p>Angels malu zip jeans slim black used</p>
-                        <div className="price">
-                          <span className="current-price">235,00 eur</span>
-                        </div>
-                        <div className="count-cart">
-                          <span>1</span>
-                          <div className="add-to-cart shop-btn-black">
-                            add to cart
-                          </div>
-                        </div>
-                      </div>
-                      <div className="buttons">
-                        <button className="ml-2 mb-2">
-                          <img src="./images/close.svg" alt="" />
-                        </button>
-                        <button className="ml-2 mb-2">
-                          <img src="./images/edit.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col lg={4} xs={6}>
-                    <div className="wishlist__body__items__frame">
-                      <div className="item">
-                        <img
-                          className="img-fluid"
-                          style={{ width: '100%' }}
-                          src={wishlistImage}
-                          alt=""
-                        />
-                        <p>Angels malu zip jeans slim black used</p>
-                        <div className="price">
-                          <span className="current-price">235,00 eur</span>
-                        </div>
-                        <div className="count-cart">
-                          <span>1</span>
-                          <div className="add-to-cart shop-btn-black">
-                            add to cart
-                          </div>
-                        </div>
-                      </div>
-                      <div className="buttons">
-                        <button className="ml-2 mb-2">
-                          <img src="./images/close.svg" alt="" />
-                        </button>
-                        <button className="ml-2 mb-2">
-                          <img src="./images/edit.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col lg={4} xs={6}>
-                    <div className="wishlist__body__items__frame">
-                      <div className="item">
-                        <img
-                          className="img-fluid"
-                          style={{ width: '100%' }}
-                          src={wishlistImage}
-                          alt=""
-                        />
-                        <p>Angels malu zip jeans slim black used</p>
-                        <div className="price">
-                          <span className="current-price">235,00 eur</span>
-                        </div>
-                        <div className="count-cart">
-                          <span>1</span>
-                          <div className="add-to-cart shop-btn-black">
-                            add to cart
-                          </div>
-                        </div>
-                      </div>
-                      <div className="buttons">
-                        <button className="ml-2 mb-2">
-                          <img src="./images/close.svg" alt="" />
-                        </button>
-                        <button className="ml-2 mb-2">
-                          <img src="./images/edit.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                  </Col> */}
                 </div>
                 <div className="wishlist__footer">
                   <Col lg={3}>
