@@ -37,6 +37,12 @@ const Main = () => {
       sign_in.innerHTML = signed.firstname
     }
   }
+  const showStorageCount = () => {
+    let storageCount = document.querySelector('.storage-count')
+    if (storageCount != null && storage.count != null) {
+      storageCount.innerHTML = storage.count
+    }
+  }
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
     document.querySelector('.cookie-wrapper').style.display = 'none'
@@ -102,6 +108,9 @@ const Main = () => {
         return new_object2
       })
     }
+    setStorage((old) => {
+      return (old = calcTotalAndCount(old))
+    })
   }
   function calcTotalAndCount(product) {
     product.count = 0
@@ -113,6 +122,7 @@ const Main = () => {
     return product
   }
   useEffect(() => {
+    showStorageCount()
     signedUser()
     console.log('test2')
     let cookie = localStorage.getItem('cookie')

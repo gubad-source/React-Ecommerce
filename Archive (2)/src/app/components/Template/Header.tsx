@@ -92,7 +92,9 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           </li>
           <li className="storage-info">
             <div className="storage-info__text">
-              <Link to="/storage">Storage</Link>
+              <Link to="/storage">
+                Storage <span className="storage-count">0</span>
+              </Link>
             </div>
             <div className="storage-info__price">0,00 eur</div>
           </li>
