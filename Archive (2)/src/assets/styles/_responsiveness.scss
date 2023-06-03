@@ -152,11 +152,8 @@
       }
     }
     .brand-items {
-      // display: flex;
-      // flex-direction: column;
-
       display: grid;
-      grid-template-rows: 11rem 23.2rem 11rem;
+      grid-template-rows: 15rem 30rem 15rem;
       grid-template-columns: 1fr;
       .item1 {
         @include brand-background(
@@ -165,7 +162,7 @@
         );
         grid-column: 1/6;
         grid-row: 1/2;
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         position: relative;
         .info1 {
@@ -205,7 +202,7 @@
         );
         grid-column: 1/6;
         grid-row: 3/4;
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         position: relative;
         .info3 {

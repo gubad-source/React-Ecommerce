@@ -281,7 +281,7 @@ body {
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 350px 350px;
     grid-template-areas:
       'left1 right1'
       'left2 right1';
