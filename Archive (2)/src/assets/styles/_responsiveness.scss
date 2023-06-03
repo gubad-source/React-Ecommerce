@@ -329,6 +329,9 @@
       .responsive-image {
         display: block;
       }
+      .explore-image {
+        display: none;
+      }
       image {
         width: 100%;
       }
@@ -345,7 +348,7 @@
       .explore-info {
         position: absolute;
         bottom: 1rem;
-        right: 28%;
+        right: 16%;
         width: 70%;
         background: white;
         padding: 6px;
