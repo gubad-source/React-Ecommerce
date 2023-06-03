@@ -1,6 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-grid-system'
 import Image from 'react-bootstrap/Image'
 import 'bootstrap/dist/css/bootstrap.css'
 import cookies from '../../../assets/images/cookies.png'

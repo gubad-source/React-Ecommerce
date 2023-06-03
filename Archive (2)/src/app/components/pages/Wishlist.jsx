@@ -1,6 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-grid-system'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import wishlistImage from '../../../assets/images/Rectangle 7.png'

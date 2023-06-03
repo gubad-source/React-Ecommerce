@@ -1,6 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-grid-system'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
 
@@ -50,7 +48,7 @@ const Card = () => {
                           <button type="button" class="btn btn-danger remote-from-basket" data-id="${
                             item.id
                           }">
-                              <span class="glyphicon glyphicon-remove"></span> Remove
+                              <span class="glyphicon glyphicon-remove"></span> 
                           </button>
                       </td>`
 
