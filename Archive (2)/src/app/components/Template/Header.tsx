@@ -6,6 +6,8 @@ import { Link, useLocation, NavLink } from 'react-router-dom'
 import { useActions } from 'hooks/useActions'
 //import { useHistory } from 'react-router'
 import logo from '../../../assets/images/Group 4.png'
+import logo_responsive from '../../../assets/images/crisp.svg'
+import storage_responsive from '../../../assets/images/cart.svg'
 import liked from '../../../assets/images/heart.svg'
 import storage from '../../../assets/images/card.svg'
 import { useSelector, useDispatch } from 'react-redux'
@@ -38,6 +40,10 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     document.querySelector('.wish-count').innerHTML =
       aa[aa.length - 1] ?? '0'.toString()
     console.log(aa.length)
+  }
+  const toggleNavActive = () => {
+    const nav = document.querySelector('nav')
+    nav?.classList.toggle('nav-active')
   }
   // const [storage, setStoragee] = useState(
   //   JSON.parse(
@@ -130,11 +136,11 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
       </nav>
 
       <section id="mobile-nav">
-        <div className="hamburger">
+        <div className="hamburger" onClick={toggleNavActive}>
           <i className="fa-solid fa-bars text-light"></i>
         </div>
         <div className="logo">
-          <img src="./images/crisp.svg" alt="" />
+          <img src={logo_responsive} alt="" />
         </div>
         <ul className="search-cart">
           <li>
@@ -144,7 +150,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           </li>
           <li>
             <a href="#">
-              <img src="./images/cart.svg" alt="" />
+              <img src={storage_responsive} alt="" />
             </a>
           </li>
         </ul>

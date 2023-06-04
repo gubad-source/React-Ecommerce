@@ -23,15 +23,40 @@
   body {
     overflow-x: hidden;
   }
-  nav {
+  nav .logo,
+  nav .account-cart {
     display: none;
   }
+  nav {
+    position: absolute;
+    top: 5rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(-100%);
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+
   #mobile-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding: 1rem;
+    i {
+      color: white;
+      font-size: 20px;
+    }
+    .fa-magnifying-glass {
+      margin-top: 0.4rem;
+    }
     .search-cart {
       display: flex;
       padding: 0;
