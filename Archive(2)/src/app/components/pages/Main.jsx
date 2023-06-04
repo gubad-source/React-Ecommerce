@@ -10,23 +10,27 @@ import products from '../../../constants/products'
 import regex from '../../../constants/regex'
 import slider_image from '../../../assets/styles/images/slider-background.png'
 import slider_info from '../../../assets/styles/images/slider-info.png'
+import slider_info2 from '../../../assets/images/slider-info2.png'
 
 import { Carousel } from 'antd'
 import TopToScroll from 'components/Template/TopToScroll'
-const contentStyle = {
-  margin: 0,
-  textAlign: 'center',
-  height: '50rem',
-  width: '100%',
-  backgroundImage: `url(${slider_image})`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-}
-const sliderImageStyle = {
-  width: '80%',
-  height: '100%',
-  margin: '0 15rem 0',
-}
+// const contentStyle = {
+//   margin: 0,
+//   textAlign: 'center',
+//   height: '50rem',
+//   width: '100%',
+//   backgroundImage: `url(${slider_image})`,
+//   backgroundSize: 'cover',
+//   backgroundRepeat: 'no-repeat',
+//   display: 'flex',
+//   alignItems: 'center',
+//   justifyContent: 'center',
+// }
+// const sliderImageStyle = {
+//   width: '30%',
+//   height: '100%',
+//   margin: '0 15rem 0',
+// }
 
 const Main = () => {
   // const signedUser = () => {
@@ -143,26 +147,32 @@ const Main = () => {
   return (
     <>
       <TopToScroll />
-      <Carousel afterChange={onChange} autoplay={true}>
-        <div>
-          <div style={contentStyle}>
-            <Image src={slider_info} style={sliderImageStyle} />
+      <Carousel
+        afterChange={onChange}
+        autoplay={true}
+        style={{ overflow: 'hidden' }}
+      >
+        <div className="slider-content">
+          <div className="slider-info">
+            <h1>
+              summer sale <br />
+              get 30% off <br />
+              on all dress
+            </h1>
+            <button className="shop-btn-transparent">shop now</button>
           </div>
+          <Image src={slider_info2} />
         </div>
-        <div>
-          <div style={contentStyle}>
-            <Image src={slider_info} style={sliderImageStyle} />
+        <div className="slider-content">
+          <div className="slider-info">
+            <h1>
+              summer sale <br />
+              get 30% off <br />
+              on all dress
+            </h1>
+            <button className="shop-btn-transparent">shop now</button>
           </div>
-        </div>
-        <div>
-          <div style={contentStyle}>
-            <Image src={slider_info} style={sliderImageStyle} />
-          </div>
-        </div>
-        <div>
-          <div style={contentStyle}>
-            <Image src={slider_info} style={sliderImageStyle} />
-          </div>
+          <Image src={slider_info2} />
         </div>
       </Carousel>
       <div class="cookie-wrapper">

@@ -1,6 +1,36 @@
 body {
   overflow-x: hidden;
 }
+.slider-content {
+  margin: 0;
+  text-align: center;
+  height: 50rem;
+  width: 100%;
+  background-image: url('./images/slider-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  .slider-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 8rem;
+      line-height: 8rem;
+    }
+    button {
+      margin-top: 3rem;
+    }
+  }
+  img {
+    width: 30%;
+    height: 100%;
+    margin: 0 15rem 0;
+  }
+}
 #products {
   margin-top: 2rem;
   .see-more {

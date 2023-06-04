@@ -22,18 +22,19 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
   )
   const dispatch = useDispatch()
 
-  // const languageLoading = () => {
-  //   const loadedLanguage = localStorage.getItem('language') ?? 'az'
-  //   console.log(loadedLanguage)
-  //   dispatch(changeLanguage(loadedLanguage))
-  // }
+  const languageLoading = () => {
+    const loadedLanguage = localStorage.getItem('language') ?? 'az'
+    console.log(loadedLanguage)
+    dispatch(changeLanguage(loadedLanguage))
+  }
   const languageStoring = (e) => {
     dispatch(changeLanguage(e.target.value))
-    localStorage.setItem('language', e.target.value)
+    localStorage.setItem('language', `${e.target.value}`)
   }
 
   useEffect(() => {
     showHaert()
+    languageLoading()
   }, [])
   const showHaert = () => {
     let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
