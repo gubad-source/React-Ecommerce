@@ -29,13 +29,13 @@ const sliderImageStyle = {
 }
 
 const Main = () => {
-  const signedUser = () => {
-    const signed = JSON.parse(localStorage.getItem('user'))
-    if (signed != null) {
-      const sign_in = document.querySelector('.sign-in')
-      sign_in.innerHTML = signed.firstname
-    }
-  }
+  // const signedUser = () => {
+  //   const signed = JSON.parse(localStorage.getItem('user'))
+  //   if (signed != null) {
+  //     const sign_in = document.querySelector('.sign-in')
+  //     sign_in.innerHTML = signed.firstname
+  //   }
+  // }
   const showStorageCount = () => {
     let storageCount = document.querySelector('.storage-count')
     if (storageCount != null && storage.count != null) {
@@ -130,7 +130,7 @@ const Main = () => {
 
   useEffect(() => {
     showStorageCount()
-    signedUser()
+    //signedUser()
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
     if (cookie != null) {

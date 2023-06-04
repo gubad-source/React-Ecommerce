@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const Card = () => {
   const makeAppointment = () => {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const user = localStorage.getItem('login')
     if (user == null) {
       alert('login olun')
     } else {

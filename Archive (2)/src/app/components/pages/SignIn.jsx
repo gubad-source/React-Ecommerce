@@ -19,6 +19,7 @@ const SignIn = () => {
         password: password,
       }
       localStorage.setItem('user', JSON.stringify(user))
+      alert('signin olduz')
     }
   }
 
