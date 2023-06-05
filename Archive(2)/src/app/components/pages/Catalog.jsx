@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-grid-system'
 import Image from 'react-bootstrap/Image'
 import catalog_product from '../../../assets/images/Rectangle 7.png'
+import { Slider } from 'antd'
 
 const Catalog = () => {
   return (
@@ -196,6 +197,16 @@ const Catalog = () => {
                 </ul>
               </div>
               <div className="color"></div>
+              <div className="range">
+                <div className="range__header">
+                  <h1>Price Range</h1>
+                  <h1>+</h1>
+                </div>
+                <Slider
+                  range={{ draggableTrack: true }}
+                  defaultValue={[0, 50]}
+                />
+              </div>
               <div className="about">
                 <h1>about dresses</h1>
                 <p>

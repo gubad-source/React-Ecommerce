@@ -425,7 +425,8 @@
     .size,
     .dress,
     .color,
-    .about {
+    .about,
+    .range {
       display: none;
     }
 
@@ -845,4 +846,13 @@
     }
   }
   //<-----add-address
+  .contact {
+    padding: 0 1rem;
+    &__info {
+      font-size: 1.4rem;
+    }
+    &__icon {
+      font-size: 4rem;
+    }
+  }
 }

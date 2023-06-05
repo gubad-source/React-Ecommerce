@@ -1,0 +1,28 @@
+.contact-title {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Oswald';
+  &__icon {
+    font-size: 10rem;
+    color: $grey-color-82;
+  }
+}
+.contact {
+  font-family: 'Oswald';
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.6rem solid $grey-color-82;
+  margin-bottom: 1rem;
+  padding: 1rem 4rem;
+  &__icon {
+    font-size: 6rem;
+    color: $grey-color;
+  }
+  &__info {
+    font-size: 2rem;
+  }
+}

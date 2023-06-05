@@ -90,7 +90,11 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
             </Link>
           </li>
           <li>
-            <a href="#">{Menu[defaultLang as keyof typeof Menu][4].contact}</a>
+            <Link to="/contact">
+              <a href="#">
+                {Menu[defaultLang as keyof typeof Menu][4].contact}
+              </a>
+            </Link>
           </li>
           <li>
             <a href="#">{Menu[defaultLang as keyof typeof Menu][5].search}</a>
@@ -103,14 +107,18 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
         </ul>
 
         <ul className="account-cart">
-          <li className="sign-in">Sign-in</li>
+          <li className="sign-in">
+            <Link to="/login">Sign-in</Link>
+          </li>
           <li className="create-account">
             {' '}
             <Link to="/sign-in">Create an account</Link>
           </li>
           <li className="liked">
-            <img src={liked} alt="" />
-            <span className="wish-count">0</span>
+            <Link to="/wishlist">
+              <img src={liked} alt="" />
+              <span className="wish-count">0</span>
+            </Link>
           </li>
           <li className="storage">
             <img src={storage} alt="" />
