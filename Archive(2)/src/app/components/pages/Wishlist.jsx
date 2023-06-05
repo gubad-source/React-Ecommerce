@@ -42,6 +42,7 @@ const Wishlist = () => {
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
+        alert('elave edildi')
         return new_object
       })
     } else {
@@ -52,6 +53,7 @@ const Wishlist = () => {
         }
 
         localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        alert('artirildi')
         return new_object2
       })
     }

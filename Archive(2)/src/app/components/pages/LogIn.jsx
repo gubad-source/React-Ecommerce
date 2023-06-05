@@ -20,7 +20,7 @@ const LogIn = () => {
   }
   return (
     <Container>
-      <Row>
+      <Row style={{ justifyContent: 'center' }}>
         <Col lg={9}>
           <form onSubmit={signedUser} className="login-form">
             <h1>Log in</h1>
