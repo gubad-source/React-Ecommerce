@@ -7,10 +7,14 @@
     .slider-content {
       display: flex !important;
       flex-direction: column-reverse;
+      padding: 2rem 0 7rem;
       .slider-info {
         h1 {
-          font-size: 5rem;
-          line-height: 5rem;
+          font-size: 4rem;
+          line-height: 4rem;
+          font-family: 'Oswald';
+          text-transform: uppercase;
+          font-weight: bolder;
         }
       }
       img {
@@ -323,8 +327,10 @@
       padding: 0.4rem;
       text-transform: uppercase;
       font-family: 'Oswald';
+      border: 1px solid $grey-color;
     }
   }
+
   #products .products .product .price .low-price,
   #products .products .product .price .current-price {
     font-size: 17px;
@@ -350,8 +356,9 @@
     margin: 1rem 1rem 1rem;
     .limits {
       background-size: 100% 100%;
+      margin-top: 2rem;
       .info {
-        padding: 1rem;
+        padding: 1.6rem 1rem;
         h1 {
           font-size: 14px;
           padding: 0;
@@ -404,14 +411,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 15rem;
+        justify-content: center;
         h2 {
           border: none;
           font-size: 14px;
           line-height: 1rem;
         }
         p {
-          font-size: 10px;
-          line-height: 13px;
+          font-size: 12px;
+          line-height: 1.6rem;
+          margin: 1rem 0;
         }
         button {
           font-size: 10px;
@@ -426,6 +436,9 @@
       margin-top: 30px;
       h1 {
         font-size: 23px;
+      }
+      p {
+        margin-bottom: 4rem;
       }
     }
   }

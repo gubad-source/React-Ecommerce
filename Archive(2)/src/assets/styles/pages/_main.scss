@@ -25,6 +25,9 @@ table {
       h1 {
         font-size: 8rem;
         line-height: 8rem;
+        font-family: 'Oswald';
+        font-weight: bolder;
+        text-transform: 'uppercase';
       }
       button {
         margin-top: 3rem;
@@ -81,7 +84,7 @@ table {
   .products {
     display: flex;
     flex-wrap: wrap;
-
+    border-left: 1px solid $grey-color-82;
     .product {
       // padding: 30px 13px 48px 13px;
       position: relative;
@@ -359,7 +362,7 @@ table {
       position: relative;
       .info3 {
         position: relative;
-        top: 25rem;
+        top: 32rem;
         left: 0rem;
       }
     }
