@@ -3,6 +3,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 0px 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
   .logo {
     display: flex;
     align-items: center;
@@ -18,7 +22,7 @@ nav {
       a {
         text-decoration: none;
         color: $white-color;
-        font-family: "Oswald";
+        font-family: 'Oswald';
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -31,7 +35,7 @@ nav {
   .account-cart {
     display: flex;
     width: 28%;
-    font-family: "Oswald";
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -41,13 +45,13 @@ nav {
     color: #ffffff;
     .storage-info {
       &__text {
-        font-family: "Roboto";
+        font-family: 'Roboto';
         font-size: 9px;
         letter-spacing: 0.01em;
         color: #ffffff;
       }
       &__price {
-        font-family: "Roboto";
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
         font-size: 14px;

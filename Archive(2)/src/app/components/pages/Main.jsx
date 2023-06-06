@@ -14,32 +14,8 @@ import slider_info2 from '../../../assets/images/slider-info2.png'
 
 import { Carousel } from 'antd'
 import TopToScroll from 'components/Template/TopToScroll'
-// const contentStyle = {
-//   margin: 0,
-//   textAlign: 'center',
-//   height: '50rem',
-//   width: '100%',
-//   backgroundImage: `url(${slider_image})`,
-//   backgroundSize: 'cover',
-//   backgroundRepeat: 'no-repeat',
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-// }
-// const sliderImageStyle = {
-//   width: '30%',
-//   height: '100%',
-//   margin: '0 15rem 0',
-// }
 
 const Main = () => {
-  // const signedUser = () => {
-  //   const signed = JSON.parse(localStorage.getItem('user'))
-  //   if (signed != null) {
-  //     const sign_in = document.querySelector('.sign-in')
-  //     sign_in.innerHTML = signed.firstname
-  //   }
-  // }
   const showStorageCount = () => {
     let storageCount = document.querySelector('.storage-count')
     if (storageCount != null && storage.count != null) {
@@ -110,7 +86,7 @@ const Main = () => {
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
-
+        new_object = calcTotalAndCount(new_object)
         alert('elave olundu')
         return new_object
       })
@@ -148,6 +124,7 @@ const Main = () => {
     <>
       <TopToScroll />
       <Carousel
+        className="carousel-frame"
         afterChange={onChange}
         autoplay={true}
         style={{ overflow: 'hidden' }}

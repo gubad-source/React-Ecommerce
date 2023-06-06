@@ -39,7 +39,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
   const showHaert = () => {
     let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
     document.querySelector('.wish-count').innerHTML =
-      aa[aa.length - 1] ?? '0'.toString()
+      aa.length ?? '0'.toString()
     console.log(aa.length)
   }
   const toggleNavActive = () => {

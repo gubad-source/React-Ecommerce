@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     .sign-in {
-      margin: 0;
+      margin: 8rem 0 0;
       .sign-in__title {
         @include dash-title;
         span {

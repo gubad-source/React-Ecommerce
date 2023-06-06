@@ -2,20 +2,25 @@
   body {
     overflow-x: hidden;
   }
-  .slider-content {
-    display: flex !important;
-    flex-direction: column-reverse;
-    .slider-info {
-      h1 {
-        font-size: 5rem;
-        line-height: 5rem;
+  .carousel-frame {
+    margin-top: 5rem;
+    .slider-content {
+      display: flex !important;
+      flex-direction: column-reverse;
+      .slider-info {
+        h1 {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
+      img {
+        width: 66%;
       }
     }
-    img {
-      width: 66%;
-    }
   }
+
   .product-slider {
+    margin-top: 8rem;
     .images {
       a {
         img {
@@ -58,6 +63,7 @@
   }
   .nav-active {
     transform: translateX(0%);
+    position: fixed;
   }
 
   #mobile-nav {
@@ -66,6 +72,10 @@
     align-items: center;
     box-sizing: border-box;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
     i {
       color: white;
       font-size: 20px;
@@ -506,6 +516,7 @@
     display: none;
   }
   #blog {
+    margin-top: 8rem;
     h1 {
       text-align: center;
     }

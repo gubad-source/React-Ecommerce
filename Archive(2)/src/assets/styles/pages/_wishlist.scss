@@ -23,6 +23,7 @@
   }
   .wishlist__title {
     @include dash-title;
+    margin-top: 9rem;
     select {
       display: none;
     }
