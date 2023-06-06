@@ -356,9 +356,11 @@
     margin: 1rem 1rem 1rem;
     .limits {
       background-size: 100% 100%;
-      margin-top: 2rem;
+      margin-top: 5rem;
+
       .info {
-        padding: 1.6rem 1rem;
+        padding: 1.6rem 17rem 0 0;
+
         h1 {
           font-size: 14px;
           padding: 0;
@@ -498,6 +500,7 @@
   #catalog-select {
     display: block;
     margin: 1rem;
+
     span {
       display: inline-block;
       margin-bottom: 0.6rem;
@@ -524,6 +527,7 @@
     .current-price {
     font-size: 1.2rem;
   }
+
   //<----catalog
   #blog-background {
     display: none;

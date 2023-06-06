@@ -209,6 +209,7 @@ table {
   .article-tips {
     background: $white-color;
     padding: 24px;
+
     .info {
       font-family: 'Oswald';
       font-style: normal;
@@ -236,7 +237,7 @@ table {
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.01em;
-
+      margin-bottom: 4rem;
       color: $black-color;
     }
     .date {

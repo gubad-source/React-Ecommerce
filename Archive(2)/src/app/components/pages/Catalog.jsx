@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-grid-system'
 import Image from 'react-bootstrap/Image'
 import catalog_product from '../../../assets/images/Rectangle 7.png'
+import size from '../../../assets/images/size.png'
 import { Slider } from 'antd'
 
 const Catalog = () => {
@@ -81,92 +82,27 @@ const Catalog = () => {
                   <ul>
                     <li>
                       <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
+                        <img src={size} alt="" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
+                        <img src={size} alt="" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
+                        <img src={size} alt="" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
+                        <img src={size} alt="" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./images/Component 2.png" alt="" />
+                        <img src={size} alt="" />
                       </a>
                     </li>
                   </ul>
@@ -399,7 +335,9 @@ const Catalog = () => {
                           elit. Assumenda iste maxime qui esse, mollitia
                           perferendis.
                         </h5>
-                        <button className="shop-btn">skip now</button>
+                        <button className="shop-btn-transparent2">
+                          skip now
+                        </button>
                       </div>
                     </div>
                   </Col>

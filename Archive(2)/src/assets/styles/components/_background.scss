@@ -5,15 +5,18 @@
   margin-top: 8rem;
   .info {
     padding: 11rem 0rem;
+
     h1 {
       font-family: 'Oswald';
       font-style: normal;
       font-weight: 900;
-      font-size: 57px;
+      font-size: 55px;
       line-height: 36px;
       text-transform: uppercase;
       color: $black-color;
-      padding: 0rem 0rem 2rem;
+      padding: 2rem 0rem 2rem;
+      border-right: 0.2rem solid black;
+      border-top: 0.2rem solid black;
     }
     h5 {
       font-family: 'Roboto';

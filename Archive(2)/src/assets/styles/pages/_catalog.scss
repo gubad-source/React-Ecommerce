@@ -4,6 +4,7 @@
     accent-color: $black-color;
   }
   .brand {
+    margin-bottom: 2rem;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -19,10 +20,12 @@
       flex-direction: column;
       li {
         list-style: none;
+        text-transform: uppercase;
       }
     }
   }
   .size {
+    margin-bottom: 2rem;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -49,6 +52,7 @@
     }
   }
   .dress {
+    margin-bottom: 2rem;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -63,11 +67,13 @@
       display: flex;
       flex-direction: column;
       li {
+        text-transform: uppercase;
         list-style: none;
       }
     }
   }
   .range {
+    margin-bottom: 2rem;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -79,6 +85,7 @@
     }
   }
   .about {
+    margin-bottom: 2rem;
     h1 {
       font-size: 1.5rem;
       text-transform: capitalize;
@@ -100,6 +107,7 @@
       flex-wrap: wrap;
       .product {
         // padding: 30px 13px 48px 13px;
+        margin-bottom: 2rem;
         position: relative;
         .discount {
           position: absolute;
