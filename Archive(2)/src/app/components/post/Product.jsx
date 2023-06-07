@@ -20,6 +20,7 @@ import size from '../../../assets/images/size.png'
 import ProductSlider from './ProductSlider'
 
 const Product = () => {
+  const [count, setCount] = useState(1)
   const [products, setProducts] = useState([
     {
       title: 'Details',
@@ -141,6 +142,20 @@ const Product = () => {
                 <Image src={size} />
                 <Image src={size} />
                 <Image src={size} />
+              </div>
+              <div className="price-quantity">
+                <div className="quantity">
+                  <h3>Quantity</h3>
+                  <div className="quantity-wrapper">
+                    <span onClick={() => setCount((val) => val + 1)}>+</span>
+                    <span>{count}</span>
+                    <span onClick={() => setCount((val) => val - 1)}>-</span>
+                  </div>
+                </div>
+                <div className="price">
+                  <h3>Price Total</h3>
+                  <span>{count * 90} eur</span>
+                </div>
               </div>
               <div className="size-buttons">
                 <button className="shop-btn-black">Add to Bag</button>
