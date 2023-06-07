@@ -53,7 +53,7 @@ const FooterComponent: React.FC<any> = ({ translate }) => {
               <ul className="foot-col">
                 <div className="foot-col__header">
                   <h3>FEATURES</h3>
-                  <i className="text-light fa-solid fa-plus"></i>
+                  <h1>+</h1>
                 </div>
 
                 <li>
@@ -86,7 +86,7 @@ const FooterComponent: React.FC<any> = ({ translate }) => {
               <ul className="foot-col">
                 <div className="foot-col__header">
                   <h3>Menu</h3>
-                  <i className="text-light fa-solid fa-plus"></i>
+                  <h1>+</h1>
                 </div>
                 <li>
                   <a href="#">ABOUT US</a>
@@ -118,7 +118,7 @@ const FooterComponent: React.FC<any> = ({ translate }) => {
               <ul className="foot-col">
                 <div className="foot-col__header">
                   <h3>Contact us</h3>
-                  <i className="text-light fa-solid fa-plus"></i>
+                  <h1>+</h1>
                 </div>
                 <li>
                   <div className="content">
@@ -151,7 +151,7 @@ const FooterComponent: React.FC<any> = ({ translate }) => {
               <ul className="foot-col">
                 <div className="foot-col__header">
                   <h3>Follow us</h3>
-                  <i className="text-light fa-solid fa-plus"></i>
+                  <h1>+</h1>
                 </div>
                 <li>
                   <a href="#">FACEBOOK</a>
