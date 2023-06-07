@@ -15,6 +15,8 @@ import top2large from '../../../assets/images/post-images/top2large.jpg'
 import top3large from '../../../assets/images/post-images/top3large.jpg'
 import top4large from '../../../assets/images/post-images/top4large.jpg'
 import top5large from '../../../assets/images/post-images/top5large.jpg'
+import { AiOutlineHeart } from 'react-icons/ai'
+import size from '../../../assets/images/size.png'
 import ProductSlider from './ProductSlider'
 
 const Product = () => {
@@ -112,6 +114,44 @@ const Product = () => {
                 <a href="#">
                   <Image src={top1large} className="img-fluid" />
                 </a>
+              </div>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="product-slider-info">
+              <span>Home/Women Dress/Angela Mau</span>
+              <button className="dashboard-btn">fendi</button>
+              <h1>
+                Women Black Checked Fit <br /> and Flare Dress
+              </h1>
+              <div className="size-title">
+                <h4>SELECT SIZE(INCHES)</h4>
+                <a href="#">Size Guide</a>
+              </div>
+              <div className="size-image">
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+                <Image src={size} />
+              </div>
+              <div className="size-buttons">
+                <button className="shop-btn-black">Add to Bag</button>
+                <button className="shop-btn">
+                  <AiOutlineHeart /> Save
+                </button>
+              </div>
+              <div className="size-tags">
+                <span>FREE SHIPPING</span>
+                <span>PRODUCT CODE:RFKK1024</span>
+                <span>TAGS:NEW ARRIVALS TOP WOMEN</span>
               </div>
             </div>
           </Col>

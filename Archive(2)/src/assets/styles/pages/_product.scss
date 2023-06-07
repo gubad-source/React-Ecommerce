@@ -30,3 +30,33 @@
     }
   }
 }
+.product-slider-info {
+  margin: 14rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  h1 {
+    line-height: 4rem;
+  }
+  .size-title {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .size-image {
+    img {
+      margin: 0.5rem;
+    }
+  }
+  .size-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+  }
+  .size-tags {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+}
