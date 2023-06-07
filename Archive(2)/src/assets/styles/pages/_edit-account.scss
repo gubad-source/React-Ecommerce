@@ -1,11 +1,14 @@
 // @import '../components/mixins';
 #edit-account {
+  margin: 14rem;
   input {
     border: 1px solid $black-color;
   }
   .edit-account__title {
     @include dash-title;
-
+    h1 {
+      margin-bottom: 2rem;
+    }
     select {
       display: none;
     }
@@ -13,7 +16,7 @@
   .edit-account__body {
     display: flex;
     border: 1px solid $light-blue-color;
-    padding: 3rem 6rem;
+    padding: 6rem 12rem 12rem;
     .dashboard-list {
       @include dashboard-list;
     }
@@ -22,14 +25,26 @@
         text-transform: uppercase;
         font-family: 'Oswald';
         font-weight: 700;
+        margin-bottom: 3rem;
       }
       .input-field {
         @include input-field;
+        label {
+          span {
+            margin-left: 1rem;
+          }
+        }
       }
       .input-field-checkbox {
         font-family: 'Oswald';
         text-transform: uppercase;
         color: $grey-color-82;
+        input {
+          margin-right: 1rem;
+        }
+      }
+      button {
+        margin-top: 2rem;
       }
     }
   }
