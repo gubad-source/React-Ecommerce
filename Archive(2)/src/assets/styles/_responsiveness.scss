@@ -616,8 +616,10 @@
     .col-lg-12 {
       .sign-in {
         width: 100%;
+        margin: 8rem 0;
         &__title {
           align-items: flex-start;
+
           span {
             font-size: 0.8rem;
             line-height: 1.6rem;
@@ -654,17 +656,23 @@
       }
     }
   }
+  #sign-in .col-lg-12 .sign-in form .form-title h3 {
+    color: $grey-color-82;
+  }
   #sign-in .col-lg-12 .sign-in form .input-field:last-child {
     margin: 0;
   }
   #sign-in .col-lg-12 .sign-in form .input-field-checkbox label {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   #sign-in .col-lg-12 .sign-in .sign-in__title h1 {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
     line-height: 2rem;
     margin: 1rem 0;
+  }
+  #sign-in .col-lg-12 .sign-in .sign-in__title span {
+    font-size: 1rem;
   }
   #sign-in .col-lg-12 .sign-in .sign-in__title {
     align-items: flex-start;
