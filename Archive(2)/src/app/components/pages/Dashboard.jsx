@@ -55,7 +55,6 @@ const Dashboard = () => {
                         <h3>contact information</h3>
                         <p>alex driver</p>
                         <p className="mb-2">exampleaddress@gmail.com</p>
-                        <span className="dashboard-btn">edit</span>
                         <span className="dashboard-btn">change password</span>
                       </div>
                       <div className="account-information__newsletters">
