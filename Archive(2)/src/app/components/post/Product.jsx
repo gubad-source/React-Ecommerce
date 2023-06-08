@@ -120,8 +120,8 @@ const Product = () => {
           </Col>
           <Col lg={6}>
             <div className="product-slider-info">
-              <span>Home/Women Dress/Angela Mau</span>
-              <button className="dashboard-btn">fendi</button>
+              <span className="span-tag">Home/Women Dress/Angela Mau</span>
+              <button className="dashboard-btn fendi">fendi</button>
               <h1>
                 Women Black Checked Fit <br /> and Flare Dress
               </h1>
@@ -157,6 +157,11 @@ const Product = () => {
                   <span>{count * 90} eur</span>
                 </div>
               </div>
+              <select name="" id="" className="product-slider-select">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+              </select>
               <div className="size-buttons">
                 <button className="shop-btn-black">Add to Bag</button>
                 <button className="shop-btn">
