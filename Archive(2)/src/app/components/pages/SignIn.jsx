@@ -1,6 +1,8 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const SignIn = () => {
   const signIn = () => {
@@ -19,7 +21,16 @@ const SignIn = () => {
         password: password,
       }
       localStorage.setItem('user', JSON.stringify(user))
-      alert('signin olduz')
+      toast.success('login olduz', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })
     }
   }
 
@@ -124,6 +135,7 @@ const SignIn = () => {
                 </div>
               </form>
             </div>
+            <ToastContainer />
           </Col>
         </Row>
       </Container>

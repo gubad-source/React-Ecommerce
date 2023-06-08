@@ -11,6 +11,8 @@ import regex from '../../../constants/regex'
 import slider_image from '../../../assets/styles/images/slider-background.png'
 import slider_info from '../../../assets/styles/images/slider-info.png'
 import slider_info2 from '../../../assets/images/slider-info2.png'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import { Carousel } from 'antd'
 import TopToScroll from 'components/Template/TopToScroll'
@@ -35,14 +37,32 @@ const Main = () => {
       setLiked((old_data) => {
         let new_array = [...old_data, productId]
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
-        alert('elave olundu')
+        toast.success('elave edildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_array
       })
     } else {
       setLiked((old_data) => {
         let new_array = old_data.filter((row) => row !== productId)
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
-        alert('cixarildi')
+        toast.error('cixarildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_array
       })
     }
@@ -87,7 +107,16 @@ const Main = () => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
         new_object = calcTotalAndCount(new_object)
-        alert('elave olundu')
+        toast.success('elave edildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_object
       })
     } else {
@@ -99,7 +128,16 @@ const Main = () => {
 
         localStorage.setItem('storedProducts', JSON.stringify(new_object2))
         //old_data = calcTotalAndCount(old_data)
-        alert('artirildi')
+        toast.warning('artirildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_object2
       })
     }
@@ -122,6 +160,7 @@ const Main = () => {
   }
   return (
     <>
+      <ToastContainer />
       <TopToScroll />
       <Carousel
         className="carousel-frame"

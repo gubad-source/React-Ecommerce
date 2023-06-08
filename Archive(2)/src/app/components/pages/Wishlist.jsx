@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import wishlistImage from '../../../assets/images/Rectangle 7.png'
 import regex from '../../../constants/regex'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const Wishlist = () => {
   useEffect(() => {}, [])
 
@@ -42,7 +45,16 @@ const Wishlist = () => {
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
-        alert('elave edildi')
+        toast.success('elave edildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_object
       })
     } else {
@@ -53,7 +65,16 @@ const Wishlist = () => {
         }
 
         localStorage.setItem('storedProducts', JSON.stringify(new_object2))
-        alert('artirildi')
+        toast.warning('artirildi', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        })
         return new_object2
       })
     }
@@ -79,6 +100,7 @@ const Wishlist = () => {
   }
   return (
     <section id="wishlist">
+      <ToastContainer />
       <span className="contact-side">contact us</span>
       <Container>
         <Row>

@@ -1,14 +1,34 @@
 import { Container, Row, Col } from 'react-grid-system'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Card = () => {
   const makeAppointment = () => {
     const user = localStorage.getItem('login')
     if (user == null) {
-      alert('login olun')
+      toast.error('login olun', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })
     } else {
-      alert('sifaris oldu')
+      toast.success('sifaris edildi', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })
     }
   }
   useEffect(() => {
@@ -88,6 +108,7 @@ const Card = () => {
     <Container>
       <Row className="mt-5">
         <Col sm={12} md={12}>
+          <ToastContainer />
           <table className="table table-hover" style={{ minHeight: '66rem' }}>
             <thead>
               <tr>

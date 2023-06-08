@@ -1,4 +1,6 @@
 import { Container, Row, Col } from 'react-grid-system'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const LogIn = () => {
   const signedUser = (e) => {
     e.preventDefault()
@@ -13,9 +15,27 @@ const LogIn = () => {
       const sign_in = document.querySelector('.sign-in')
       localStorage.setItem('login', 'logged in')
       sign_in.innerHTML = signed.firstname
-      alert('login olduz')
+      toast.success('login olduz', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })
     } else {
-      alert('sefdir')
+      toast.error('sefhdir', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      })
     }
   }
   return (
@@ -40,6 +60,7 @@ const LogIn = () => {
             />
             <button type="submit">Click</button>
           </form>
+          <ToastContainer />
         </Col>
       </Row>
     </Container>
