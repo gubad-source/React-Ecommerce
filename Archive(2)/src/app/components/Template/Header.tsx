@@ -35,6 +35,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
   useEffect(() => {
     showHaert()
     languageLoading()
+    showUser()
   }, [])
   const showHaert = () => {
     let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
@@ -45,6 +46,14 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
   const toggleNavActive = () => {
     const nav = document.querySelector('nav')
     nav?.classList.toggle('nav-active')
+  }
+  const showUser = () => {
+    if (localStorage.getItem('login') != null) {
+      const mm = JSON.parse(localStorage.getItem('user'))
+      const ff = mm.firstname ?? 'sign-in'
+      const ll = document.querySelector('.sign-in')
+      ll.innerHTML = ff
+    }
   }
   // const [storage, setStoragee] = useState(
   //   JSON.parse(

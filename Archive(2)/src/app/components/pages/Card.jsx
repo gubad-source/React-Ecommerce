@@ -29,6 +29,8 @@ const Card = () => {
         progress: undefined,
         theme: 'colored',
       })
+      localStorage.removeItem('storedProducts')
+      //window.onload();
     }
   }
   useEffect(() => {
