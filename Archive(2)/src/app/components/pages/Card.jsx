@@ -30,7 +30,9 @@ const Card = () => {
         theme: 'colored',
       })
       localStorage.removeItem('storedProducts')
-      //window.onload();
+      setTimeout(() => {
+        location.reload()
+      }, '3000')
     }
   }
   useEffect(() => {
@@ -123,7 +125,9 @@ const Card = () => {
             </thead>
             <tbody className="cart-items"></tbody>
           </table>
-          <button onClick={makeAppointment}>Order</button>
+          <button onClick={makeAppointment} className="shop-btn">
+            Order
+          </button>
         </Col>
       </Row>
     </Container>
