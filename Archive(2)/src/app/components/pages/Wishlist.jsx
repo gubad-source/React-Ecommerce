@@ -15,16 +15,27 @@ const Wishlist = () => {
         '{"items":[],"count":0,"total":0}'
     )
   )
+
+  function calcTotalAndCount(product) {
+    product.count = 0
+    product.total = 0
+    product.items?.forEach((item) => {
+      product.total += item.qty * item.price
+      product.count++
+    })
+    return product
+  }
   function addToStorage(productId) {
     let storeIndex = storage.items?.findIndex((item) => {
       return item.id == productId
     })
     const price_items = document
       .querySelector(
-        '.wishlist__body__items__frame .item .price .current-price'
+        '.wishlist__body__items .wishlist__body__items__frame .item .price .current-price'
       )
       .innerHTML.match(regex)
     const items = storage.items
+
     if (storeIndex == -1) {
       console.log('test' + productId + ' ' + storeIndex)
       let productid = productId
@@ -44,6 +55,8 @@ const Wishlist = () => {
 
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
+        //old_data = calcTotalAndCount(old_data)
+        new_object = calcTotalAndCount(new_object)
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
         toast.success('elave edildi', {
           position: 'top-right',
@@ -55,16 +68,14 @@ const Wishlist = () => {
           progress: undefined,
           theme: 'colored',
         })
+
         return new_object
       })
     } else {
       setStorage((old_data) => {
-        let new_object2 = {
-          ...old_data,
-          items: [...items, items[storeIndex].qty++],
-        }
+        old_data.items[storeIndex].qty++
 
-        localStorage.setItem('storedProducts', JSON.stringify(new_object2))
+        old_data = calcTotalAndCount(old_data)
         toast.warning('artirildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -75,8 +86,10 @@ const Wishlist = () => {
           progress: undefined,
           theme: 'colored',
         })
-        return new_object2
+        return (old_data = calcTotalAndCount(old_data))
       })
+
+      localStorage.setItem('storedProducts', JSON.stringify(storage))
     }
   }
   const [liked, setLiked] = useState(
