@@ -91,6 +91,7 @@ const Main = () => {
       .querySelector('.product .price .low-price')
       .innerHTML.match(regex)
     const items = storage.items
+
     if (storeIndex == -1) {
       console.log('test' + productId + ' ' + storeIndex)
       let productid = productId
@@ -105,8 +106,9 @@ const Main = () => {
 
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
-        localStorage.setItem('storedProducts', JSON.stringify(new_object))
+        //old_data = calcTotalAndCount(old_data)
         new_object = calcTotalAndCount(new_object)
+        localStorage.setItem('storedProducts', JSON.stringify(new_object))
         toast.success('elave edildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -117,17 +119,14 @@ const Main = () => {
           progress: undefined,
           theme: 'colored',
         })
+
         return new_object
       })
     } else {
       setStorage((old_data) => {
-        let new_object2 = {
-          ...old_data,
-          items: [...items, items[storeIndex].qty++],
-        }
+        old_data.items[storeIndex].qty++
 
-        localStorage.setItem('storedProducts', JSON.stringify(new_object2))
-        //old_data = calcTotalAndCount(old_data)
+        old_data = calcTotalAndCount(old_data)
         toast.warning('artirildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -138,12 +137,11 @@ const Main = () => {
           progress: undefined,
           theme: 'colored',
         })
-        return new_object2
+        return (old_data = calcTotalAndCount(old_data))
       })
+
+      localStorage.setItem('storedProducts', JSON.stringify(storage))
     }
-    setStorage((old) => {
-      return (old = calcTotalAndCount(old))
-    })
   }
 
   useEffect(() => {
