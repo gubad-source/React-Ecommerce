@@ -21,8 +21,14 @@ import type { RootState } from '../../../redux/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { incrementByAmount } from '../../../redux/wishCounter'
 import { incrementCart } from '../../../redux/cardCounter'
+import { incrementPriceCart } from '../../../redux/cardPriceCounter'
 
 const Main = () => {
+  const dispatch4 = useDispatch()
+  const defaultPriceCart = useSelector(
+    (state: RootState) => state.cardPriceCounter.defaultPriceCart
+  )
+
   const dispatch3 = useDispatch()
   const defaultCart = useSelector(
     (state: RootState) => state.cardCounter.defaultCart
@@ -136,6 +142,11 @@ const Main = () => {
         dispatch3(incrementCart(cardStore))
         console.log(`jdjdjdj: ${defaultCart}`)
 
+        let cardPriceStore =
+          JSON.parse(localStorage.getItem('storedProducts')).total ?? 0
+        dispatch4(incrementPriceCart(cardPriceStore))
+        console.log(`jdjdjdj: ${defaultPriceCart}`)
+
         toast.success('elave edildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -174,6 +185,10 @@ const Main = () => {
       })
 
       localStorage.setItem('storedProducts', JSON.stringify(storage))
+      let cardPriceStore =
+        JSON.parse(localStorage.getItem('storedProducts')).total ?? 0
+      dispatch4(incrementPriceCart(cardPriceStore))
+      console.log(`jdjdjdj: ${defaultPriceCart}`)
     }
   }
 

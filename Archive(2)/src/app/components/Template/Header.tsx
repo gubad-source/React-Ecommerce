@@ -16,6 +16,10 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
+  const defaultPriceCart = useSelector(
+    (state: RootState) => state.cardPriceCounter.defaultPriceCart
+  )
+
   const defaultCart = useSelector(
     (state: RootState) => state.cardCounter.defaultCart
   )
@@ -147,7 +151,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
                 Storage <span className="storage-count">{defaultCart}</span>
               </Link>
             </div>
-            <div className="storage-info__price">0,00 eur</div>
+            <div className="storage-info__price">{defaultPriceCart} eur</div>
           </li>
           <li style={{ color: '#000000' }}>
             {/* <select onChange={(e) => dispatch(changeLanguage(e.target.value))}> */}
