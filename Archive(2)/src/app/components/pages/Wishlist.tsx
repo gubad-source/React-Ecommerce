@@ -6,7 +6,22 @@ import regex from '../../../constants/regex'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+import type { RootState } from '../../../redux/store'
+import { useDispatch, useSelector } from 'react-redux'
+import { incrementCart } from '../../../redux/cardCounter'
+import { incrementPriceCart } from '../../../redux/cardPriceCounter'
+
 const Wishlist = () => {
+  const dispatch4 = useDispatch()
+  const defaultPriceCart = useSelector(
+    (state: RootState) => state.cardPriceCounter.defaultPriceCart
+  )
+
+  const dispatch3 = useDispatch()
+  const defaultCart = useSelector(
+    (state: RootState) => state.cardCounter.defaultCart
+  )
+
   useEffect(() => {}, [])
 
   const [storage, setStorage] = useState(
@@ -58,6 +73,17 @@ const Wishlist = () => {
         //old_data = calcTotalAndCount(old_data)
         new_object = calcTotalAndCount(new_object)
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
+
+        let cardStore =
+          JSON.parse(localStorage.getItem('storedProducts')).count ?? 0
+        dispatch3(incrementCart(cardStore))
+        console.log(`jdjdjdj: ${defaultCart}`)
+
+        let cardPriceStore =
+          JSON.parse(localStorage.getItem('storedProducts')).total ?? 0
+        dispatch4(incrementPriceCart(cardPriceStore))
+        console.log(`jdjdjdj: ${defaultPriceCart}`)
+
         toast.success('elave edildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -76,6 +102,12 @@ const Wishlist = () => {
         old_data.items[storeIndex].qty++
 
         old_data = calcTotalAndCount(old_data)
+
+        let cardStore =
+          JSON.parse(localStorage.getItem('storedProducts')).count ?? 0
+        dispatch3(incrementCart(cardStore))
+        console.log(`jdjdjdj: ${defaultCart}`)
+
         toast.warning('artirildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -90,6 +122,10 @@ const Wishlist = () => {
       })
 
       localStorage.setItem('storedProducts', JSON.stringify(storage))
+      let cardPriceStore =
+        JSON.parse(localStorage.getItem('storedProducts')).total ?? 0
+      dispatch4(incrementPriceCart(cardPriceStore))
+      console.log(`jdjdjdj: ${defaultPriceCart}`)
     }
   }
   const [liked, setLiked] = useState(

@@ -48,8 +48,17 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     showHaert()
     languageLoading()
     showUser()
+    showStorageCount()
   }, [])
 
+  const showStorageCount = () => {
+    let storage = JSON.parse(localStorage.getItem('storedProducts')) ?? 0
+    let storageCount = document.querySelector('.storage-count')
+
+    if (storageCount != null && storage.count != null) {
+      storageCount.innerHTML = storage.count
+    }
+  }
   const showHaert = () => {
     let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
     document.querySelector('.wish-count').innerHTML =

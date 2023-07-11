@@ -38,13 +38,13 @@ const Main = () => {
   const defaultWish = useSelector(
     (state: RootState) => state.wishCounter.defaultWish
   )
-  const showStorageCount = () => {
-    let storageCount = document.querySelector('.storage-count')
+  // const showStorageCount = () => {
+  //   let storageCount = document.querySelector('.storage-count')
 
-    if (storageCount != null && storage.count != null) {
-      storageCount.innerHTML = storage.count
-    }
-  }
+  //   if (storageCount != null && storage.count != null) {
+  //     storageCount.innerHTML = storage.count
+  //   }
+  // }
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
     document.querySelector('.cookie-wrapper').style.display = 'none'
@@ -193,7 +193,7 @@ const Main = () => {
   }
 
   useEffect(() => {
-    showStorageCount()
+    //showStorageCount()
     //signedUser()
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
