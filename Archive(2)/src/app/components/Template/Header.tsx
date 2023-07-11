@@ -44,11 +44,20 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     localStorage.setItem('language', `${e.target.value}`)
   }
 
+  let ii = JSON.parse(localStorage.getItem('storedProducts'))
+    ? JSON.parse(localStorage.getItem('storedProducts')).total
+    : 0
+  const showStoragePrice = () => {
+    let yy = document.querySelector('.storage-info__price__span')
+    yy.innerHTML = ii
+  }
   useEffect(() => {
     showHaert()
     languageLoading()
     showUser()
     showStorageCount()
+
+    showStoragePrice()
   }, [])
 
   const showStorageCount = () => {
@@ -160,7 +169,12 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
                 Storage <span className="storage-count">{defaultCart}</span>
               </Link>
             </div>
-            <div className="storage-info__price">{defaultPriceCart} eur</div>
+            <div className="storage-info__price">
+              <span className="storage-info__price__span">
+                {defaultPriceCart}
+              </span>{' '}
+              eur
+            </div>
           </li>
           <li style={{ color: '#000000' }}>
             {/* <select onChange={(e) => dispatch(changeLanguage(e.target.value))}> */}
