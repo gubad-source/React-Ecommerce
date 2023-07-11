@@ -17,7 +17,15 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Carousel } from 'antd'
 import TopToScroll from 'components/Template/TopToScroll'
 
+import type { RootState } from '../../../redux/store'
+import { useDispatch, useSelector } from 'react-redux'
+import { incrementByAmount } from '../../../redux/wishCounter'
+
 const Main = () => {
+  const dispatch2 = useDispatch()
+  const defaultWish = useSelector(
+    (state: RootState) => state.wishCounter.defaultWish
+  )
   const showStorageCount = () => {
     let storageCount = document.querySelector('.storage-count')
     if (storageCount != null && storage.count != null) {
@@ -37,6 +45,9 @@ const Main = () => {
       setLiked((old_data) => {
         let new_array = [...old_data, productId]
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        let wishStore = JSON.parse(localStorage.getItem('likedProducts')) ?? []
+        dispatch2(incrementByAmount(wishStore.length))
+        console.log(`jdjdjdj: ${defaultWish}`)
         toast.success('elave edildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -53,6 +64,9 @@ const Main = () => {
       setLiked((old_data) => {
         let new_array = old_data.filter((row) => row !== productId)
         localStorage.setItem('likedProducts', JSON.stringify(new_array))
+        let wishStore = JSON.parse(localStorage.getItem('likedProducts')) ?? []
+        dispatch2(incrementByAmount(wishStore.length))
+        console.log(`jdjdjdj: ${defaultWish}`)
         toast.error('cixarildi', {
           position: 'top-right',
           autoClose: 5000,

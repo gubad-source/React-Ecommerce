@@ -16,6 +16,10 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
+  const defaultWish = useSelector(
+    (state: RootState) => state.wishCounter.defaultWish
+  )
+
   const loadedLanguage = localStorage.getItem('language')
   const defaultLang = useSelector(
     (state: RootState) => state.lngSwitcher.value ?? 'az'
@@ -126,7 +130,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           <li className="liked">
             <Link to="/wishlist">
               <img src={liked} alt="" />
-              <span className="wish-count">0</span>
+              <span className="wish-count">{defaultWish}</span>
             </Link>
           </li>
           <li className="storage">

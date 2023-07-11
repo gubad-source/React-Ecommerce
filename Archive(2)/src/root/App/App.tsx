@@ -24,21 +24,21 @@ const App = () => {
     <BrowserRouter>
       <Provider store={store}>
         <Header />
-      </Provider>
 
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/catalog" component={Catalog} />
-        <Route path="/sign-in" component={SignIn} />
-        <Route path="/edit-account" component={EditAccount} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/wishlist" component={Wishlist} />
-        <Route path="/storage" component={Storage} />
-        <Route path="/product" component={Product} />
-        <Route path="/login" component={LogIn} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/catalog" component={Catalog} />
+          <Route path="/sign-in" component={SignIn} />
+          <Route path="/edit-account" component={EditAccount} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/wishlist" component={Wishlist} />
+          <Route path="/storage" component={Storage} />
+          <Route path="/product" component={Product} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </Provider>
       <Footer />
     </BrowserRouter>
   )
