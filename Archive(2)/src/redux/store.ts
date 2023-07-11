@@ -3,11 +3,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import languageSwitcher from './languageSwitcher'
 import wishCounter from './wishCounter'
+import cardCounter from './cardCounter'
 
 export const store = configureStore({
   reducer: {
     lngSwitcher: languageSwitcher,
     wishCounter: wishCounter,
+    cardCounter: cardCounter,
   },
 })
 

@@ -20,14 +20,21 @@ import TopToScroll from 'components/Template/TopToScroll'
 import type { RootState } from '../../../redux/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { incrementByAmount } from '../../../redux/wishCounter'
+import { incrementCart } from '../../../redux/cardCounter'
 
 const Main = () => {
+  const dispatch3 = useDispatch()
+  const defaultCart = useSelector(
+    (state: RootState) => state.cardCounter.defaultCart
+  )
+
   const dispatch2 = useDispatch()
   const defaultWish = useSelector(
     (state: RootState) => state.wishCounter.defaultWish
   )
   const showStorageCount = () => {
     let storageCount = document.querySelector('.storage-count')
+
     if (storageCount != null && storage.count != null) {
       storageCount.innerHTML = storage.count
     }
@@ -123,6 +130,12 @@ const Main = () => {
         //old_data = calcTotalAndCount(old_data)
         new_object = calcTotalAndCount(new_object)
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
+
+        let cardStore =
+          JSON.parse(localStorage.getItem('storedProducts')).count ?? 0
+        dispatch3(incrementCart(cardStore))
+        console.log(`jdjdjdj: ${defaultCart}`)
+
         toast.success('elave edildi', {
           position: 'top-right',
           autoClose: 5000,
@@ -141,6 +154,12 @@ const Main = () => {
         old_data.items[storeIndex].qty++
 
         old_data = calcTotalAndCount(old_data)
+
+        let cardStore =
+          JSON.parse(localStorage.getItem('storedProducts')).count ?? 0
+        dispatch3(incrementCart(cardStore))
+        console.log(`jdjdjdj: ${defaultCart}`)
+
         toast.warning('artirildi', {
           position: 'top-right',
           autoClose: 5000,

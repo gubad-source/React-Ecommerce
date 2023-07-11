@@ -16,6 +16,10 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
+  const defaultCart = useSelector(
+    (state: RootState) => state.cardCounter.defaultCart
+  )
+
   const defaultWish = useSelector(
     (state: RootState) => state.wishCounter.defaultWish
   )
@@ -41,6 +45,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
     languageLoading()
     showUser()
   }, [])
+
   const showHaert = () => {
     let aa = JSON.parse(localStorage.getItem('likedProducts') ?? '0')
     document.querySelector('.wish-count').innerHTML =
@@ -139,7 +144,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           <li className="storage-info">
             <div className="storage-info__text">
               <Link to="/storage">
-                Storage <span className="storage-count">0</span>
+                Storage <span className="storage-count">{defaultCart}</span>
               </Link>
             </div>
             <div className="storage-info__price">0,00 eur</div>
