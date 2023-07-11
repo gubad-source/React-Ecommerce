@@ -105,6 +105,7 @@ const Card = () => {
           localStorage.setItem('storedProducts', JSON.stringify(dd))
           return dd
         })
+        location.reload()
       })
     })
   }
