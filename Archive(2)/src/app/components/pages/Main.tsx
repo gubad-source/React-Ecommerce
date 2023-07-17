@@ -8,8 +8,6 @@ import logo_brand from '../../../assets/images/chose your brand.png'
 import { useEffect, useState } from 'react'
 import products from '../../../constants/products'
 import regex from '../../../constants/regex'
-import slider_image from '../../../assets/styles/images/slider-background.png'
-import slider_info from '../../../assets/styles/images/slider-info.png'
 import slider_info2 from '../../../assets/images/slider-info2.png'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -22,6 +20,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { incrementByAmount } from '../../../redux/wishCounter'
 import { incrementCart } from '../../../redux/cardCounter'
 import { incrementPriceCart } from '../../../redux/cardPriceCounter'
+
+import { Animated } from 'react-animated-css'
 
 const Main = () => {
   const dispatch4 = useDispatch()
@@ -38,13 +38,7 @@ const Main = () => {
   const defaultWish = useSelector(
     (state: RootState) => state.wishCounter.defaultWish
   )
-  // const showStorageCount = () => {
-  //   let storageCount = document.querySelector('.storage-count')
 
-  //   if (storageCount != null && storage.count != null) {
-  //     storageCount.innerHTML = storage.count
-  //   }
-  // }
   const localFunc = () => {
     localStorage.setItem('cookie', 'green')
     document.querySelector('.cookie-wrapper').style.display = 'none'
@@ -193,8 +187,6 @@ const Main = () => {
   }
 
   useEffect(() => {
-    //showStorageCount()
-    //signedUser()
     console.log('test2')
     let cookie = localStorage.getItem('cookie')
     if (cookie != null) {
@@ -237,15 +229,16 @@ const Main = () => {
           <Image src={slider_info2} />
         </div>
       </Carousel>
-      <div class="cookie-wrapper">
+
+      <div className="cookie-wrapper">
         <Image src={cookies} />
-        <div class="cookie-wrapper__content">
+        <div className="cookie-wrapper__content">
           <h1>cookies constent</h1>
           <p>
             This website use cookies to ensure you <br />
             get the best experience on our website
           </p>
-          <div class="button">
+          <div className="button">
             <button onClick={localFunc}>I understand</button>
             <a href="#">Learn more</a>
           </div>
@@ -256,12 +249,12 @@ const Main = () => {
         <Container fluid>
           <Row>
             <Col lg={12}>
-              <div class="brand-tabs">
-                <div class="brand-tabs__logo">
+              <div className="brand-tabs">
+                <div className="brand-tabs__logo">
                   <Image src={logo_brand} />
                 </div>
                 <ul>
-                  <a href="#" class="activee" data-source="1">
+                  <a href="#" className="activee" data-source="1">
                     <span>chanel</span>
                   </a>
                   <a href="#" data-source="2">
@@ -284,30 +277,39 @@ const Main = () => {
                   </a>
                 </ul>
               </div>
-              <div class="brand-items">
-                <div class="item item1">
-                  <div class="info1">
-                    <h1>choose your look</h1>
-                    <p>popular clothing collections</p>
-                    <button class="shop-btn-transparent">see offers</button>
-                  </div>
+              <div className="brand-items">
+                <div className="item item1">
+                  <Animated
+                    animationIn="bounceInLeft"
+                    animationOut="fadeOut"
+                    isVisible={true}
+                  >
+                    <div className="info1">
+                      <h1>choose your look</h1>
+                      <p>popular clothing collections</p>
+                      <button className="shop-btn-transparent">
+                        see offers
+                      </button>
+                    </div>
+                  </Animated>
                 </div>
-                <div class="item item2">
-                  <div class="info2">
+
+                <div className="item item2">
+                  <div className="info2">
                     <h1>
                       up to <br />
                       40% off
                     </h1>
                     <p>special offers and great deals</p>
 
-                    <button class="shop-btn-transparent">see offers</button>
+                    <button className="shop-btn-transparent">see offers</button>
                   </div>
                 </div>
-                <div class="item item3">
-                  <div class="info3">
+                <div className="item item3">
+                  <div className="info3">
                     <h1>brand new style</h1>
                     <p>popular clothing collections</p>
-                    <button class="shop-btn-transparent">see offers</button>
+                    <button className="shop-btn-transparent">see offers</button>
                   </div>
                 </div>
               </div>
@@ -348,37 +350,45 @@ const Main = () => {
                 {products.map((product) => {
                   return (
                     <Col lg={3} xs={6}>
-                      <div className="product" data-productid={product.id}>
-                        <div className="liked-basket">
-                          <span>
-                            <i
-                              className="fa-solid fa-heart text-danger"
-                              onClick={() => addToLiked(product.id)}
-                            ></i>
+                      <Animated
+                        animationIn="bounceInLeft"
+                        animationOut="fadeOut"
+                        isVisible={true}
+                      >
+                        <div className="product" data-productid={product.id}>
+                          <div className="liked-basket">
+                            <span>
+                              <i
+                                className="fa-solid fa-heart text-danger"
+                                onClick={() => addToLiked(product.id)}
+                              ></i>
+                            </span>
+                            <span>
+                              <i
+                                className="fa-solid fa-basket-shopping text-info"
+                                onClick={() => addToStorage(product.id)}
+                              ></i>
+                            </span>
+                          </div>
+                          <Image
+                            fluid
+                            src={product.image}
+                            style={{ width: '100%' }}
+                          />
+                          <span className="top-product">
+                            {product.category}
                           </span>
-                          <span>
-                            <i
-                              className="fa-solid fa-basket-shopping text-info"
-                              onClick={() => addToStorage(product.id)}
-                            ></i>
-                          </span>
+                          <p>{product.title}</p>
+                          <div className="price">
+                            <span className="low-price">
+                              {product.low_price} EUR
+                            </span>
+                            <span className="discount-price">
+                              <del>{product.discount_price} EUR</del>
+                            </span>
+                          </div>
                         </div>
-                        <Image
-                          fluid
-                          src={product.image}
-                          style={{ width: '100%' }}
-                        />
-                        <span className="top-product">{product.category}</span>
-                        <p>{product.title}</p>
-                        <div className="price">
-                          <span className="low-price">
-                            {product.low_price} EUR
-                          </span>
-                          <span className="discount-price">
-                            <del>{product.discount_price} EUR</del>
-                          </span>
-                        </div>
-                      </div>
+                      </Animated>
                     </Col>
                   )
                 })}
@@ -393,17 +403,17 @@ const Main = () => {
       </section>
 
       <section id="shoping-limits">
-        <div class="limits">
+        <div className="limits">
           <Container>
             <Row>
               <Col lg={6}>
-                <div class="info">
+                <div className="info">
                   <h1>shoping without limits</h1>
                   <h5>
                     Choose the best option for you and it <br />
                     does not wheter you are.
                   </h5>
-                  <button class="shop-btn-transparent">skip now</button>
+                  <button className="shop-btn-transparent">skip now</button>
                 </div>
               </Col>
             </Row>

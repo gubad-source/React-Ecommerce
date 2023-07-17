@@ -16,6 +16,17 @@ import type { RootState } from '../../../redux/store'
 import Menu from '../../../constants/header'
 
 const HeaderComponent: React.FC<any> = ({ translate }) => {
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  }
+
   const defaultPriceCart = useSelector(
     (state: RootState) => state.cardPriceCounter.defaultPriceCart
   )
@@ -86,26 +97,22 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
       ll.innerHTML = ff
     }
   }
-  // const [storage, setStoragee] = useState(
-  //   JSON.parse(
-  //     localStorage.getItem('storedProducts') ??
-  //       '{"items":[],"count":0,"total":0}'
-  //   )
-  // )
-
-  //const { translateListData } = useActions()
-
-  // const location = useLocation()
-  // const navigate = useHistory()
-  // const pathname = location.pathname
-  // const scrollY = useScrollYPosition()
-
-  // useLayoutEffect(() => {
-  //   translateListData()
-  // }, [])
-
-  // useEffect(() => {}, [translate])
-
+  const signOutModalOpen = () => {
+    if (localStorage.getItem('login') != null) {
+      const signOutModal = document.querySelector('.sign-out-modal')
+      signOutModal.style.display = 'block'
+    }
+  }
+  const signOutModalClose = () => {
+    const signOutModal = document.querySelector('.sign-out-modal')
+    signOutModal.style.display = 'none'
+  }
+  const signOutAccount = () => {
+    localStorage.removeItem('login')
+    const signOutModal = document.querySelector('.sign-out-modal')
+    signOutModal.style.display = 'none'
+    location.reload()
+  }
   return (
     <>
       <nav>
@@ -147,7 +154,7 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
         </ul>
 
         <ul className="account-cart">
-          <li className="sign-in">
+          <li className="sign-in" onClick={signOutModalOpen}>
             <Link to="/login">Sign-in</Link>
           </li>
           <li className="create-account">
@@ -188,7 +195,17 @@ const HeaderComponent: React.FC<any> = ({ translate }) => {
           </li>
         </ul>
       </nav>
-
+      <div className="sign-out-modal">
+        <h1>Are you sure you want to quit</h1>
+        <div className="sign-out-modal__buttons">
+          <button className="sign-out-yes" onClick={signOutAccount}>
+            Yes
+          </button>
+          <button className="sign-out-no" onClick={signOutModalClose}>
+            No
+          </button>
+        </div>
+      </div>
       <section id="mobile-nav">
         <div className="hamburger" onClick={toggleNavActive}>
           <i className="fa-solid fa-bars text-light"></i>

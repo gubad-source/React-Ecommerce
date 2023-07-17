@@ -1,0 +1,29 @@
+.sign-out-modal {
+  z-index: 6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: whitesmoke;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  display: none;
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    .sign-out-yes {
+      background: orangered;
+      color: white;
+      padding: 1.4rem 2rem;
+      border-radius: 1rem;
+      font-size: 2rem;
+    }
+    .sign-out-no {
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-size: 2rem;
+      background: darkseagreen;
+    }
+  }
+}

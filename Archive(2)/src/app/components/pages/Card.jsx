@@ -3,10 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Modal from './Modal'
 
 const Card = () => {
   const makeAppointment = () => {
     const user = localStorage.getItem('login')
+    const storedPrdct = localStorage.getItem('storedProducts')
     if (user == null) {
       toast.error('login olun', {
         position: 'top-right',
@@ -19,20 +21,53 @@ const Card = () => {
         theme: 'colored',
       })
     } else {
-      toast.success('sifaris edildi', {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-      })
-      localStorage.removeItem('storedProducts')
-      setTimeout(() => {
-        location.reload()
-      }, '3000')
+      let submitOrder = document.querySelector('.submit-order')
+      submitOrder.style.display = 'block'
+      let orderForm = document.querySelector('.submit-order form')
+      if (storedPrdct != null) {
+        orderForm.addEventListener('submit', function () {
+          const orderPhone = document.querySelector('#order-phone').value
+          const orderZip = document.querySelector('#order-zip').value
+          const orderCard = document.querySelector('#order-card').value
+          const orderCVV = document.querySelector('#order-cvv').value
+          const cardExpiry = document.querySelector('#card-expiry').value
+          const orderProducts = JSON.parse(
+            localStorage.getItem('storedProducts')
+          )
+          const date = new Date()
+          let currentDay = String(date.getDate()).padStart(2, '0')
+          let currentMonth = String(date.getMonth() + 1).padStart(2, '0')
+          let currentYear = date.getFullYear()
+          // we will display the date as DD-MM-YYYY
+          let currentDate = `${currentDay}-${currentMonth}-${currentYear}`
+
+          let orderInfo = {
+            orderPhone: orderPhone,
+            orderZip: orderZip,
+            orderCard: orderCard,
+            orderProducts: orderProducts,
+            cardExpiry: cardExpiry,
+            currentDate: currentDate,
+          }
+          const orderBasket =
+            JSON.parse(localStorage.getItem('orderBasket')) ?? []
+
+          orderBasket.push(orderInfo)
+          localStorage.setItem('orderBasket', JSON.stringify(orderBasket))
+          localStorage.removeItem('storedProducts')
+
+          toast.success('sifaris edildi', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+          })
+        })
+      }
     }
   }
   useEffect(() => {
@@ -129,6 +164,7 @@ const Card = () => {
           <button onClick={makeAppointment} className="shop-btn">
             Order
           </button>
+          <Modal />
         </Col>
       </Row>
     </Container>

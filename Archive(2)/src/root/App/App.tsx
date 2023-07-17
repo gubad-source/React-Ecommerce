@@ -16,6 +16,7 @@ import Footer from 'components/Template/Footer'
 import Product from 'components/post/Product'
 import LogIn from 'components/pages/LogIn'
 import Contact from 'components/pages/Contact'
+import Order from 'components/pages/Order'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store'
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/product" component={Product} />
           <Route path="/login" component={LogIn} />
           <Route path="/contact" component={Contact} />
+          <Route path="/orders" component={Order} />
         </Switch>
       </Provider>
       <Footer />

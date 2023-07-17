@@ -1,0 +1,33 @@
+.submit-order {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 66rem;
+  transform: translate(-50%, -50%);
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      width: 100%;
+      border: 0.2rem solid grey;
+      padding: 1rem 2rem;
+      margin-bottom: 1rem;
+    }
+    .order-buttons {
+      .finish-order {
+        color: white;
+        background: forestgreen;
+        font-size: 2rem;
+      }
+      button {
+        margin: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
