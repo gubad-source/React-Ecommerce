@@ -2,6 +2,34 @@
   body {
     overflow-x: hidden;
   }
+  .sign-out-modal {
+    h1 {
+      font-size: 1.6rem;
+    }
+    &__buttons {
+      .sign-out-no,
+      .sign-out-yes {
+        font-size: 1rem;
+      }
+    }
+  }
+  .submit-order {
+    .close-button {
+      top: -3rem;
+      right: 16rem;
+    }
+    form {
+      input {
+        width: 50%;
+        font-size: 1rem;
+      }
+    }
+  }
+  .order-info {
+    img {
+      margin-top: 5rem;
+    }
+  }
   .carousel-frame {
     margin-top: 5rem;
     .slider-content {

@@ -34,7 +34,7 @@ const Order = () => {
                         <li>
                           {order?.orderProducts?.items?.map((item) => {
                             return (
-                              <ul>
+                              <ul className='order-info'>
                                 <li>
                                   <strong>Title:</strong> {item.title}
                                 </li>
@@ -50,7 +50,10 @@ const Order = () => {
                                 <li>
                                   <img
                                     src={item.image}
-                                    style={{ width: '50px' }}
+                                    style={{
+                                      width: '50px',
+                                      marginBottom: '.3rem',
+                                    }}
                                     alt=""
                                   />
                                 </li>
