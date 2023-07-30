@@ -127,7 +127,7 @@ const Main = () => {
 
       setStorage((old_data) => {
         let new_object = { ...old_data, items: [...items, product] }
-        //old_data = calcTotalAndCount(old_data)
+
         new_object = calcTotalAndCount(new_object)
         localStorage.setItem('storedProducts', JSON.stringify(new_object))
 
@@ -279,19 +279,11 @@ const Main = () => {
               </div>
               <div className="brand-items">
                 <div className="item item1">
-                  <Animated
-                    animationIn="bounceInLeft"
-                    animationOut="fadeOut"
-                    isVisible={true}
-                  >
-                    <div className="info1">
-                      <h1>choose your look</h1>
-                      <p>popular clothing collections</p>
-                      <button className="shop-btn-transparent">
-                        see offers
-                      </button>
-                    </div>
-                  </Animated>
+                  <div className="info1">
+                    <h1>choose your look</h1>
+                    <p>popular clothing collections</p>
+                    <button className="shop-btn-transparent">see offers</button>
+                  </div>
                 </div>
 
                 <div className="item item2">
@@ -317,6 +309,26 @@ const Main = () => {
           </Row>
         </Container>
       </section>
+
+      <section id="shoping-limits">
+        <div className="limits">
+          <Container>
+            <Row>
+              <Col lg={6}>
+                <div className="info">
+                  <h1>shoping without limits</h1>
+                  <h5>
+                    Choose the best option for you and it <br />
+                    does not wheter you are.
+                  </h5>
+                  <button className="shop-btn-transparent">skip now</button>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </section>
+
       <section id="products">
         <Container fluid>
           <Row>
@@ -400,25 +412,6 @@ const Main = () => {
             </Col>
           </Row>
         </Container>
-      </section>
-
-      <section id="shoping-limits">
-        <div className="limits">
-          <Container>
-            <Row>
-              <Col lg={6}>
-                <div className="info">
-                  <h1>shoping without limits</h1>
-                  <h5>
-                    Choose the best option for you and it <br />
-                    does not wheter you are.
-                  </h5>
-                  <button className="shop-btn-transparent">skip now</button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
       </section>
 
       <section id="explore">

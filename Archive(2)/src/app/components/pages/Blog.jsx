@@ -44,7 +44,27 @@ const Blog = () => {
                 <div className="blog__image">
                   <img src={BlogImage} alt="" className="img-fluid" />
                 </div>
-                <h1>the dress</h1>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima saepe debitis ipsum provident suscipit? Voluptate,
+                  deserunt eveniet libero saepe, quaerat iusto officiis modi
+                  architecto animi corrupti aspernatur esse doloremque repellat
+                  ullam nemo enim, sapiente consequuntur. Nobis nulla aspernatur
+                  blanditiis, vel ullam veniam, deleniti omnis quasi, ab maiores
+                  similique illo impedit? <br />
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima saepe debitis ipsum provident suscipit? Voluptate,
+                  deserunt eveniet libero saepe, quaerat iusto officiis modi
+                  architecto animi corrupti aspernatur esse doloremque repellat
+                  ullam nemo enim, sapiente consequuntur. Nobis nulla aspernatur
+                  blanditiis, vel ullam veniam, deleniti omnis quasi, ab maiores
+                  similique illo impedit? <br />
+                </p>
+
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Minima saepe debitis ipsum provident suscipit? Voluptate,
